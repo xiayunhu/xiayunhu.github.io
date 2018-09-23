@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>xyh‘s Blog</title>
+  <title>xyh&#39;s Blog</title>
   
-  <subtitle>做个文艺的程序猿</subtitle>
+  
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
@@ -10,7 +10,7 @@
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>夏运虎</name>
+    <name>XYH</name>
     
   </author>
   
