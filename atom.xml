@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-09-10T13:35:49.919Z</updated>
+  <updated>2018-09-26T05:21:05.857Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,15 +17,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>我的第一篇博客</title>
+    <title>斯人若彩虹遇上方知有</title>
     <link href="http://yoursite.com/2018/09/05/first/"/>
     <id>http://yoursite.com/2018/09/05/first/</id>
     <published>2018-09-05T15:22:07.000Z</published>
-    <updated>2018-09-10T13:35:49.919Z</updated>
+    <updated>2018-09-26T05:21:05.857Z</updated>
     
     <summary type="html">
-    
-      大家好，这是我的第一篇博客，正式上线
     
     </summary>
     
