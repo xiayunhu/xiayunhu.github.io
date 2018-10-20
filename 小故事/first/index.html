@@ -21,6 +21,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
 <meta name="theme-color" content="#222">
 
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "14ec2e7b"
+    });
+  daovoice('update');
+  </script>
+
 
 
 
@@ -93,7 +118,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '6.4.2',
-    sidebar: {"position":"left","display":"always","offset":15,"b2t":false,"scrollpercent":true,"onmobile":false},
+    sidebar: {"position":"left","display":"always","offset":15,"b2t":false,"scrollpercent":true,"onmobile":false,"gitalk":null,"enable":true,"ClientID":"757edc2ab1dfbc5e9113","ClientSecret":"a640a35e387a6dce9ab20498b5fc312a6ec332d2","repo":"xiayunhu.github.io","adminUser":"xyh","githubID":"xiayunhu","distractionFreeMode":true},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -115,18 +140,18 @@
 
 
 
-  <meta name="description" content="星光不问赶路人，时光不负有心人。你尽管踏实下来，一步一步往前走，何时抵达只是时间问题。">
-<meta name="keywords" content="me">
+  <meta name="description" content="一.写博客的经历从上大学开始，慢慢的接触到了一些新鲜的东西，毕竟是学的软件专业，当时就感觉如果有一个自己的网站，是多么的牛。然后脑子里就有一些想法，可能是技术的原因，一直拖着，偶尔也想想就是不知从哪下手。 经历了大一的时光，心中还是有对自己网站的向往，当时也稍微懂点技术上的问题了，可感觉还是技术不够。又开始拖着。直到大二结束的暑假。我在偶然的机会在公众号里看到一位大神写的文章，名叫：程序员为什么要">
+<meta name="keywords" content="Java">
 <meta property="og:type" content="article">
-<meta property="og:title" content="脚踏实地">
-<meta property="og:url" content="http://xiayunhu.github.io/about/shi/index.html">
+<meta property="og:title" content="斯人若彩虹,遇上方知有">
+<meta property="og:url" content="http://xiayunhu.github.io/小故事/first/index.html">
 <meta property="og:site_name" content="xyh&#39;s Blog">
-<meta property="og:description" content="星光不问赶路人，时光不负有心人。你尽管踏实下来，一步一步往前走，何时抵达只是时间问题。">
+<meta property="og:description" content="一.写博客的经历从上大学开始，慢慢的接触到了一些新鲜的东西，毕竟是学的软件专业，当时就感觉如果有一个自己的网站，是多么的牛。然后脑子里就有一些想法，可能是技术的原因，一直拖着，偶尔也想想就是不知从哪下手。 经历了大一的时光，心中还是有对自己网站的向往，当时也稍微懂点技术上的问题了，可感觉还是技术不够。又开始拖着。直到大二结束的暑假。我在偶然的机会在公众号里看到一位大神写的文章，名叫：程序员为什么要">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-10-15T13:51:48.261Z">
+<meta property="og:updated_time" content="2018-10-17T13:35:22.494Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="脚踏实地">
-<meta name="twitter:description" content="星光不问赶路人，时光不负有心人。你尽管踏实下来，一步一步往前走，何时抵达只是时间问题。">
+<meta name="twitter:title" content="斯人若彩虹,遇上方知有">
+<meta name="twitter:description" content="一.写博客的经历从上大学开始，慢慢的接触到了一些新鲜的东西，毕竟是学的软件专业，当时就感觉如果有一个自己的网站，是多么的牛。然后脑子里就有一些想法，可能是技术的原因，一直拖着，偶尔也想想就是不知从哪下手。 经历了大一的时光，心中还是有对自己网站的向往，当时也稍微懂点技术上的问题了，可感觉还是技术不够。又开始拖着。直到大二结束的暑假。我在偶然的机会在公众号里看到一位大神写的文章，名叫：程序员为什么要">
 
 
 
@@ -135,7 +160,7 @@
 
 
 
-  <link rel="canonical" href="http://xiayunhu.github.io/about/shi/"/>
+  <link rel="canonical" href="http://xiayunhu.github.io/小故事/first/"/>
 
 
 
@@ -145,7 +170,7 @@
   };
 </script>
 
-  <title>脚踏实地 | xyh's Blog</title>
+  <title>斯人若彩虹,遇上方知有 | xyh's Blog</title>
   
 
 
@@ -183,9 +208,17 @@
   </style>
 </noscript>
 
-</head>
+
+  
+
+  </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+
+<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
 
   
   
@@ -242,7 +275,7 @@
         
         
           
-          <li class="menu-item menu-item-关于 menu-item-active">
+          <li class="menu-item menu-item-关于">
     <a href="/about/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-user"></i> <br />关于</a>
   </li>
@@ -358,7 +391,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xiayunhu.github.io/about/shi/">
+    <link itemprop="mainEntityOfPage" href="http://xiayunhu.github.io/小故事/first/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XYH">
@@ -376,7 +409,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">脚踏实地
+          <h1 class="post-title" itemprop="name headline">斯人若彩虹,遇上方知有
               
             
           </h1>
@@ -401,7 +434,7 @@
                 
               
 
-              <time title="创建时间：2018-09-15 22:22:07" itemprop="dateCreated datePublished" datetime="2018-09-15T22:22:07+08:00">2018-09-15</time>
+              <time title="创建时间：2018-09-05 23:22:07" itemprop="dateCreated datePublished" datetime="2018-09-05T23:22:07+08:00">2018-09-05</time>
             
 
             
@@ -419,7 +452,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-10-15 21:51:48" itemprop="dateModified" datetime="2018-10-15T21:51:48+08:00">2018-10-15</time>
+                <time title="修改时间：2018-10-17 21:35:22" itemprop="dateModified" datetime="2018-10-17T21:35:22+08:00">2018-10-17</time>
               
             
           </span>
@@ -436,7 +469,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/about/" itemprop="url" rel="index"><span itemprop="name">about</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/小故事/" itemprop="url" rel="index"><span itemprop="name">小故事</span></a></span>
 
                 
                 
@@ -452,35 +485,15 @@
           
 
           
-
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
           
-            <div class="post-symbolscount">
-              
 
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">本文字数：</span>
-                
-                <span title="本文字数"></span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长"></span>
-              
-            </div>
           
 
           
@@ -498,7 +511,9 @@
       
 
       
-        <h2 id="星光不问赶路人，时光不负有心人。你尽管踏实下来，一步一步往前走，"><a href="#星光不问赶路人，时光不负有心人。你尽管踏实下来，一步一步往前走，" class="headerlink" title="星光不问赶路人，时光不负有心人。你尽管踏实下来，一步一步往前走，"></a>星光不问赶路人，时光不负有心人。你尽管踏实下来，一步一步往前走，</h2><h2 id="何时抵达只是时间问题。"><a href="#何时抵达只是时间问题。" class="headerlink" title="何时抵达只是时间问题。"></a>何时抵达只是时间问题。</h2>
+        <h2 id="一-写博客的经历"><a href="#一-写博客的经历" class="headerlink" title="一.写博客的经历"></a>一.写博客的经历</h2><p>从上大学开始，慢慢的接触到了一些新鲜的东西，毕竟是学的软件专业，当时就感觉如果有一个自己的网站，是多么的牛。<br>然后脑子里就有一些想法，可能是技术的原因，一直拖着，偶尔也想想就是不知从哪下手。 经历了大一的时光，<br>心中还是有对自己网站的向往，当时也稍微懂点技术上的问题了，可感觉还是技术不够。又开始拖着。直到大二结束的暑假。<br>我在偶然的机会在公众号里看到一位大神写的文章，名叫：程序员为什么要写博客？我认真的看了一遍，说的特别好，<br>尤其是到了用什么搭建的博客。 第一次听到hexo这个词，我当时看到就感觉，哇，肯定很难，我能做出来吗？我该怎么做？<br>适合我吗？一系列的问题，想找人问，想了一遍认识的好友里，最后还是放弃了。然后找到了度娘（百度），打开网页的那一刻，<br>太惊喜了，哇，原来有那么详细的教程，Hexo+github从零开始搭建博客。我心里就认定了，就是这个了。</p>
+<h2 id="二-为什么要写博客？"><a href="#二-为什么要写博客？" class="headerlink" title="二.为什么要写博客？"></a>二.为什么要写博客？</h2><p>为什么要写自己的博客，刚开始我心里也有疑问，从有打算到开始动手做，拖拖拉拉的两年了。后来学的东西越来越多，<br>自己经常百度，几乎搜到的东西好多都是别人博客里写的，我知道最多的就是，CSDN、博客园、简书等。<br>我也比较喜欢写一些东西。想创建博客不是为了以后有多少多少粉丝，想出名等，而是想把自己的一些东西记录下来，<br>总结的工作经验以及一些自己的心得，有幸可以和大家一起分享。</p>
+
       
     </div>
 
@@ -528,12 +543,12 @@
   <!-- JS库 sweetalert 可修改路径 -->
   <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>本文标题:</span><a href="/about/shi/">脚踏实地</a></p>
+  <p><span>本文标题:</span><a href="/小故事/first/">斯人若彩虹,遇上方知有</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 XYH 的个人博客">XYH</a></p>
-  <p><span>发布时间:</span>2018年09月15日 - 22:09</p>
-  <p><span>最后更新:</span>2018年10月15日 - 21:10</p>
-  <p><span>原始链接:</span><a href="/about/shi/" title="脚踏实地">http://xiayunhu.github.io/about/shi/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://xiayunhu.github.io/about/shi/"  aria-label="复制成功！"></i></span>
+  <p><span>发布时间:</span>2018年09月05日 - 23:09</p>
+  <p><span>最后更新:</span>2018年10月17日 - 21:10</p>
+  <p><span>原始链接:</span><a href="/小故事/first/" title="斯人若彩虹,遇上方知有">http://xiayunhu.github.io/小故事/first/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://xiayunhu.github.io/小故事/first/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
 </div>
@@ -595,7 +610,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/me/" rel="tag"><i class="fa fa-tag"></i> me</a>
+            <a href="/tags/Java/" rel="tag"><i class="fa fa-tag"></i> Java</a>
           
         </div>
       
@@ -608,15 +623,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/about/first/" rel="next" title="斯人若彩虹,遇上方知有">
-                <i class="fa fa-chevron-left"></i> 斯人若彩虹,遇上方知有
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/小故事/shi/" rel="prev" title="脚踏实地">
+                脚踏实地 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -720,7 +735,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">标签</span>
                   
                 </div>
@@ -805,7 +822,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#星光不问赶路人，时光不负有心人。你尽管踏实下来，一步一步往前走，"><span class="nav-number">1.</span> <span class="nav-text">星光不问赶路人，时光不负有心人。你尽管踏实下来，一步一步往前走，</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#何时抵达只是时间问题。"><span class="nav-number">2.</span> <span class="nav-text">何时抵达只是时间问题。</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一-写博客的经历"><span class="nav-number">1.</span> <span class="nav-text">一.写博客的经历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二-为什么要写博客？"><span class="nav-number">2.</span> <span class="nav-text">二.为什么要写博客？</span></a></li></ol></div>
             
 
           </div>
@@ -825,9 +842,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <!-- 新增访客统计代码 -->
-
-<div class="busuanzi-count">
+        <div class="busuanzi-count">
     <script async="" src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <span class="site-uv">
       <i class="fa fa-user"></i>
@@ -844,7 +859,6 @@
       博客全站共： <span class="post-count">536</span> 字
     </span>
 </div>
-<!-- 新增访客统计代码 END-->
 
 
 <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
@@ -854,21 +868,7 @@
   <span class="author" itemprop="copyrightHolder">XYH</span>
 
   
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    
-    <span title="站点总字数"></span>
-  
 
-  
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-coffee"></i>
-    </span>
-    
-    <span title="站点阅读时长"></span>
   
 </div>
 
@@ -907,6 +907,14 @@ setInterval("createtime()",250);
 </script>
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
 
 
 
@@ -956,6 +964,8 @@ setInterval("createtime()",250);
 
 
 
+  
+
 
 
 
@@ -981,6 +991,11 @@ setInterval("createtime()",250);
   
   
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
