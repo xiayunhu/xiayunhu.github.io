@@ -118,7 +118,7 @@
     root: '/',
     scheme: 'Gemini',
     version: '6.4.2',
-    sidebar: {"position":"left","display":"always","offset":15,"b2t":false,"scrollpercent":true,"onmobile":false,"gitalk":null,"enable":true,"ClientID":"757edc2ab1dfbc5e9113","ClientSecret":"a640a35e387a6dce9ab20498b5fc312a6ec332d2","repo":"xiayunhu.github.io","adminUser":"xyh","githubID":"xiayunhu","distractionFreeMode":true},
+    sidebar: {"position":"left","display":"always","offset":15,"b2t":false,"scrollpercent":true,"onmobile":false},
     fancybox: false,
     fastclick: false,
     lazyload: false,
@@ -486,6 +486,16 @@
 
           
             
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/小故事/first/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/小故事/first/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
           
 
           
@@ -660,10 +670,6 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/电影评论/ceshi/" rel="next" title="杀死一只知更鸟观后感">
-                <i class="fa fa-chevron-left"></i> 杀死一只知更鸟观后感
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
@@ -694,6 +700,10 @@
           </div>
           
 
+  
+    <div class="comments" id="comments">
+    </div>
+	
   
 
 
@@ -746,7 +756,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -761,9 +771,7 @@
                     
                       
                     
-                      
-                    
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">1</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1086,6 +1094,31 @@ setInterval("createtime()",250);
 
 
 
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  
+  
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(function (item) {
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: '3sVAWAt8YxJwNll1iVMmtdyQ-gzGzoHsz',
+        appKey: 'fLgOLtSuTjfftEqDST5otnjk',
+        placeholder: '欢迎评论',
+        avatar:'mm',
+        meta:guest,
+        pageSize:'10' || 10,
+        visitor: false
+    });
+  </script>
 
 
 
