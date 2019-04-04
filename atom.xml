@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xiayunhu.github.io/"/>
-  <updated>2019-03-27T06:19:55.124Z</updated>
+  <updated>2019-04-02T01:21:49.240Z</updated>
   <id>http://xiayunhu.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PHP基础第一章</title>
+    <link href="http://xiayunhu.github.io/PHP/PHP%E5%9F%BA%E7%A1%80/"/>
+    <id>http://xiayunhu.github.io/PHP/PHP基础/</id>
+    <published>2019-04-01T16:00:00.000Z</published>
+    <updated>2019-04-02T01:21:49.240Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>刚刚毕业实习的我在公司呆了段时间，由于各种原因，考虑再三，最终我还是决定学习PHP作为我后台的入门语言。<br>为什么要选择PHP，因为PHP入门比较容易，可在不同的平台上运行（Windows、Linux、Unix、Mac OS X 等），<br>与目前几乎所有的正在被使用的服务器相兼容（Apache、IIS 等）。<br>从这章开始，将记录下我所学PHP全部的历程，切记一定要坚持！不要听别人说Java也好，学了一半就去学Java了。贵在坚持。<br>加油！一起努力。</p><h4 id="第一个程序"><a href="#第一个程序" class="headerlink" title="第一个程序"></a>第一个程序</h4><p>具体在哪运行的自己可以去菜鸟教程或者百度上找。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt; </span><br><span class="line">&lt;html&gt; </span><br><span class="line">&lt;body&gt; </span><br><span class="line"></span><br><span class="line">&lt;?php </span><br><span class="line">echo &quot;Hello World!&quot;; </span><br><span class="line">?&gt; </span><br><span class="line"></span><br><span class="line">&lt;/body&gt; </span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;刚刚毕业实习的我在公司呆了段时间，由于各种原因，考虑再三，最终我还是决定学习PHP作为我后台的入门语言。&lt;br&gt;为什么要选择PHP，因为PH
+      
+    
+    </summary>
+    
+      <category term="PHP" scheme="http://xiayunhu.github.io/categories/PHP/"/>
+    
+    
+      <category term="PHP" scheme="http://xiayunhu.github.io/tags/PHP/"/>
+    
+  </entry>
   
   <entry>
     <title>Layui的左侧三级导航栏</title>
@@ -110,31 +135,13 @@
   </entry>
   
   <entry>
-    <title>PHP魔术方法基础</title>
-    <link href="http://xiayunhu.github.io/PHP/PHP%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95%E5%9F%BA%E7%A1%80/"/>
-    <id>http://xiayunhu.github.io/PHP/PHP魔术方法基础/</id>
-    <published>2018-11-06T16:00:00.000Z</published>
-    <updated>2018-11-08T01:59:25.835Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://xiayunhu.github.io/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://xiayunhu.github.io/tags/PHP/"/>
-    
-  </entry>
-  
-  <entry>
     <title>小小语录</title>
     <link href="http://xiayunhu.github.io/%E5%B0%8F%E6%95%85%E4%BA%8B/shi/"/>
     <id>http://xiayunhu.github.io/小故事/shi/</id>
     <published>2018-09-15T14:22:07.000Z</published>
-    <updated>2018-11-23T01:40:49.817Z</updated>
+    <updated>2019-04-04T05:52:56.777Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="1-星光不问赶路人，时光不负有心人。你尽管踏实下来，一步一步往前走，何时抵达只是时间问题。"><a href="#1-星光不问赶路人，时光不负有心人。你尽管踏实下来，一步一步往前走，何时抵达只是时间问题。" class="headerlink" title="1. 星光不问赶路人，时光不负有心人。你尽管踏实下来，一步一步往前走，何时抵达只是时间问题。"></a>1. 星光不问赶路人，时光不负有心人。你尽管踏实下来，一步一步往前走，何时抵达只是时间问题。</h3><hr><h3 id="2-如果有来生，要做一棵树，站成永恒，没有悲欢的姿势。一半在土里安详，一半在风里飞扬，一半洒落阴凉，一半沐浴阳光，非常沉默非常骄傲，从不依靠从不寻找。-三毛"><a href="#2-如果有来生，要做一棵树，站成永恒，没有悲欢的姿势。一半在土里安详，一半在风里飞扬，一半洒落阴凉，一半沐浴阳光，非常沉默非常骄傲，从不依靠从不寻找。-三毛" class="headerlink" title="2. 如果有来生，要做一棵树，站成永恒，没有悲欢的姿势。一半在土里安详，一半在风里飞扬，一半洒落阴凉，一半沐浴阳光，非常沉默非常骄傲，从不依靠从不寻找。- - - - - -三毛"></a>2. 如果有来生，要做一棵树，站成永恒，没有悲欢的姿势。一半在土里安详，一半在风里飞扬，一半洒落阴凉，一半沐浴阳光，非常沉默非常骄傲，从不依靠从不寻找。- - - - - -三毛</h3><hr>]]></content>
+    <content type="html"><![CDATA[<h3 id="1-星光不问赶路人，时光不负有心人。你尽管踏实下来，一步一步往前走，何时抵达只是时间问题。"><a href="#1-星光不问赶路人，时光不负有心人。你尽管踏实下来，一步一步往前走，何时抵达只是时间问题。" class="headerlink" title="1. 星光不问赶路人，时光不负有心人。你尽管踏实下来，一步一步往前走，何时抵达只是时间问题。"></a>1. 星光不问赶路人，时光不负有心人。你尽管踏实下来，一步一步往前走，何时抵达只是时间问题。</h3><hr><h3 id="2-如果有来生，要做一棵树，站成永恒，没有悲欢的姿势。一半在土里安详，一半在风里飞扬，一半洒落阴凉，一半沐浴阳光，非常沉默非常骄傲，从不依靠从不寻找。-三毛"><a href="#2-如果有来生，要做一棵树，站成永恒，没有悲欢的姿势。一半在土里安详，一半在风里飞扬，一半洒落阴凉，一半沐浴阳光，非常沉默非常骄傲，从不依靠从不寻找。-三毛" class="headerlink" title="2. 如果有来生，要做一棵树，站成永恒，没有悲欢的姿势。一半在土里安详，一半在风里飞扬，一半洒落阴凉，一半沐浴阳光，非常沉默非常骄傲，从不依靠从不寻找。- - - - - -三毛"></a>2. 如果有来生，要做一棵树，站成永恒，没有悲欢的姿势。一半在土里安详，一半在风里飞扬，一半洒落阴凉，一半沐浴阳光，非常沉默非常骄傲，从不依靠从不寻找。- - - - - -三毛</h3><hr><pre><code>每个人都要有一个梦想，万一实现了呢？而我呢，却有很多梦想，全面撒网，重点培养。</code></pre><p> 所谓的梦想，都是自己在某一天，某一个地点，发生了某些事情，灵光一闪，就想拥有他或是去实现他。</p><pre><code>那些萌生的梦想就是自己的目标，如果不实现，我就会觉得留下了人生的遗憾，每一件事我都在努力的去做，</code></pre><p> 但是仍然会有遗憾留下，那是自己真正的无能为力，只要有点希望，我又何尝不去争取呢！<br> 某一 天我想做一件事，却发现自己无能为力，那不仅仅是痛苦，留下的遗憾可能为一生都无法去弥补，<br> 所以我一直在尽可能的去努力，坚持不放弃每一件事，有时候走了偏路，没有人会提醒，甚至没有走回去的 机会，<br> 这样的遗憾会是多么的不甘心。</p><pre><code>给自己一个梦想，给自己一个目标，有个努力的方向，我不会放弃，我只能坚持到底。</code></pre><hr>]]></content>
     
     <summary type="html">
     
