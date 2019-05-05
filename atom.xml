@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xiayunhu.github.io/"/>
-  <updated>2019-04-23T07:12:09.987Z</updated>
+  <updated>2019-05-05T00:53:30.754Z</updated>
   <id>http://xiayunhu.github.io/</id>
   
   <author>
@@ -15,6 +15,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTML小例子</title>
+    <link href="http://xiayunhu.github.io/HTML/HTML%E5%B0%8F%E7%9F%A5%E8%AF%86/"/>
+    <id>http://xiayunhu.github.io/HTML/HTML小知识/</id>
+    <published>2019-04-28T16:00:00.000Z</published>
+    <updated>2019-05-05T00:53:30.754Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="文本域textarea标签"><a href="#文本域textarea标签" class="headerlink" title="文本域textarea标签"></a>文本域textarea标签</h3><p>最近做到两个文本域内容比较无法给局部文字改变颜色，只能对整个文本域进行改变样式。我找了下，textarea标签是不支持局部文字改变样式的，也不支持其内部嵌套其他的标签。既然不能用这个，我就用div自己仿一个文本域出来。<br>只要用到HTML5全局的contenteditable 属性就可实现。contenteditable 属性规定是否可编辑元素的内容，当设置html标签的<br>contenteditable=”true”时，就可以开启这个元素的编辑模式。达到textarea的效果。<br>具体代码如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">&lt;title&gt;文本域仿写&lt;/title&gt;</span><br><span class="line"></span><br><span class="line">&lt;style type=&quot;text/css&quot;&gt;</span><br><span class="line">div&#123;</span><br><span class="line">width: 500px;</span><br><span class="line">height: 300px;</span><br><span class="line">border: 1px solid black;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">span&#123;</span><br><span class="line">font-family: &quot;微软雅黑&quot;;</span><br><span class="line">font-size: 20px;</span><br><span class="line">padding: 10px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">   &lt;div contenteditable=&quot;true&quot;&gt;</span><br><span class="line">   </span><br><span class="line">     &lt;!-- 设为false则不能更改，但能删除整体文字 --&gt;</span><br><span class="line">    &lt;span contenteditable=&quot;false&quot;&gt;我的：&lt;/span&gt;</span><br><span class="line">    &lt;span style=&quot;color: red&quot;&gt;xyh&apos;s Blog www.xyhwh.cn&lt;/span&gt;</span><br><span class="line"></span><br><span class="line">   &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;文本域textarea标签&quot;&gt;&lt;a href=&quot;#文本域textarea标签&quot; class=&quot;headerlink&quot; title=&quot;文本域textarea标签&quot;&gt;&lt;/a&gt;文本域textarea标签&lt;/h3&gt;&lt;p&gt;最近做到两个文本域内容比较无法给局部文字改变颜色，只
+      
+    
+    </summary>
+    
+      <category term="HTML" scheme="http://xiayunhu.github.io/categories/HTML/"/>
+    
+    
+      <category term="HTML" scheme="http://xiayunhu.github.io/tags/HTML/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript常用小例子</title>
+    <link href="http://xiayunhu.github.io/JavaScript/JavaScript%E5%B8%B8%E7%94%A8%E5%B0%8F%E7%9F%A5%E8%AF%86/"/>
+    <id>http://xiayunhu.github.io/JavaScript/JavaScript常用小知识/</id>
+    <published>2019-04-28T16:00:00.000Z</published>
+    <updated>2019-05-05T00:54:39.629Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="字符串的获取"><a href="#字符串的获取" class="headerlink" title="字符串的获取"></a>字符串的获取</h3><p>有的字符串是从数据库里直接获取到的，有的是从文本框值获取等，</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;字符串的获取&quot;&gt;&lt;a href=&quot;#字符串的获取&quot; class=&quot;headerlink&quot; title=&quot;字符串的获取&quot;&gt;&lt;/a&gt;字符串的获取&lt;/h3&gt;&lt;p&gt;有的字符串是从数据库里直接获取到的，有的是从文本框值获取等，&lt;/p&gt;
+&lt;figure class=&quot;high
+      
+    
+    </summary>
+    
+      <category term="JavaScript" scheme="http://xiayunhu.github.io/categories/JavaScript/"/>
+    
+    
+      <category term="JavaScript" scheme="http://xiayunhu.github.io/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>IIS部署php项目</title>
