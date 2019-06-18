@@ -149,7 +149,7 @@
 <meta property="og:description" content="CSS引入字体我们在Web开发的时候，由于各种需求的不同，有时用的字体也不一样，当我们下载下来的字体，不能安装到自己的电脑上，因为其他人的电脑上不一定有这个字体，所以我们应把字体的文件放到项目文件中，用css来引入这个字体，这样不管电脑上有没有这个字体，都能正常显示。不过要做IE的兼容处理。 获取字体① webfont网站：https://www.webfont.com② dafont网站：htt">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://xiayunhu.github.io/CSS/CSS设置字体/1.png">
-<meta property="og:updated_time" content="2019-05-30T01:26:56.374Z">
+<meta property="og:updated_time" content="2019-06-04T02:39:41.649Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS设置字体、特殊字体">
 <meta name="twitter:description" content="CSS引入字体我们在Web开发的时候，由于各种需求的不同，有时用的字体也不一样，当我们下载下来的字体，不能安装到自己的电脑上，因为其他人的电脑上不一定有这个字体，所以我们应把字体的文件放到项目文件中，用css来引入这个字体，这样不管电脑上有没有这个字体，都能正常显示。不过要做IE的兼容处理。 获取字体① webfont网站：https://www.webfont.com② dafont网站：htt">
@@ -470,7 +470,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-30 09:26:56" itemprop="dateModified" datetime="2019-05-30T09:26:56+08:00">2019-05-30</time>
+                <time title="修改时间：2019-06-04 10:39:41" itemprop="dateModified" datetime="2019-06-04T10:39:41+08:00">2019-06-04</time>
               
             
           </span>
@@ -572,7 +572,7 @@
       
         <h3 id="CSS引入字体"><a href="#CSS引入字体" class="headerlink" title="CSS引入字体"></a>CSS引入字体</h3><p>我们在Web开发的时候，由于各种需求的不同，有时用的字体也不一样，当我们下载下来的字体，不能安装到自己的电脑上，因为其他人的<br>电脑上不一定有这个字体，所以我们应把字体的文件放到项目文件中，用css来引入这个字体，这样不管电脑上有没有这个字体，都能正常<br>显示。不过要做IE的兼容处理。</p>
 <h4 id="获取字体"><a href="#获取字体" class="headerlink" title="获取字体"></a>获取字体</h4><p>① webfont网站：<a href="https://www.webfont.com/" target="_blank" rel="noopener">https://www.webfont.com</a><br>② dafont网站：<a href="https://www.dafont.com/" target="_blank" rel="noopener">https://www.dafont.com</a><br>我就先介绍这两个吧，根据你的需要，也可在百度搜索。<br>下载的字体文件一般都是后缀为.ttf格式的，然后我们要兼容IE就需要把这个字体再转换成后缀为.woff和.eot的文件，<br>同时引入这三个文件就可以了。<br>转换工具：fontsquirre网站：<a href="https://www.fontsquirrel.com/tools/webfont-generator" target="_blank" rel="noopener">https://www.fontsquirrel.com</a> 如下图所示：<br><img src="/CSS/CSS设置字体/1.png" alt="“CSS设置字体”"><br>或者<a href="http://www.freefontconverter.com/" target="_blank" rel="noopener">fontconverter</a> 网站</p>
-<h4 id="css设置字体语法"><a href="#css设置字体语法" class="headerlink" title="css设置字体语法"></a>css设置字体语法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">      &lt;style&gt;</span><br><span class="line">	@font-face &#123;</span><br><span class="line">	font-family: &apos;LCD&apos;;</span><br><span class="line">	src: url(&apos;font/LCD.TTF&apos;);		 </span><br><span class="line">	src: url(&apos;font/lcd-webfont.eot&apos;);  /* IE9 Compat Modes */</span><br><span class="line">	src: url(&apos;font/lcd-webfont.eot?#iefix&apos;) format(&apos;embedded-opentype&apos;); /* 兼容IE6-IE8 */ </span><br><span class="line">	url(&apos;font/lcd-webfont.woff&apos;) format(&apos;woff&apos;);/* Modern Browsers */</span><br><span class="line">	url(&apos;font/LCD.TTF&apos;) format(&apos;truetype&apos;);    /* Safari, Android, iOS */</span><br><span class="line">&#125;  </span><br><span class="line">  &lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="css设置字体语法"><a href="#css设置字体语法" class="headerlink" title="css设置字体语法"></a>css设置字体语法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">      &lt;style&gt;</span><br><span class="line">	@font-face &#123;</span><br><span class="line">	font-family: &apos;LCD&apos;;</span><br><span class="line">	src: url(&apos;font/LCD.TTF&apos;);		 </span><br><span class="line">	src: url(&apos;font/lcd-webfont.eot&apos;);  /* IE9 Compat Modes */</span><br><span class="line">	src: url(&apos;font/lcd-webfont.eot?#iefix&apos;) format(&apos;embedded-opentype&apos;); /* 兼容IE6-IE8 */ </span><br><span class="line">	url(&apos;font/lcd-webfont.woff&apos;) format(&apos;woff&apos;);/* Modern Browsers */</span><br><span class="line">	url(&apos;font/LCD.TTF&apos;) format(&apos;truetype&apos;);    /* Safari, Android, iOS */</span><br><span class="line">&#125;  </span><br><span class="line"> &lt;/style&gt;</span><br></pre></td></tr></table></figure>
 <p>以上代码把兼容问题也解决了，一个独特的@font-face语法。</p>
 <h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><ol>
 <li>@font-face遵循先定义后使用原则。</li>
@@ -673,6 +673,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/Vue/Vue.js笔记/" rel="prev" title="Vue.js笔记">
+                Vue.js笔记 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -749,7 +753,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">15</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -780,7 +784,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">9</span>
+                      
+                    
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -813,7 +819,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">10</span>
+                      
+                    
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -934,7 +942,7 @@
     <!-- 博客字数统计 -->
     <span class="site-pv">
       <i class="fa fa-pencil"></i>
-      博客全站共： <span class="post-count">13.9k</span> 字
+      博客全站共： <span class="post-count">14.7k</span> 字
     </span>
 </div>
 
