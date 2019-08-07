@@ -148,7 +148,7 @@
 <meta property="og:site_name" content="xyh&#39;s Blog">
 <meta property="og:description" content="JavaScript是区分大小写的语言，关键字、变量、函数名以及所有的标识符都必须采用一致的字符大小写形式。 字符串应用1、获取字符串的长度123456//定义一个字符串var s = &amp;quot;afcsdmf&amp;quot;; //获取字符串的长度var len = s.length;//打印长度console.log(len);  2、获取字符串的最后一个字符 1234 //获取字符串最后一个字">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-24T02:59:06.992Z">
+<meta property="og:updated_time" content="2019-07-18T08:57:51.165Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从0到1学JavaScript">
 <meta name="twitter:description" content="JavaScript是区分大小写的语言，关键字、变量、函数名以及所有的标识符都必须采用一致的字符大小写形式。 字符串应用1、获取字符串的长度123456//定义一个字符串var s = &amp;quot;afcsdmf&amp;quot;; //获取字符串的长度var len = s.length;//打印长度console.log(len);  2、获取字符串的最后一个字符 1234 //获取字符串最后一个字">
@@ -468,7 +468,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-06-24 10:59:06" itemprop="dateModified" datetime="2019-06-24T10:59:06+08:00">2019-06-24</time>
+                <time title="修改时间：2019-07-18 16:57:51" itemprop="dateModified" datetime="2019-07-18T16:57:51+08:00">2019-07-18</time>
               
             
           </span>
@@ -539,7 +539,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">字数统计:</span>
-           <span class="post-count">554字</span>
+           <span class="post-count">664字</span>
          </span>
 
          <span class="post-time">
@@ -580,6 +580,7 @@
 <h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><p>1、创建数字并赋值</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//创建数组并赋值</span><br><span class="line"> var a = new Array();</span><br><span class="line"> a[0] = 10;</span><br><span class="line"> a[1] = 21;</span><br><span class="line"> a[2] = 33;</span><br><span class="line"> a[3] = &quot;adacs&quot;;</span><br></pre></td></tr></table></figure>
 <h3 id="获取div高度"><a href="#获取div高度" class="headerlink" title="获取div高度"></a>获取div高度</h3><p>1、获取div的高度<br>可根据浏览器页面的高度，算出div的高度<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">      &lt;div id=&quot;outscroll&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script src=&quot;js/jquery/jQuery-2.2.0.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">          $(document).ready(function()&#123;</span><br><span class="line">            var o = document.getElementById(&quot;outscroll&quot;);</span><br><span class="line">           </span><br><span class="line">                var h = o.offsetHeight; //高度                   </span><br><span class="line">                var w = o.offsetWidth; //宽度</span><br><span class="line">                alert(h);</span><br><span class="line">                alert(w);</span><br><span class="line">             </span><br><span class="line">          &#125;); </span><br><span class="line">          &lt;/script&gt;</span><br></pre></td></tr></table></figure><br>这是几个其他获取高度的值。<br>alert($(window).height()); //浏览器当前窗口可视区域高度<br>alert($(document).height()); //浏览器当前窗口文档的高度<br>alert($(document.body).height());//浏览器当前窗口文档body的高度<br>alert($(document.body).outerHeight(true));//浏览器当前窗口文档body的总高度 包括border padding margin<br>alert($(window).width()); //浏览器当前窗口可视区域宽度<br>alert($(document).width());//浏览器当前窗口文档对象宽度<br>alert($(document.body).width());//浏览器当前窗口文档body的高度<br>alert($(document.body).outerWidth(true));//浏览器当前窗口文档body的总宽度 包括border padding margin<br>或者，这样也可以获取<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">		  </span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">         window.onload = function()&#123;</span><br><span class="line">         var deviceHeight = document.documentElement.clientHeight;</span><br><span class="line">         console.log(deviceHeight); 	</span><br><span class="line">        &#125; </span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<h3 id="键盘按回车键登录"><a href="#键盘按回车键登录" class="headerlink" title="键盘按回车键登录"></a>键盘按回车键登录</h3><p>当我们做登录页面时，习惯性的喜欢输入完账号和密码，再按下回车键登录，这里我用js控制了一下enter键来实现的。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;body onkeydown=&quot;on_return()&quot;&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">	&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">	//回车时，默认是登陆</span><br><span class="line">	 function on_return()&#123;</span><br><span class="line">	 if(window.event.keyCode == 13)&#123;</span><br><span class="line">	  if (document.all(&apos;btnLogin&apos;)!=null)&#123;</span><br><span class="line">	   document.all(&apos;btnLogin&apos;).click();</span><br><span class="line">	   &#125;</span><br><span class="line">	 &#125;</span><br><span class="line">	 &#125;</span><br><span class="line"></span><br><span class="line">	&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -911,7 +912,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串应用"><span class="nav-number">1.</span> <span class="nav-text">字符串应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象"><span class="nav-number">2.</span> <span class="nav-text">对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组"><span class="nav-number">3.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取div高度"><span class="nav-number">4.</span> <span class="nav-text">获取div高度</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串应用"><span class="nav-number">1.</span> <span class="nav-text">字符串应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对象"><span class="nav-number">2.</span> <span class="nav-text">对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组"><span class="nav-number">3.</span> <span class="nav-text">数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取div高度"><span class="nav-number">4.</span> <span class="nav-text">获取div高度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#键盘按回车键登录"><span class="nav-number">5.</span> <span class="nav-text">键盘按回车键登录</span></a></li></ol></div>
             
 
           </div>
@@ -947,7 +948,7 @@
     <!-- 博客字数统计 -->
     <span class="site-pv">
       <i class="fa fa-pencil"></i>
-      博客全站共： <span class="post-count">16.3k</span> 字
+      博客全站共： <span class="post-count">16.4k</span> 字
     </span>
 </div>
 
@@ -1537,5 +1538,5 @@ setInterval("createtime()",250);
 <script type="text/javascript" src="/js/src/clipboard.min.js"></script>  
 <script type="text/javascript" src="/js/src/clipboard-use.js"></script>
   
-<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"live2d-widget-model-shizuku"},"display":{"superSample":2,"width":150,"height":300,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.2},"log":false,"tagMode":false});</script></body>
+</body>
 </html>
