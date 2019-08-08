@@ -140,36 +140,18 @@
 
 
 
-  <meta name="description" content="前言因为平时测试项目的需要，我就在自己的电脑（win10系统）上开启了IIS服务器（IIS全称为Internet Information Services，中文名字为互联网信息服务），然后自己写的PHP代码或者网页放上去，用本地的ip加端口号浏览，在一个局域内都可以访问到，很方便。接下来，我就详细的介绍下IIS服务器在自己电脑上的配置和创建PHP项目的发布。 配置IIS服务器首先右键点击开始菜单，">
-<meta name="keywords" content="PHP">
+  <meta name="description" content="初识Vue.jsVue是一套构建用户界面的渐进式框架。Vue 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。Vue.js 的 API 是参考了AngularJS、KnockoutJS、Ractive.js、Rivets.js。Vue.js 的 API 的对于其他框架的参考也只是参考，其中也包含了许多 Vue.js 的独特功能。 Vue.js文件的引入1、先来最简单的引入方法">
+<meta name="keywords" content="Vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="IIS部署php项目">
-<meta property="og:url" content="http://xiayunhu.github.io/PHP/IIS部署php项目/index.html">
+<meta property="og:title" content="Vue.js笔记">
+<meta property="og:url" content="http://xiayunhu.github.io/Vue/Vue第一天/index.html">
 <meta property="og:site_name" content="xyh&#39;s Blog">
-<meta property="og:description" content="前言因为平时测试项目的需要，我就在自己的电脑（win10系统）上开启了IIS服务器（IIS全称为Internet Information Services，中文名字为互联网信息服务），然后自己写的PHP代码或者网页放上去，用本地的ip加端口号浏览，在一个局域内都可以访问到，很方便。接下来，我就详细的介绍下IIS服务器在自己电脑上的配置和创建PHP项目的发布。 配置IIS服务器首先右键点击开始菜单，">
+<meta property="og:description" content="初识Vue.jsVue是一套构建用户界面的渐进式框架。Vue 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。Vue.js 的 API 是参考了AngularJS、KnockoutJS、Ractive.js、Rivets.js。Vue.js 的 API 的对于其他框架的参考也只是参考，其中也包含了许多 Vue.js 的独特功能。 Vue.js文件的引入1、先来最简单的引入方法">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://xiayunhu.github.io/PHP/IIS部署php项目/1.png">
-<meta property="og:image" content="http://xiayunhu.github.io/PHP/IIS部署php项目/2.png">
-<meta property="og:image" content="http://xiayunhu.github.io/PHP/IIS部署php项目/3.png">
-<meta property="og:image" content="http://xiayunhu.github.io/PHP/IIS部署php项目/4.png">
-<meta property="og:image" content="http://xiayunhu.github.io/PHP/IIS部署php项目/5.png">
-<meta property="og:image" content="http://xiayunhu.github.io/PHP/IIS部署php项目/6.png">
-<meta property="og:image" content="http://xiayunhu.github.io/PHP/IIS部署php项目/7.png">
-<meta property="og:image" content="http://xiayunhu.github.io/PHP/IIS部署php项目/8.png">
-<meta property="og:image" content="http://xiayunhu.github.io/PHP/IIS部署php项目/9.png">
-<meta property="og:image" content="http://xiayunhu.github.io/PHP/IIS部署php项目/10.png">
-<meta property="og:image" content="http://xiayunhu.github.io/PHP/IIS部署php项目/11.png">
-<meta property="og:image" content="http://xiayunhu.github.io/PHP/IIS部署php项目/12.png">
-<meta property="og:image" content="http://xiayunhu.github.io/PHP/IIS部署php项目/13.png">
-<meta property="og:image" content="http://xiayunhu.github.io/PHP/IIS部署php项目/14.png">
-<meta property="og:image" content="http://xiayunhu.github.io/PHP/IIS部署php项目/15.png">
-<meta property="og:image" content="http://xiayunhu.github.io/PHP/IIS部署php项目/16.png">
-<meta property="og:image" content="http://xiayunhu.github.io/PHP/IIS部署php项目/17.png">
-<meta property="og:updated_time" content="2019-08-08T02:23:49.920Z">
+<meta property="og:updated_time" content="2019-06-18T08:31:07.993Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="IIS部署php项目">
-<meta name="twitter:description" content="前言因为平时测试项目的需要，我就在自己的电脑（win10系统）上开启了IIS服务器（IIS全称为Internet Information Services，中文名字为互联网信息服务），然后自己写的PHP代码或者网页放上去，用本地的ip加端口号浏览，在一个局域内都可以访问到，很方便。接下来，我就详细的介绍下IIS服务器在自己电脑上的配置和创建PHP项目的发布。 配置IIS服务器首先右键点击开始菜单，">
-<meta name="twitter:image" content="http://xiayunhu.github.io/PHP/IIS部署php项目/1.png">
+<meta name="twitter:title" content="Vue.js笔记">
+<meta name="twitter:description" content="初识Vue.jsVue是一套构建用户界面的渐进式框架。Vue 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。Vue.js 的 API 是参考了AngularJS、KnockoutJS、Ractive.js、Rivets.js。Vue.js 的 API 的对于其他框架的参考也只是参考，其中也包含了许多 Vue.js 的独特功能。 Vue.js文件的引入1、先来最简单的引入方法">
 
 
 
@@ -178,7 +160,7 @@
 
 
 
-  <link rel="canonical" href="http://xiayunhu.github.io/PHP/IIS部署php项目/"/>
+  <link rel="canonical" href="http://xiayunhu.github.io/Vue/Vue第一天/"/>
 
 
 
@@ -188,7 +170,7 @@
   };
 </script>
 
-  <title>IIS部署php项目 | xyh's Blog</title>
+  <title>Vue.js笔记 | xyh's Blog</title>
   
 
 
@@ -419,7 +401,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xiayunhu.github.io/PHP/IIS部署php项目/">
+    <link itemprop="mainEntityOfPage" href="http://xiayunhu.github.io/Vue/Vue第一天/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XYH">
@@ -437,7 +419,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">IIS部署php项目
+          <h1 class="post-title" itemprop="name headline">Vue.js笔记
               
             
           </h1>
@@ -466,7 +448,7 @@
                 
               
 
-              <time title="创建时间：2019-04-20 00:00:00" itemprop="dateCreated datePublished" datetime="2019-04-20T00:00:00+08:00">2019-04-20</time>
+              <time title="创建时间：2019-06-04 00:00:00" itemprop="dateCreated datePublished" datetime="2019-06-04T00:00:00+08:00">2019-06-04</time>
             
 
 		
@@ -486,7 +468,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-08 10:23:49" itemprop="dateModified" datetime="2019-08-08T10:23:49+08:00">2019-08-08</time>
+                <time title="修改时间：2019-06-18 16:31:07" itemprop="dateModified" datetime="2019-06-18T16:31:07+08:00">2019-06-18</time>
               
             
           </span>
@@ -503,7 +485,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PHP/" itemprop="url" rel="index"><span itemprop="name">PHP</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
 
                 
                 
@@ -519,8 +501,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/PHP/IIS部署php项目/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/PHP/IIS部署php项目/" itemprop="commentCount"></span>
+                <a href="/Vue/Vue第一天/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Vue/Vue第一天/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -557,7 +539,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">字数统计:</span>
-           <span class="post-count">1k字</span>
+           <span class="post-count">520字</span>
          </span>
 
          <span class="post-time">
@@ -566,7 +548,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">阅读时长:</span>
-           <span class="post-count">3分钟</span>
+           <span class="post-count">2分钟</span>
          </span>
 	
     
@@ -586,40 +568,26 @@
       
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>因为平时测试项目的需要，我就在自己的电脑（win10系统）上开启了IIS服务器（IIS全称为Internet Information Services，中文名字为互联<br>网信息服务），然后自己写的PHP代码或者网页放上去，用本地的ip加端口号浏览，在一个局域内都可以访问到，很方便。接下来，我就详细<br>的介绍下IIS服务器在自己电脑上的配置和创建PHP项目的发布。</p>
-<h3 id="配置IIS服务器"><a href="#配置IIS服务器" class="headerlink" title="配置IIS服务器"></a>配置IIS服务器</h3><p>首先右键点击开始菜单，选择控制面板或者win+R左下角会弹出一个框，在输入框里打control即可。如下图所示：</p>
-<p><img src="1.png" alt="“IIS部署php项目”"></p>
-<p>打开控制面板后，找到<b>程序</b>选项（点击程序或者卸载程序都可以），如下图所示：</p>
-<p><img src="2.png" alt="“IIS部署php项目”"></p>
-<p>点进去，然后再找到<b>启用或关闭Windows功能</b>，如果你点的是卸载程序，那就在左边一栏可以找到。</p>
-<p><img src="3.png" alt="“IIS部署php项目”"></p>
-<p>找到之后，点击一下，会弹出一个框，如下图所示：</p>
-<p><img src="4.png" alt="“IIS部署php项目”"></p>
-<p>当你找到那个目录的时候，可根据自己的需求选择功能模块，但对于我们刚刚接触的小白，最好全选上，（注意：每个目录下面都分了好多级，要一个一个点开选中）为了防止因为忘记某个功能而报错。</p>
-<p><img src="5.png" alt="“IIS部署php项目”"></p>
-<p>全都选中之后，点击确定，然后等待自行安装就好。</p>
-<p><img src="6.png" alt="“IIS部署php项目”"></p>
-<p>等结束后，此时IIS已经安装完成了，有可能会提示你重启电脑，最好重新启动一下。接下来我们验证一下是否成功。<br>返回桌面，找到我的电脑右击，选择管理</p>
-<p><img src="7.png" alt="“IIS部署php项目”"></p>
-<p>点进去之后，然后找到服务和应用程序下面的Internet Information Services（IIS）管理器</p>
-<p><img src="8.png" alt="“IIS部署php项目”"></p>
-<p>打开，在右侧就会出来IIS控制器了，可以看到Default Web Site这是IIS自带的一个网站，在浏览器中输入 <a href="http://localhost/" target="_blank" rel="noopener">http://localhost/</a>, 就可以看到第一个网页了。</p>
-<p><img src="9.png" alt="“IIS部署php项目”"><br><img src="10.png" alt="“IIS部署php项目”"></p>
-<p>此时到这，你的电脑上已经安装好IIS服务器了。接下来，我们要部署PHP项目了。</p>
-<h3 id="PHP项目部署"><a href="#PHP项目部署" class="headerlink" title="PHP项目部署"></a>PHP项目部署</h3><p>首先，在你电脑本地有PHP的运行环境，我装的是phpstudy，就直接配置好了环境，只要把项目放到phpstudy安装目录下的WWW文件下面就可以了。<br>在确保能运行php项目的前提下，我们打开刚刚安装好的IIS，然后创建一个新的网站。</p>
-<p><img src="11.png" alt="“IIS部署php项目”"></p>
-<p>单击添加网站</p>
-<p><img src="12.png" alt="“IIS部署php项目”"></p>
-<p>这样网站就创建好了，还有需要注意的就是，你修改了网站就要重新启动下网站，如下图所示：</p>
-<p><img src="13.png" alt="“IIS部署php项目”"></p>
-<h4 id="添加默认文档"><a href="#添加默认文档" class="headerlink" title="添加默认文档"></a>添加默认文档</h4><p>给网站添加默认的文档，也就是说，当用户浏览你网站的时候，第一个展现的页面文件名称。单击下创建的网站，就会出来网站主页，<br>然后在里面找到<b>默认文档</b>，点进去，然后在里面添加一个你项目的首页文件名称，PHP项目一般都是index.php。如果默认的里面有<br>你项目的文件名称，就不用添加了。这里我们是创建的PHP项目，默认的没有，要自己添加的。如图所示：</p>
-<p><img src="14.png" alt="“IIS部署php项目”"><br><img src="15.png" alt="“IIS部署php项目”"></p>
-<h4 id="处理程序映射"><a href="#处理程序映射" class="headerlink" title="处理程序映射"></a>处理程序映射</h4><p>还是在找默认文档的那个页面上，找到处理程序映射选项。</p>
-<p><img src="16.png" alt="“IIS部署php项目”"></p>
-<p>进去之后，选择<b>添加模块映射</b><br>注意：这个必须在启动IIS的时候，必须勾选”CGI”，不然选择的时候找不到 FastCgiModule</p>
-<p><img src="17.png" alt="“IIS部署php项目”"></p>
-<p>到此为止，PHP项目已经在IIS上部署好了，你可以浏览你的项目了，在一个局域网里，别人都可以看到你的网站了。<br>访问地址为你自己电脑的ip+项目的端口号。例如：10.0.0.123:8000。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这是在自己电脑上部署，如果让外网的人，不同区域的人看到，就需要买个服务器，在服务器上部署我们的项目。<br>我将会在以后的文章中讲到。让我们共同努力。以上有什么错误或者描述不清楚的欢迎留言或加我qq交流。</p>
+        <h3 id="初识Vue-js"><a href="#初识Vue-js" class="headerlink" title="初识Vue.js"></a>初识Vue.js</h3><p>Vue是一套构建用户界面的渐进式框架。Vue 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。<br>Vue.js 的 API 是参考了AngularJS、KnockoutJS、Ractive.js、Rivets.js。<br>Vue.js 的 API 的对于其他框架的参考也只是参考，其中也包含了许多 Vue.js 的独特功能。</p>
+<h3 id="Vue-js文件的引入"><a href="#Vue-js文件的引入" class="headerlink" title="Vue.js文件的引入"></a>Vue.js文件的引入</h3><p>1、先来最简单的引入方法，直接在html文件里直接引入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://cdn.staticfile.org/vue/2.2.2/vue.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p>
+<p>这样就成功的引进了Vue.js,不需要在引入其他文件，就这一个。</p>
+<p>2、使用CDN方法：</p>
+<ul>
+<li>Staticfile CDN（国内）：<a href="https://cdn.staticfile.org/vue/2.2.2/vue.min.js" target="_blank" rel="noopener">https://cdn.staticfile.org/vue/2.2.2/vue.min.js</a></li>
+<li>unpkg：<a href="https://unpkg.com/vue/dist/vue.js" target="_blank" rel="noopener">https://unpkg.com/vue/dist/vue.js</a>, 会保持和 npm 发布的最新的版本一致。</li>
+<li>cdnjs：<a href="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js" target="_blank" rel="noopener">https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js</a></li>
+</ul>
+<h3 id="第一个程序"><a href="#第一个程序" class="headerlink" title="第一个程序"></a>第一个程序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line"> &lt;!--创建一个div--&gt;   </span><br><span class="line"> &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">  &lt;p&gt;&lt;/p&gt;</span><br><span class="line"> &lt;/div&gt;</span><br><span class="line">    &lt;!--vue语句--&gt;   </span><br><span class="line">&lt;script&gt;</span><br><span class="line">new Vue(&#123;</span><br><span class="line">  el: &apos;#app&apos;,</span><br><span class="line">  data: &#123;</span><br><span class="line">	message: &apos;Hello Vue.js!&apos;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>每个 Vue 应用都需要通过实例化 Vue 来实现。</p>
+<h3 id="实例分析"><a href="#实例分析" class="headerlink" title="实例分析"></a>实例分析</h3><p>我们在上述的程序中可以看到Vue构造器中有一个el参数，它是DOM元素中的id。简单的说就是你创建的div元素的id。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">    &lt;!--也可以用class--&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;&lt;/div&gt; </span><br><span class="line">&lt;script&gt;</span><br><span class="line">    new Vue(&#123;</span><br><span class="line">	el: &apos;#app&apos;,	 &lt;!--上边用class这个地方就要改为 &apos;.app&apos; --&gt;</span><br><span class="line">	data: &#123;</span><br><span class="line">           site: &quot;我的博客&quot;,</span><br><span class="line">           url: &quot;www.xyhwh.cn&quot;,</span><br><span class="line">           alexa: &quot;100&quot;</span><br><span class="line">       &#125;,</span><br><span class="line">	 methods: &#123;</span><br><span class="line">           details: function() &#123;</span><br><span class="line">               return  this.site;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line"> &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>我们可以改动在这个div下的内容，而div以外的不受影响。</p>
+<ul>
+<li>el是选定div的范围。</li>
+<li>data 用于定义属性，实例中有三个属性分别为：site、url、alexa。</li>
+<li>methods 用于定义的函数，可以通过 return 来返回函数值。</li>
+<li>双重大括号用于输出对象属性和函数返回值。</li>
+</ul>
 
       
     </div>
@@ -691,7 +659,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/PHP/" rel="tag"><i class="fa fa-tag"></i> PHP</a>
+            <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
           
         </div>
       
@@ -704,8 +672,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/PHP/PHP支付宝在线即时到账/" rel="next" title="PHP支付宝在线即时到账">
-                <i class="fa fa-chevron-left"></i> PHP支付宝在线即时到账
+              <a href="/Vue/Vue.js笔记/" rel="next" title="Vue.js笔记">
+                <i class="fa fa-chevron-left"></i> Vue.js笔记
               </a>
             
           </div>
@@ -714,8 +682,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/HTML/HTML小知识/" rel="prev" title="HTML小例子">
-                HTML小例子 <i class="fa fa-chevron-right"></i>
+              <a href="/MySQL/MySQL笔记/" rel="prev" title="MySQL笔记">
+                MySQL笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -794,7 +762,7 @@
                 
                   <a href="/archives">
                 
-                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -951,7 +919,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置IIS服务器"><span class="nav-number">2.</span> <span class="nav-text">配置IIS服务器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PHP项目部署"><span class="nav-number">3.</span> <span class="nav-text">PHP项目部署</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#添加默认文档"><span class="nav-number">3.1.</span> <span class="nav-text">添加默认文档</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#处理程序映射"><span class="nav-number">3.2.</span> <span class="nav-text">处理程序映射</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#初识Vue-js"><span class="nav-number">1.</span> <span class="nav-text">初识Vue.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-js文件的引入"><span class="nav-number">2.</span> <span class="nav-text">Vue.js文件的引入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#第一个程序"><span class="nav-number">3.</span> <span class="nav-text">第一个程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实例分析"><span class="nav-number">4.</span> <span class="nav-text">实例分析</span></a></li></ol></div>
             
 
           </div>
@@ -987,7 +955,7 @@
     <!-- 博客字数统计 -->
     <span class="site-pv">
       <i class="fa fa-pencil"></i>
-      博客全站共： <span class="post-count">16.4k</span> 字
+      博客全站共： <span class="post-count">15.9k</span> 字
     </span>
 </div>
 
