@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xiayunhu.github.io/"/>
-  <updated>2019-08-08T09:24:52.446Z</updated>
+  <updated>2019-08-10T08:31:30.794Z</updated>
   <id>http://xiayunhu.github.io/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue第2天</title>
+    <link href="http://xiayunhu.github.io/Vue/Vue%E7%AC%AC2%E5%A4%A9/"/>
+    <id>http://xiayunhu.github.io/Vue/Vue第2天/</id>
+    <published>2019-08-09T16:00:00.000Z</published>
+    <updated>2019-08-10T08:31:30.794Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>由于我们使用vue-cli脚手架搭建的项目学习起来难度比较大，我们放到进阶阶段再学习，我们先用vue包引入来学习vue。</p><h3 id="vue-js包"><a href="#vue-js包" class="headerlink" title="vue.js包"></a>vue.js包</h3><p>1、Staticfile CDN（国内） : <a href="https://cdn.staticfile.org/vue/2.2.2/vue.min.js" target="_blank" rel="noopener">https://cdn.staticfile.org/vue/2.2.2/vue.min.js</a><br>2、unpkg：<a href="https://unpkg.com/vue/dist/vue.js" target="_blank" rel="noopener">https://unpkg.com/vue/dist/vue.js</a><br>3、cdnjs : <a href="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js" target="_blank" rel="noopener">https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js</a></p><h3 id="开始学习vue"><a href="#开始学习vue" class="headerlink" title="开始学习vue"></a>开始学习vue</h3><p>1、每个 Vue 应用都需要通过实例化 Vue 来实现。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var xyh = new Vue(&#123;</span><br><span class="line">  // 选项</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><br>2、通过以下的实例我们来分析</p><table><thead><tr><th style="text-align:center">参数</th><th style="text-align:center">说明</th></tr></thead><tbody><tr><td style="text-align:center">el</td><td style="text-align:center">它是 DOM 元素中的 id，数据改动全部在以上指定的 div 内，div 外部不受影响</td></tr><tr><td style="text-align:center">data</td><td style="text-align:center">用于定义属性，下面例子有两个属性分别为：name、url</td></tr><tr><td style="text-align:center">methods</td><td style="text-align:center">用于定义的函数，可以通过 return 来返回函数值</td></tr><tr><td style="text-align:center">双括号</td><td style="text-align:center">用于输出对象属性和函数返回值。</td></tr></tbody></table><p><img src="http://pic.zhaotu.me/2019/08/10/QQ201908101016080bc1d87a46f1782d.png" alt="“Vue第2天”"><br>3、当一个 Vue 实例被创建时，它向 Vue 的响应式系统中加入了其 data 对象中能找到的所有的属性。当这些属性的值发生改变<br>时，html视图将也会产生相应的变化。<br><img src="http://pic.zhaotu.me/2019/08/10/22749f277dfd1ef2f.png" alt="“Vue第2天”"><br><b>也就是说，无论我们给data对象改变值，还是直接改变属性值，都会改变原始数据。<br>一般来说，除了数据属性，Vue 实例还提供了一些有用的实例属性与方法。它们都有前缀 $，以便与用户定义的属性区分开来。<br></b></p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>今天先就了解那么多，主要是学习了引用vue.js包、初始化vue、vue中的一些参数和用法。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;由于我们使用vue-cli脚手架搭建的项目学习起来难度比较大，我们放到进阶阶段再学习，我们先用vue包引入来学习vue。&lt;/p&gt;
+&lt;h3 i
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="http://xiayunhu.github.io/categories/Vue/"/>
+    
+    
+      <category term="Vue" scheme="http://xiayunhu.github.io/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue第1天</title>
+    <link href="http://xiayunhu.github.io/Vue/Vue%E7%AC%AC1%E5%A4%A9/"/>
+    <id>http://xiayunhu.github.io/Vue/Vue第1天/</id>
+    <published>2019-08-08T16:00:00.000Z</published>
+    <updated>2019-08-10T01:37:01.919Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>最近想着应该好好的学习下vue.js来补充下自己的知识，所以接下来我将会把每天学的东西记录下来，供我们大家一起学习。</p><h3 id="创建vue项目"><a href="#创建vue项目" class="headerlink" title="创建vue项目"></a>创建vue项目</h3><p>1、先全局安装vue-cli<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --global vue-cli</span><br></pre></td></tr></table></figure>2、创建一个新的项目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init webpack xyhVue（你的项目名称）</span><br></pre></td></tr></table></figure>3、紧接着需要一些配置，默认回车就好。<br>4、创建好之后，进入到你的项目文件下，运行项目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cnpm run dev</span><br><span class="line"></span><br><span class="line"> DONE  Compiled successfully in 43557ms                                     4:24:11 PM</span><br><span class="line"> I  Your application is running here: http://localhost:8080</span><br></pre></td></tr></table></figure><br>启动成功之后，在浏览器中输入<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a> ，输出结果如下图所示：<br><img src="http://pic.zhaotu.me/2019/08/08/vue879d435f53758ab6b.md.png" alt="“Vue第一天”"></p><h3 id="Vue-js-目录结构"><a href="#Vue-js-目录结构" class="headerlink" title="Vue.js 目录结构"></a>Vue.js 目录结构</h3><p>打开创建好的项目文件，具体结构如下图所示：<br><img src="http://pic.zhaotu.me/2019/08/09/201908091647110a2403b9c22c70fb.png" alt="“vue项目创建和运行”"><br>我们将每个文件的名称及作用进行解析。</p><table><thead><tr><th style="text-align:center">文件名称</th><th style="text-align:center">说明/作用</th></tr></thead><tbody><tr><td style="text-align:center">node_modules</td><td style="text-align:center">npm 加载的项目依赖模块</td></tr><tr><td style="text-align:center">build</td><td style="text-align:center">项目搭建(webpack)相关代码</td></tr><tr><td style="text-align:center">config</td><td style="text-align:center">配置目录，包括端口号等。初学可以使用默认的</td></tr><tr><td style="text-align:center">src</td><td style="text-align:center">这里是我们要开发的目录，基本上要做的事情都在这个目录里。里面包含了几个目录及文件：<br>assets: 放置一些图片，如logo等。<br>components: 目录里面放了一个组件文件，可以不用。<br>App.vue: 项目入口文件，我们也可以直接将组件写这里，而不使用 components 目录。<br>main.js: 项目的核心文件。</td></tr><tr><td style="text-align:center">static</td><td style="text-align:center">静态资源目录，如图片、字体等。</td></tr><tr><td style="text-align:center">test</td><td style="text-align:center">初始测试目录，可删除</td></tr><tr><td style="text-align:center">index.html</td><td style="text-align:center">首页入口文件，你可以添加一些 meta 信息或统计代码等。</td></tr><tr><td style="text-align:center">package.json</td><td style="text-align:center">项目配置文件。</td></tr><tr><td style="text-align:center">package-lock.json</td><td style="text-align:center">对结合了逻辑树和物理树的一个快照（snapshot），里面有明确的各依赖版本号，实际安装的结构，也有逻辑树的结构</td></tr><tr><td style="text-align:center">README.md</td><td style="text-align:center">项目的说明文档，markdown 格式</td></tr></tbody></table><h3 id="项目的首页入口"><a href="#项目的首页入口" class="headerlink" title="项目的首页入口"></a>项目的首页入口</h3><p>我们可以尝试修改下初始化的项目，找到src文件下的components下的HelloWorld.vue.<br>则src/components/HelloWorld.vue<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &apos;HelloWorld&apos;,</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      msg: &apos;第一个Vue项目创建好啦！！！&apos;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>我们修改后，保存，页面会自动刷新。<br><img src="http://pic.zhaotu.me/2019/08/09/20190809173515ca48eaa74be6ca1a.png" alt="“Vue第一天”"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;最近想着应该好好的学习下vue.js来补充下自己的知识，所以接下来我将会把每天学的东西记录下来，供我们大家一起学习。&lt;/p&gt;
+&lt;h3 id=
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="http://xiayunhu.github.io/categories/Vue/"/>
+    
+    
+      <category term="Vue" scheme="http://xiayunhu.github.io/tags/Vue/"/>
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -102,31 +154,6 @@
     
     
       <category term="MySQL" scheme="http://xiayunhu.github.io/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue.js笔记</title>
-    <link href="http://xiayunhu.github.io/Vue/Vue%E7%AC%AC%E4%B8%80%E5%A4%A9/"/>
-    <id>http://xiayunhu.github.io/Vue/Vue第一天/</id>
-    <published>2019-06-03T16:00:00.000Z</published>
-    <updated>2019-06-18T08:31:07.993Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="初识Vue-js"><a href="#初识Vue-js" class="headerlink" title="初识Vue.js"></a>初识Vue.js</h3><p>Vue是一套构建用户界面的渐进式框架。Vue 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。<br>Vue.js 的 API 是参考了AngularJS、KnockoutJS、Ractive.js、Rivets.js。<br>Vue.js 的 API 的对于其他框架的参考也只是参考，其中也包含了许多 Vue.js 的独特功能。</p><h3 id="Vue-js文件的引入"><a href="#Vue-js文件的引入" class="headerlink" title="Vue.js文件的引入"></a>Vue.js文件的引入</h3><p>1、先来最简单的引入方法，直接在html文件里直接引入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://cdn.staticfile.org/vue/2.2.2/vue.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p><p>这样就成功的引进了Vue.js,不需要在引入其他文件，就这一个。</p><p>2、使用CDN方法：</p><ul><li>Staticfile CDN（国内）：<a href="https://cdn.staticfile.org/vue/2.2.2/vue.min.js" target="_blank" rel="noopener">https://cdn.staticfile.org/vue/2.2.2/vue.min.js</a></li><li>unpkg：<a href="https://unpkg.com/vue/dist/vue.js" target="_blank" rel="noopener">https://unpkg.com/vue/dist/vue.js</a>, 会保持和 npm 发布的最新的版本一致。</li><li>cdnjs：<a href="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js" target="_blank" rel="noopener">https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js</a></li></ul><h3 id="第一个程序"><a href="#第一个程序" class="headerlink" title="第一个程序"></a>第一个程序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line"> &lt;!--创建一个div--&gt;   </span><br><span class="line"> &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">  &lt;p&gt;&lt;/p&gt;</span><br><span class="line"> &lt;/div&gt;</span><br><span class="line">    &lt;!--vue语句--&gt;   </span><br><span class="line">&lt;script&gt;</span><br><span class="line">new Vue(&#123;</span><br><span class="line">  el: &apos;#app&apos;,</span><br><span class="line">  data: &#123;</span><br><span class="line">message: &apos;Hello Vue.js!&apos;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure><p>每个 Vue 应用都需要通过实例化 Vue 来实现。</p><h3 id="实例分析"><a href="#实例分析" class="headerlink" title="实例分析"></a>实例分析</h3><p>我们在上述的程序中可以看到Vue构造器中有一个el参数，它是DOM元素中的id。简单的说就是你创建的div元素的id。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">    &lt;!--也可以用class--&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;&lt;/div&gt; </span><br><span class="line">&lt;script&gt;</span><br><span class="line">    new Vue(&#123;</span><br><span class="line">el: &apos;#app&apos;, &lt;!--上边用class这个地方就要改为 &apos;.app&apos; --&gt;</span><br><span class="line">data: &#123;</span><br><span class="line">           site: &quot;我的博客&quot;,</span><br><span class="line">           url: &quot;www.xyhwh.cn&quot;,</span><br><span class="line">           alexa: &quot;100&quot;</span><br><span class="line">       &#125;,</span><br><span class="line"> methods: &#123;</span><br><span class="line">           details: function() &#123;</span><br><span class="line">               return  this.site;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line"> &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure><p>我们可以改动在这个div下的内容，而div以外的不受影响。</p><ul><li>el是选定div的范围。</li><li>data 用于定义属性，实例中有三个属性分别为：site、url、alexa。</li><li>methods 用于定义的函数，可以通过 return 来返回函数值。</li><li>双重大括号用于输出对象属性和函数返回值。</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;初识Vue-js&quot;&gt;&lt;a href=&quot;#初识Vue-js&quot; class=&quot;headerlink&quot; title=&quot;初识Vue.js&quot;&gt;&lt;/a&gt;初识Vue.js&lt;/h3&gt;&lt;p&gt;Vue是一套构建用户界面的渐进式框架。Vue 的目标是通过尽可能简单的 API 实现响应的数
-      
-    
-    </summary>
-    
-      <category term="Vue" scheme="http://xiayunhu.github.io/categories/Vue/"/>
-    
-    
-      <category term="Vue" scheme="http://xiayunhu.github.io/tags/Vue/"/>
     
   </entry>
   
