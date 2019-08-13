@@ -140,18 +140,24 @@
 
 
 
-  <meta name="description" content="layui简介经典模块化前端框架之一，由职业前端倾情打造，面向所有层次的前后端开发者，零门槛开箱即用的前端UI解决方案。有好多的功能组件直接使用，非常的方便，自适应页面。可以加入layui社区获得更多的帮助。因为我在layui的官网给出的案例没有导航的三级菜单，偶然的发现了一个三级的菜单，这个使用layui-nav-tree树写的三级，我感觉挺好用的。 1234567891011121314151">
-<meta name="keywords" content="Layui">
+  <meta name="description" content="Vue的模板语法接着昨天的继续学习模板语法。 动态参数（2.6.0 新增）从 2.6.0 开始，可以用方括号括起来的 JavaScript 表达式作为一个指令的参数1&amp;quot;&amp;lt;a v-bind:[attributeName]=&amp;quot;url&amp;quot;&amp;gt; ... &amp;lt;/a&amp;gt; &amp;quot;这里的 attributeName 会被作为一个 JavaScript 表达式进行">
+<meta name="keywords" content="Vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Layui的左侧三级导航栏">
-<meta property="og:url" content="http://xiayunhu.github.io/Layui/layui/index.html">
+<meta property="og:title" content="Vue第4天">
+<meta property="og:url" content="http://xiayunhu.github.io/Vue/Vue第4天/index.html">
 <meta property="og:site_name" content="xyh&#39;s Blog">
-<meta property="og:description" content="layui简介经典模块化前端框架之一，由职业前端倾情打造，面向所有层次的前后端开发者，零门槛开箱即用的前端UI解决方案。有好多的功能组件直接使用，非常的方便，自适应页面。可以加入layui社区获得更多的帮助。因为我在layui的官网给出的案例没有导航的三级菜单，偶然的发现了一个三级的菜单，这个使用layui-nav-tree树写的三级，我感觉挺好用的。 1234567891011121314151">
+<meta property="og:description" content="Vue的模板语法接着昨天的继续学习模板语法。 动态参数（2.6.0 新增）从 2.6.0 开始，可以用方括号括起来的 JavaScript 表达式作为一个指令的参数1&amp;quot;&amp;lt;a v-bind:[attributeName]=&amp;quot;url&amp;quot;&amp;gt; ... &amp;lt;/a&amp;gt; &amp;quot;这里的 attributeName 会被作为一个 JavaScript 表达式进行">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-06T07:30:51.968Z">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/08/13/1df72ac35b6757aa4.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/08/13/25eda2c25eb110e87.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/08/13/35b4fce4cbf1461fc.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/08/13/4b285b0691ed674e9.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/08/13/5e41cc6cf3d2d981a.png">
+<meta property="og:updated_time" content="2019-08-13T07:51:54.768Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Layui的左侧三级导航栏">
-<meta name="twitter:description" content="layui简介经典模块化前端框架之一，由职业前端倾情打造，面向所有层次的前后端开发者，零门槛开箱即用的前端UI解决方案。有好多的功能组件直接使用，非常的方便，自适应页面。可以加入layui社区获得更多的帮助。因为我在layui的官网给出的案例没有导航的三级菜单，偶然的发现了一个三级的菜单，这个使用layui-nav-tree树写的三级，我感觉挺好用的。 1234567891011121314151">
+<meta name="twitter:title" content="Vue第4天">
+<meta name="twitter:description" content="Vue的模板语法接着昨天的继续学习模板语法。 动态参数（2.6.0 新增）从 2.6.0 开始，可以用方括号括起来的 JavaScript 表达式作为一个指令的参数1&amp;quot;&amp;lt;a v-bind:[attributeName]=&amp;quot;url&amp;quot;&amp;gt; ... &amp;lt;/a&amp;gt; &amp;quot;这里的 attributeName 会被作为一个 JavaScript 表达式进行">
+<meta name="twitter:image" content="http://pic.zhaotu.me/2019/08/13/1df72ac35b6757aa4.png">
 
 
 
@@ -160,7 +166,7 @@
 
 
 
-  <link rel="canonical" href="http://xiayunhu.github.io/Layui/layui/"/>
+  <link rel="canonical" href="http://xiayunhu.github.io/Vue/Vue第4天/"/>
 
 
 
@@ -170,7 +176,7 @@
   };
 </script>
 
-  <title>Layui的左侧三级导航栏 | xyh's Blog</title>
+  <title>Vue第4天 | xyh's Blog</title>
   
 
 
@@ -401,7 +407,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xiayunhu.github.io/Layui/layui/">
+    <link itemprop="mainEntityOfPage" href="http://xiayunhu.github.io/Vue/Vue第4天/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XYH">
@@ -419,7 +425,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Layui的左侧三级导航栏
+          <h1 class="post-title" itemprop="name headline">Vue第4天
               
             
           </h1>
@@ -448,7 +454,7 @@
                 
               
 
-              <time title="创建时间：2019-03-27 00:00:00" itemprop="dateCreated datePublished" datetime="2019-03-27T00:00:00+08:00">2019-03-27</time>
+              <time title="创建时间：2019-08-12 00:00:00" itemprop="dateCreated datePublished" datetime="2019-08-12T00:00:00+08:00">2019-08-12</time>
             
 
 		
@@ -468,7 +474,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-06 15:30:51" itemprop="dateModified" datetime="2019-05-06T15:30:51+08:00">2019-05-06</time>
+                <time title="修改时间：2019-08-13 15:51:54" itemprop="dateModified" datetime="2019-08-13T15:51:54+08:00">2019-08-13</time>
               
             
           </span>
@@ -485,7 +491,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Layui/" itemprop="url" rel="index"><span itemprop="name">Layui</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
 
                 
                 
@@ -501,8 +507,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/Layui/layui/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Layui/layui/" itemprop="commentCount"></span>
+                <a href="/Vue/Vue第4天/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Vue/Vue第4天/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -539,7 +545,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">字数统计:</span>
-           <span class="post-count">1.2k字</span>
+           <span class="post-count">629字</span>
          </span>
 
          <span class="post-time">
@@ -548,7 +554,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">阅读时长:</span>
-           <span class="post-count">6分钟</span>
+           <span class="post-count">2分钟</span>
          </span>
 	
     
@@ -568,8 +574,16 @@
       
 
       
-        <h2 id="layui简介"><a href="#layui简介" class="headerlink" title="layui简介"></a>layui简介</h2><p>经典模块化前端框架之一，由职业前端倾情打造，面向所有层次的前后端开发者，零门槛开箱即用的前端UI解决方案。<br>有好多的功能组件直接使用，非常的方便，自适应页面。可以加入layui社区获得更多的帮助。<br>因为我在layui的官网给出的案例没有导航的三级菜单，偶然的发现了一个三级的菜单，这个使用layui-nav-tree树写的三级，我感觉挺好用的。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=1&quot;&gt;</span><br><span class="line">    &lt;title&gt;&lt;/title&gt;</span><br><span class="line">    &lt;link href=&quot;~/layui-v2.2.5/layui-v2.2.5/layui/css/layui.css&quot; rel=&quot;stylesheet&quot; /&gt;   </span><br><span class="line">  </span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        ol li a &#123;</span><br><span class="line">            background-color: rgba(0,0,0,1) !important;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        .three_this &#123;</span><br><span class="line">            background-color: #808080 !important;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body class=&quot;layui-layout-body&quot;&gt;</span><br><span class="line">    &lt;div class=&quot;layui-layout layui-layout-admin&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;layui-header&quot;&gt;</span><br><span class="line">            &lt;div class=&quot;layui-logo&quot;&gt;layui 后台布局&lt;/div&gt;</span><br><span class="line">            &lt;ul class=&quot;layui-nav layui-layout-left&quot;&gt;</span><br><span class="line">                &lt;li class=&quot;layui-nav-item&quot;&gt;&lt;a href=&quot;&quot;&gt;控制台&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                &lt;li class=&quot;layui-nav-item&quot;&gt;&lt;a href=&quot;&quot;&gt;商品管理&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                &lt;li class=&quot;layui-nav-item&quot;&gt;&lt;a href=&quot;&quot;&gt;用户管理&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                &lt;li class=&quot;layui-nav-item&quot;&gt;</span><br><span class="line">                    &lt;a href=&quot;javascript:;&quot;&gt;日常&lt;/a&gt;</span><br><span class="line">                    &lt;dl class=&quot;layui-nav-child&quot;&gt;</span><br><span class="line">                        &lt;dd&gt;&lt;a href=&quot;&quot;&gt;邮件管理&lt;/a&gt;&lt;/dd&gt;</span><br><span class="line">                        &lt;dd&gt;&lt;a href=&quot;&quot;&gt;消息管理&lt;/a&gt;&lt;/dd&gt;</span><br><span class="line">                        &lt;dd&gt;&lt;a href=&quot;&quot;&gt;授权管理&lt;/a&gt;&lt;/dd&gt;</span><br><span class="line">                    &lt;/dl&gt;</span><br><span class="line">                &lt;/li&gt;</span><br><span class="line">            &lt;/ul&gt;</span><br><span class="line">            &lt;ul class=&quot;layui-nav layui-layout-right&quot;&gt;</span><br><span class="line">                &lt;li class=&quot;layui-nav-item&quot;&gt;</span><br><span class="line">                    &lt;a href=&quot;javascript:;&quot;&gt;</span><br><span class="line">                        &lt;img src=&quot;~/images/tb.png&quot; class=&quot;layui-nav-img&quot; /&gt;</span><br><span class="line">                        .Net海</span><br><span class="line">                    &lt;/a&gt;</span><br><span class="line">                    &lt;dl class=&quot;layui-nav-child&quot;&gt;</span><br><span class="line">                        &lt;dd&gt;&lt;a href=&quot;&quot;&gt;基本资料&lt;/a&gt;&lt;/dd&gt;</span><br><span class="line">                        &lt;dd&gt;&lt;a href=&quot;&quot;&gt;安全设置&lt;/a&gt;&lt;/dd&gt;</span><br><span class="line">                    &lt;/dl&gt;</span><br><span class="line">                &lt;/li&gt;</span><br><span class="line">                &lt;li class=&quot;layui-nav-item&quot;&gt;&lt;a href=&quot;&quot;&gt;退出&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">            &lt;/ul&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;layui-side layui-bg-black&quot;&gt;</span><br><span class="line">            &lt;div class=&quot;layui-side-scroll&quot;&gt;</span><br><span class="line">                &lt;ul class=&quot;layui-nav layui-nav-tree&quot; lay-filter=&quot;test&quot;&gt;</span><br><span class="line">                    &lt;li class=&quot;layui-nav-item layui-nav-itemed&quot;&gt;</span><br><span class="line">                        &lt;a class=&quot;&quot; href=&quot;javascript:;&quot;&gt;所有商品&lt;/a&gt;</span><br><span class="line">                        &lt;dl class=&quot;layui-nav-child&quot;&gt;</span><br><span class="line">                            &lt;dd&gt;</span><br><span class="line">                                &lt;a href=&quot;javascript:;&quot; class=&quot;menu_three &quot;&gt;列表一&lt;/a&gt;</span><br><span class="line">                                &lt;ol class=&quot;layui-nav-child&quot; style=&quot;display: none;&quot;&gt;</span><br><span class="line">                                    &lt;li&gt;&lt;a href=&quot;javascript:;&quot;&gt;三级列表一&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                                    &lt;li&gt;&lt;a href=&quot;javascript:;&quot;&gt;三级列表二&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                                    &lt;li&gt;&lt;a href=&quot;javascript:;&quot;&gt;三级列表三&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                                    &lt;li&gt;&lt;a href=&quot;&quot;&gt;超链接&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                                &lt;/ol&gt;</span><br><span class="line">                            &lt;/dd&gt;</span><br><span class="line">                            &lt;dd&gt;&lt;a href=&quot;javascript:;&quot; class=&quot;menu_three&quot;&gt;列表二&lt;/a&gt;</span><br><span class="line">                                &lt;ol class=&quot;layui-nav-child&quot; style=&quot;display: none;&quot;&gt;</span><br><span class="line">                                    &lt;li&gt;&lt;a href=&quot;javascript:;&quot;&gt;三级列表一&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                                    &lt;li&gt;&lt;a href=&quot;javascript:;&quot;&gt;三级列表二&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                                    &lt;li&gt;&lt;a href=&quot;javascript:;&quot;&gt;三级列表三&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                                    &lt;li&gt;&lt;a href=&quot;&quot;&gt;超链接&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                                &lt;/ol&gt;</span><br><span class="line">                            &lt;/dd&gt;</span><br><span class="line">                            &lt;dd&gt;&lt;a href=&quot;javascript:;&quot;&gt;列表三&lt;/a&gt;&lt;/dd&gt;</span><br><span class="line">                            &lt;dd&gt;&lt;a href=&quot;&quot;&gt;超链接&lt;/a&gt;&lt;/dd&gt;</span><br><span class="line">                        &lt;/dl&gt;</span><br><span class="line">                    &lt;/li&gt;</span><br><span class="line">                    &lt;li class=&quot;layui-nav-item&quot;&gt;&lt;a href=&quot;&quot;&gt;云市场&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                    &lt;li class=&quot;layui-nav-item&quot;&gt;&lt;a href=&quot;&quot;&gt;发布商品&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">                &lt;/ul&gt;</span><br><span class="line">            &lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">        &lt;div class=&quot;layui-body&quot;&gt;</span><br><span class="line">            &lt;!-- 内容主体区域 --&gt;</span><br><span class="line">            &lt;div style=&quot;padding: 15px;&quot;&gt;内容主体区域&lt;/div&gt;</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line"></span><br><span class="line">        &lt;div class=&quot;layui-footer&quot;&gt;</span><br><span class="line">            &lt;!-- 底部固定区域 --&gt;</span><br><span class="line">            © layui.com - 底部固定区域</span><br><span class="line">        &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line"> //注意路劲</span><br><span class="line">    &lt;script src=&quot;~/layui-v2.2.5/layui-v2.2.5/layui/layui.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        //JavaScript代码区域</span><br><span class="line">        layui.use([&apos;element&apos;, &apos;jquery&apos;], function () &#123;</span><br><span class="line">            var element = layui.element, $ = layui.jquery;</span><br><span class="line">            $(&quot;.menu_three&quot;).on(&quot;click&quot;, function () &#123;</span><br><span class="line">                </span><br><span class="line">                $(this).next().toggle();</span><br><span class="line">                $.each($(this).parent().siblings(), function (i, e) &#123;</span><br><span class="line">                    $(e).find(&quot;ol&quot;).hide();;</span><br><span class="line">                &#125;);</span><br><span class="line">               </span><br><span class="line">            &#125;)</span><br><span class="line">            $(&quot;ol&quot;).on(&quot;click&quot;, &quot;li a&quot;, function () &#123;</span><br><span class="line">                $.each($(this).parent().siblings(), function (i, e) &#123;</span><br><span class="line">                    $(e).find(&quot;a&quot;).removeClass(&apos;three_this&apos;)</span><br><span class="line">                &#125;);</span><br><span class="line">                $(this).addClass(&apos;three_this&apos;);                            // 添加当前元素的样式</span><br><span class="line">            &#125;)</span><br><span class="line">        &#125;);</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+        <h3 id="Vue的模板语法"><a href="#Vue的模板语法" class="headerlink" title="Vue的模板语法"></a>Vue的模板语法</h3><p>接着昨天的继续学习模板语法。</p>
+<h4 id="动态参数（2-6-0-新增）"><a href="#动态参数（2-6-0-新增）" class="headerlink" title="动态参数（2.6.0 新增）"></a>动态参数（2.6.0 新增）</h4><p>从 2.6.0 开始，可以用方括号括起来的 JavaScript 表达式作为一个指令的参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;&lt;a v-bind:[attributeName]=&quot;url&quot;&gt; ... &lt;/a&gt; &quot;</span><br></pre></td></tr></table></figure><br>这里的 attributeName 会被作为一个 JavaScript 表达式进行动态求值，求得的值将会作为最终的参数来使用。<br>例如，如果你的 Vue 实例有一个 data 属性 attributeName，其值为 “href”，那么这个绑定将等价于 v-bind:href。<br>同样地，你可以使用动态参数为一个动态的事件名绑定处理函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;&lt;a v-on:[eventName]=&quot;doSomething&quot;&gt; ... &lt;/a&gt; &quot;</span><br></pre></td></tr></table></figure><br>同样地，当 eventName 的值为 “focus” 时，v-on:[eventName] 将等价于 v-on:focus。<br><img src="http://pic.zhaotu.me/2019/08/13/1df72ac35b6757aa4.png" alt="“Vue第4天”"></p>
+<h4 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h4><p>修饰符 (modifier) 是以半角句号 . 指明的特殊后缀，用于指出一个指令应该以特殊方式绑定。<br>例如，.prevent 修饰符告诉 v-on 指令对于触发的事件调用 event.preventDefault()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;&lt;form v-on:submit.prevent=&quot;onSubmit&quot;&gt;...&lt;/form&gt;&quot;</span><br></pre></td></tr></table></figure></p>
+<h4 id="用户输入"><a href="#用户输入" class="headerlink" title="用户输入"></a>用户输入</h4><p>在 input 输入框中我们可以使用 v-model 指令来实现双向数据绑定<br><img src="http://pic.zhaotu.me/2019/08/13/25eda2c25eb110e87.png" alt="“Vue第4天”"><br>v-model 指令用来在 input、select、textarea、checkbox、radio 等表单控件元素上创建双向数据绑定，根据表单上的值，自动更新绑定的元素的值。<br>按钮的事件我们可以使用 v-on 监听事件，并对用户的输入进行响应。<br>例如：用户点击按钮后对字符串进行反转操作<br><img src="http://pic.zhaotu.me/2019/08/13/35b4fce4cbf1461fc.png" alt="“Vue第4天”"></p>
+<h4 id="过滤器（了解）"><a href="#过滤器（了解）" class="headerlink" title="过滤器（了解）"></a>过滤器（了解）</h4><p>Vue.js 允许你自定义过滤器，被用作一些常见的文本格式化<br><img src="http://pic.zhaotu.me/2019/08/13/4b285b0691ed674e9.png" alt="“Vue第4天”"><br>例如：对输入的字符串第一个字母转为大写<br><img src="http://pic.zhaotu.me/2019/08/13/5e41cc6cf3d2d981a.png" alt="“Vue第4天”"></p>
+<h4 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h4><p>v- 前缀作为一种视觉提示，用来识别模板中 Vue 特定的特性。Vue 为 v-bind 和 v-on 这两个最常用的指令，提供了特定简写。</p>
+<h5 id="v-bind-缩写"><a href="#v-bind-缩写" class="headerlink" title="v-bind 缩写"></a>v-bind 缩写</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 完整语法 --&gt;</span><br><span class="line">&lt;a v-bind:href=&quot;url&quot;&gt;&lt;/a&gt;</span><br><span class="line">&lt;!-- 缩写 --&gt;</span><br><span class="line">&lt;a :href=&quot;url&quot;&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<h5 id="v-on-缩写"><a href="#v-on-缩写" class="headerlink" title="v-on 缩写"></a>v-on 缩写</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 完整语法 --&gt;</span><br><span class="line">&lt;a v-on:click=&quot;doSomething&quot;&gt;&lt;/a&gt;</span><br><span class="line">&lt;!-- 缩写 --&gt;</span><br><span class="line">&lt;a @click=&quot;doSomething&quot;&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>今天一个学了5个模板语法，同样也是我们学习vue的重点，主要有动态参数（2.6.0 新增）、修饰符、用户输入、过滤器、缩写（v-bind 缩写、v-on 缩写）。</p>
+
       
     </div>
 
@@ -640,7 +654,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Layui/" rel="tag"><i class="fa fa-tag"></i> Layui</a>
+            <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
           
         </div>
       
@@ -653,8 +667,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Hexo/Next主题/" rel="next" title="Next主题">
-                <i class="fa fa-chevron-left"></i> Next主题
+              <a href="/Vue/Vue第3天/" rel="next" title="Vue第3天">
+                <i class="fa fa-chevron-left"></i> Vue第3天
               </a>
             
           </div>
@@ -662,10 +676,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/PHP/PHP基础第一篇/" rel="prev" title="PHP基础第一章">
-                PHP基础第一章 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -900,7 +910,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#layui简介"><span class="nav-number">1.</span> <span class="nav-text">layui简介</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue的模板语法"><span class="nav-number">1.</span> <span class="nav-text">Vue的模板语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#动态参数（2-6-0-新增）"><span class="nav-number">1.1.</span> <span class="nav-text">动态参数（2.6.0 新增）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修饰符"><span class="nav-number">1.2.</span> <span class="nav-text">修饰符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用户输入"><span class="nav-number">1.3.</span> <span class="nav-text">用户输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过滤器（了解）"><span class="nav-number">1.4.</span> <span class="nav-text">过滤器（了解）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缩写"><span class="nav-number">1.5.</span> <span class="nav-text">缩写</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#v-bind-缩写"><span class="nav-number">1.5.1.</span> <span class="nav-text">v-bind 缩写</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#v-on-缩写"><span class="nav-number">1.5.2.</span> <span class="nav-text">v-on 缩写</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>

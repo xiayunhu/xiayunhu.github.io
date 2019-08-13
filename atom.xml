@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xiayunhu.github.io/"/>
-  <updated>2019-08-12T07:56:35.521Z</updated>
+  <updated>2019-08-13T07:51:54.768Z</updated>
   <id>http://xiayunhu.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue第4天</title>
+    <link href="http://xiayunhu.github.io/Vue/Vue%E7%AC%AC4%E5%A4%A9/"/>
+    <id>http://xiayunhu.github.io/Vue/Vue第4天/</id>
+    <published>2019-08-11T16:00:00.000Z</published>
+    <updated>2019-08-13T07:51:54.768Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Vue的模板语法"><a href="#Vue的模板语法" class="headerlink" title="Vue的模板语法"></a>Vue的模板语法</h3><p>接着昨天的继续学习模板语法。</p><h4 id="动态参数（2-6-0-新增）"><a href="#动态参数（2-6-0-新增）" class="headerlink" title="动态参数（2.6.0 新增）"></a>动态参数（2.6.0 新增）</h4><p>从 2.6.0 开始，可以用方括号括起来的 JavaScript 表达式作为一个指令的参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;&lt;a v-bind:[attributeName]=&quot;url&quot;&gt; ... &lt;/a&gt; &quot;</span><br></pre></td></tr></table></figure><br>这里的 attributeName 会被作为一个 JavaScript 表达式进行动态求值，求得的值将会作为最终的参数来使用。<br>例如，如果你的 Vue 实例有一个 data 属性 attributeName，其值为 “href”，那么这个绑定将等价于 v-bind:href。<br>同样地，你可以使用动态参数为一个动态的事件名绑定处理函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;&lt;a v-on:[eventName]=&quot;doSomething&quot;&gt; ... &lt;/a&gt; &quot;</span><br></pre></td></tr></table></figure><br>同样地，当 eventName 的值为 “focus” 时，v-on:[eventName] 将等价于 v-on:focus。<br><img src="http://pic.zhaotu.me/2019/08/13/1df72ac35b6757aa4.png" alt="“Vue第4天”"></p><h4 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h4><p>修饰符 (modifier) 是以半角句号 . 指明的特殊后缀，用于指出一个指令应该以特殊方式绑定。<br>例如，.prevent 修饰符告诉 v-on 指令对于触发的事件调用 event.preventDefault()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;&lt;form v-on:submit.prevent=&quot;onSubmit&quot;&gt;...&lt;/form&gt;&quot;</span><br></pre></td></tr></table></figure></p><h4 id="用户输入"><a href="#用户输入" class="headerlink" title="用户输入"></a>用户输入</h4><p>在 input 输入框中我们可以使用 v-model 指令来实现双向数据绑定<br><img src="http://pic.zhaotu.me/2019/08/13/25eda2c25eb110e87.png" alt="“Vue第4天”"><br>v-model 指令用来在 input、select、textarea、checkbox、radio 等表单控件元素上创建双向数据绑定，根据表单上的值，自动更新绑定的元素的值。<br>按钮的事件我们可以使用 v-on 监听事件，并对用户的输入进行响应。<br>例如：用户点击按钮后对字符串进行反转操作<br><img src="http://pic.zhaotu.me/2019/08/13/35b4fce4cbf1461fc.png" alt="“Vue第4天”"></p><h4 id="过滤器（了解）"><a href="#过滤器（了解）" class="headerlink" title="过滤器（了解）"></a>过滤器（了解）</h4><p>Vue.js 允许你自定义过滤器，被用作一些常见的文本格式化<br><img src="http://pic.zhaotu.me/2019/08/13/4b285b0691ed674e9.png" alt="“Vue第4天”"><br>例如：对输入的字符串第一个字母转为大写<br><img src="http://pic.zhaotu.me/2019/08/13/5e41cc6cf3d2d981a.png" alt="“Vue第4天”"></p><h4 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h4><p>v- 前缀作为一种视觉提示，用来识别模板中 Vue 特定的特性。Vue 为 v-bind 和 v-on 这两个最常用的指令，提供了特定简写。</p><h5 id="v-bind-缩写"><a href="#v-bind-缩写" class="headerlink" title="v-bind 缩写"></a>v-bind 缩写</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 完整语法 --&gt;</span><br><span class="line">&lt;a v-bind:href=&quot;url&quot;&gt;&lt;/a&gt;</span><br><span class="line">&lt;!-- 缩写 --&gt;</span><br><span class="line">&lt;a :href=&quot;url&quot;&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure><h5 id="v-on-缩写"><a href="#v-on-缩写" class="headerlink" title="v-on 缩写"></a>v-on 缩写</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 完整语法 --&gt;</span><br><span class="line">&lt;a v-on:click=&quot;doSomething&quot;&gt;&lt;/a&gt;</span><br><span class="line">&lt;!-- 缩写 --&gt;</span><br><span class="line">&lt;a @click=&quot;doSomething&quot;&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>今天一个学了5个模板语法，同样也是我们学习vue的重点，主要有动态参数（2.6.0 新增）、修饰符、用户输入、过滤器、缩写（v-bind 缩写、v-on 缩写）。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Vue的模板语法&quot;&gt;&lt;a href=&quot;#Vue的模板语法&quot; class=&quot;headerlink&quot; title=&quot;Vue的模板语法&quot;&gt;&lt;/a&gt;Vue的模板语法&lt;/h3&gt;&lt;p&gt;接着昨天的继续学习模板语法。&lt;/p&gt;
+&lt;h4 id=&quot;动态参数（2-6-0-新增）&quot;&gt;&lt;a 
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="http://xiayunhu.github.io/categories/Vue/"/>
+    
+    
+      <category term="Vue" scheme="http://xiayunhu.github.io/tags/Vue/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue第3天</title>
@@ -473,31 +499,6 @@
       
       
         &lt;h3 id=&quot;1-星光不问赶路人，时光不负有心人。你尽管踏实下来，一步一步往前走，何时抵达只是时间问题。&quot;&gt;&lt;a href=&quot;#1-星光不问赶路人，时光不负有心人。你尽管踏实下来，一步一步往前走，何时抵达只是时间问题。&quot; class=&quot;headerlink&quot; title=&quot;1.
-      
-    
-    </summary>
-    
-      <category term="小故事" scheme="http://xiayunhu.github.io/categories/%E5%B0%8F%E6%95%85%E4%BA%8B/"/>
-    
-    
-      <category term="Me" scheme="http://xiayunhu.github.io/tags/Me/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>斯人若彩虹,遇上方知有</title>
-    <link href="http://xiayunhu.github.io/%E5%B0%8F%E6%95%85%E4%BA%8B/first/"/>
-    <id>http://xiayunhu.github.io/小故事/first/</id>
-    <published>2018-09-05T15:22:07.000Z</published>
-    <updated>2019-04-23T07:06:11.648Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="一-写博客的经历"><a href="#一-写博客的经历" class="headerlink" title="一.写博客的经历"></a>一.写博客的经历</h2><p>从上大学开始，慢慢的接触到了一些新鲜的东西，毕竟是学的软件专业，当时就感觉如果有一个自己的网站，是多么的牛。<br>然后脑子里就有一些想法，可能是技术的原因，一直拖着，偶尔也想想就是不知从哪下手。 经历了大一的时光，<br>心中还是有对自己网站的向往，当时也稍微懂点技术上的问题了，可感觉还是技术不够。又开始拖着。直到大二结束的暑假。<br>我在偶然的机会在公众号里看到一位大神写的文章，名叫：程序员为什么要写博客？我认真的看了一遍，说的特别好，<br>尤其是到了用什么搭建的博客。 第一次听到hexo这个词，我当时看到就感觉，哇，肯定很难，我能做出来吗？我该怎么做？<br>适合我吗？一系列的问题，想找人问，想了一遍认识的好友里，最后还是放弃了。然后找到了度娘（百度），打开网页的那一刻，<br>太惊喜了，哇，原来有那么详细的教程，Hexo+github从零开始搭建博客。我心里就认定了，就是这个了。</p><h2 id="二-为什么要写博客？"><a href="#二-为什么要写博客？" class="headerlink" title="二.为什么要写博客？"></a>二.为什么要写博客？</h2><p>为什么要写自己的博客，刚开始我心里也有疑问，从有打算到开始动手做，拖拖拉拉的两年了。后来学的东西越来越多，<br>自己经常百度，几乎搜到的东西好多都是别人博客里写的，我知道最多的就是，CSDN、博客园、简书等。<br>我也比较喜欢写一些东西。想创建博客不是为了以后有多少多少粉丝，想出名等，而是想把自己的一些东西记录下来，<br>总结的工作经验以及一些自己的心得，有幸可以和大家一起分享。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;一-写博客的经历&quot;&gt;&lt;a href=&quot;#一-写博客的经历&quot; class=&quot;headerlink&quot; title=&quot;一.写博客的经历&quot;&gt;&lt;/a&gt;一.写博客的经历&lt;/h2&gt;&lt;p&gt;从上大学开始，慢慢的接触到了一些新鲜的东西，毕竟是学的软件专业，当时就感觉如果有一个自己的网
       
     
     </summary>
