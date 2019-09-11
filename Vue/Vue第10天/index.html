@@ -140,22 +140,27 @@
 
 
 
-  <meta name="description" content="前言最近想着应该好好的学习下vue.js来补充下自己的知识，所以接下来我将会把每天学的东西记录下来，供我们大家一起学习。 创建vue项目1、先全局安装vue-cli1cnpm install --global vue-cli2、创建一个新的项目1vue init webpack xyhVue（你的项目名称）3、紧接着需要一些配置，默认回车就好。4、创建好之后，进入到你的项目文件下，运行项目1234">
+  <meta name="description" content="Vue.js 样式绑定操作元素的 class 列表和内联样式是数据绑定的一个常见需求。因为它们都是属性，所以我们可以用 v-bind 处理它们： 只需要通过表达式计算出字符串结果即可。在将 v-bind 用于 class 和 style 时，Vue.js 做了专门的增强。 表达式结果的类型除了字符串之外，还可以是对象或数组。 绑定 HTML Class我们可以为 v-bind:class 设置一个">
 <meta name="keywords" content="Vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue第1天">
-<meta property="og:url" content="http://xiayunhu.github.io/Vue/Vue第1天/index.html">
+<meta property="og:title" content="Vue第10天">
+<meta property="og:url" content="http://xiayunhu.github.io/Vue/Vue第10天/index.html">
 <meta property="og:site_name" content="xyh&#39;s Blog">
-<meta property="og:description" content="前言最近想着应该好好的学习下vue.js来补充下自己的知识，所以接下来我将会把每天学的东西记录下来，供我们大家一起学习。 创建vue项目1、先全局安装vue-cli1cnpm install --global vue-cli2、创建一个新的项目1vue init webpack xyhVue（你的项目名称）3、紧接着需要一些配置，默认回车就好。4、创建好之后，进入到你的项目文件下，运行项目1234">
+<meta property="og:description" content="Vue.js 样式绑定操作元素的 class 列表和内联样式是数据绑定的一个常见需求。因为它们都是属性，所以我们可以用 v-bind 处理它们： 只需要通过表达式计算出字符串结果即可。在将 v-bind 用于 class 和 style 时，Vue.js 做了专门的增强。 表达式结果的类型除了字符串之外，还可以是对象或数组。 绑定 HTML Class我们可以为 v-bind:class 设置一个">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://pic.zhaotu.me/2019/08/08/vue879d435f53758ab6b.md.png">
-<meta property="og:image" content="http://pic.zhaotu.me/2019/08/09/201908091647110a2403b9c22c70fb.png">
-<meta property="og:image" content="http://pic.zhaotu.me/2019/08/09/20190809173515ca48eaa74be6ca1a.png">
-<meta property="og:updated_time" content="2019-08-10T01:37:01.919Z">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/09/11/1bbc507db31bda863.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/09/11/200fa6ffef5dcbd24.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/09/11/335639896276aed15.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/09/11/4b677a12199bb882c.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/09/11/550b6934d194aa7bc.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/09/11/65459c1aa6fbddefa.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/09/11/772a0cff465825976.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/09/11/8d97244ef2381c98f.png">
+<meta property="og:updated_time" content="2019-09-11T14:42:36.097Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue第1天">
-<meta name="twitter:description" content="前言最近想着应该好好的学习下vue.js来补充下自己的知识，所以接下来我将会把每天学的东西记录下来，供我们大家一起学习。 创建vue项目1、先全局安装vue-cli1cnpm install --global vue-cli2、创建一个新的项目1vue init webpack xyhVue（你的项目名称）3、紧接着需要一些配置，默认回车就好。4、创建好之后，进入到你的项目文件下，运行项目1234">
-<meta name="twitter:image" content="http://pic.zhaotu.me/2019/08/08/vue879d435f53758ab6b.md.png">
+<meta name="twitter:title" content="Vue第10天">
+<meta name="twitter:description" content="Vue.js 样式绑定操作元素的 class 列表和内联样式是数据绑定的一个常见需求。因为它们都是属性，所以我们可以用 v-bind 处理它们： 只需要通过表达式计算出字符串结果即可。在将 v-bind 用于 class 和 style 时，Vue.js 做了专门的增强。 表达式结果的类型除了字符串之外，还可以是对象或数组。 绑定 HTML Class我们可以为 v-bind:class 设置一个">
+<meta name="twitter:image" content="http://pic.zhaotu.me/2019/09/11/1bbc507db31bda863.png">
 
 
 
@@ -164,7 +169,7 @@
 
 
 
-  <link rel="canonical" href="http://xiayunhu.github.io/Vue/Vue第1天/"/>
+  <link rel="canonical" href="http://xiayunhu.github.io/Vue/Vue第10天/"/>
 
 
 
@@ -174,7 +179,7 @@
   };
 </script>
 
-  <title>Vue第1天 | xyh's Blog</title>
+  <title>Vue第10天 | xyh's Blog</title>
   
 
 
@@ -405,7 +410,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xiayunhu.github.io/Vue/Vue第1天/">
+    <link itemprop="mainEntityOfPage" href="http://xiayunhu.github.io/Vue/Vue第10天/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XYH">
@@ -423,7 +428,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Vue第1天
+          <h1 class="post-title" itemprop="name headline">Vue第10天
               
             
           </h1>
@@ -452,7 +457,7 @@
                 
               
 
-              <time title="创建时间：2019-08-09 00:00:00" itemprop="dateCreated datePublished" datetime="2019-08-09T00:00:00+08:00">2019-08-09</time>
+              <time title="创建时间：2019-09-11 00:00:00 / 修改时间：22:42:36" itemprop="dateCreated datePublished" datetime="2019-09-11T00:00:00+08:00">2019-09-11</time>
             
 
 		
@@ -460,19 +465,6 @@
             
               
 
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-				
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-08-10 09:37:01" itemprop="dateModified" datetime="2019-08-10T09:37:01+08:00">2019-08-10</time>
               
             
           </span>
@@ -505,8 +497,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/Vue/Vue第1天/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Vue/Vue第1天/" itemprop="commentCount"></span>
+                <a href="/Vue/Vue第10天/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Vue/Vue第10天/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -543,7 +535,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">字数统计:</span>
-           <span class="post-count">561字</span>
+           <span class="post-count">597字</span>
          </span>
 
          <span class="post-time">
@@ -572,60 +564,13 @@
       
 
       
-        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>最近想着应该好好的学习下vue.js来补充下自己的知识，所以接下来我将会把每天学的东西记录下来，供我们大家一起学习。</p>
-<h3 id="创建vue项目"><a href="#创建vue项目" class="headerlink" title="创建vue项目"></a>创建vue项目</h3><p>1、先全局安装vue-cli<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --global vue-cli</span><br></pre></td></tr></table></figure>2、创建一个新的项目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init webpack xyhVue（你的项目名称）</span><br></pre></td></tr></table></figure>3、紧接着需要一些配置，默认回车就好。<br>4、创建好之后，进入到你的项目文件下，运行项目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cnpm run dev</span><br><span class="line"></span><br><span class="line"> DONE  Compiled successfully in 43557ms                                     4:24:11 PM</span><br><span class="line"> I  Your application is running here: http://localhost:8080</span><br></pre></td></tr></table></figure><br>启动成功之后，在浏览器中输入<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a> ，输出结果如下图所示：<br><img src="http://pic.zhaotu.me/2019/08/08/vue879d435f53758ab6b.md.png" alt="“Vue第一天”"></p>
-<h3 id="Vue-js-目录结构"><a href="#Vue-js-目录结构" class="headerlink" title="Vue.js 目录结构"></a>Vue.js 目录结构</h3><p>打开创建好的项目文件，具体结构如下图所示：<br><img src="http://pic.zhaotu.me/2019/08/09/201908091647110a2403b9c22c70fb.png" alt="“vue项目创建和运行”"><br>我们将每个文件的名称及作用进行解析。</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">文件名称</th>
-<th style="text-align:center">说明/作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">node_modules</td>
-<td style="text-align:center">npm 加载的项目依赖模块</td>
-</tr>
-<tr>
-<td style="text-align:center">build</td>
-<td style="text-align:center">项目搭建(webpack)相关代码</td>
-</tr>
-<tr>
-<td style="text-align:center">config</td>
-<td style="text-align:center">配置目录，包括端口号等。初学可以使用默认的</td>
-</tr>
-<tr>
-<td style="text-align:center">src</td>
-<td style="text-align:center">这里是我们要开发的目录，基本上要做的事情都在这个目录里。里面包含了几个目录及文件：<br>assets: 放置一些图片，如logo等。<br>components: 目录里面放了一个组件文件，可以不用。<br>App.vue: 项目入口文件，我们也可以直接将组件写这里，而不使用 components 目录。<br>main.js: 项目的核心文件。</td>
-</tr>
-<tr>
-<td style="text-align:center">static</td>
-<td style="text-align:center">静态资源目录，如图片、字体等。</td>
-</tr>
-<tr>
-<td style="text-align:center">test</td>
-<td style="text-align:center">初始测试目录，可删除</td>
-</tr>
-<tr>
-<td style="text-align:center">index.html</td>
-<td style="text-align:center">首页入口文件，你可以添加一些 meta 信息或统计代码等。</td>
-</tr>
-<tr>
-<td style="text-align:center">package.json</td>
-<td style="text-align:center">项目配置文件。</td>
-</tr>
-<tr>
-<td style="text-align:center">package-lock.json</td>
-<td style="text-align:center">对结合了逻辑树和物理树的一个快照（snapshot），里面有明确的各依赖版本号，实际安装的结构，也有逻辑树的结构</td>
-</tr>
-<tr>
-<td style="text-align:center">README.md</td>
-<td style="text-align:center">项目的说明文档，markdown 格式</td>
-</tr>
-</tbody>
-</table>
-<h3 id="项目的首页入口"><a href="#项目的首页入口" class="headerlink" title="项目的首页入口"></a>项目的首页入口</h3><p>我们可以尝试修改下初始化的项目，找到src文件下的components下的HelloWorld.vue.<br>则src/components/HelloWorld.vue<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &apos;HelloWorld&apos;,</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      msg: &apos;第一个Vue项目创建好啦！！！&apos;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>我们修改后，保存，页面会自动刷新。<br><img src="http://pic.zhaotu.me/2019/08/09/20190809173515ca48eaa74be6ca1a.png" alt="“Vue第一天”"></p>
+        <h3 id="Vue-js-样式绑定"><a href="#Vue-js-样式绑定" class="headerlink" title="Vue.js 样式绑定"></a>Vue.js 样式绑定</h3><p>操作元素的 class 列表和内联样式是数据绑定的一个常见需求。因为它们都是属性，所以我们可以用 v-bind 处理它们： 只需要通过表达式计算出字符串结果即可。在将 v-bind 用于 class 和 style 时，Vue.js 做了专门的增强。 表达式结果的类型除了字符串之外，还可以是对象或数组。</p>
+<h4 id="绑定-HTML-Class"><a href="#绑定-HTML-Class" class="headerlink" title="绑定 HTML Class"></a>绑定 HTML Class</h4><p>我们可以为 v-bind:class 设置一个对象，从而动态的切换 class:<br>例1、将 isActive 设置为 true 显示了一个绿色的 div 块，如果设置为 false 则不显示：<br><img src="http://pic.zhaotu.me/2019/09/11/1bbc507db31bda863.png" alt="“Vue第10天”"><br>以上的例子div的class为active。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;active&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure><br>你可以在对象中传入更多属性来动态切换多个 class。此外，v-bind:class 指令也可以与普通的 class 属性共存。<br><img src="http://pic.zhaotu.me/2019/09/11/200fa6ffef5dcbd24.png" alt="“Vue第10天”"><br>当 isActive 或者 hasError 变化时，class 列表将相应地更新。例如，如果 hasError 的值为 true，class 列表将变为 “static active text-danger”。</p>
+<p>我们也可以在这里绑定一个返回对象的计算属性。这是一个常用且强大的模式：<br><img src="http://pic.zhaotu.me/2019/09/11/335639896276aed15.png" alt="“Vue第10天”"><br><img src="http://pic.zhaotu.me/2019/09/11/4b677a12199bb882c.png" alt="“Vue第10天”"></p>
+<h4 id="数组语法"><a href="#数组语法" class="headerlink" title="数组语法"></a>数组语法</h4><p>我们可以把一个数组传给 v-bind:class，以应用一个 class 列表：<br><img src="http://pic.zhaotu.me/2019/09/11/550b6934d194aa7bc.png" alt="“Vue第10天”"><br>渲染为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;active text-danger&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure><br>如果你也想根据条件切换列表中的 class，可以用三元表达式：<br><img src="http://pic.zhaotu.me/2019/09/11/65459c1aa6fbddefa.png" alt="“Vue第10天”"></p>
+<h4 id="绑定内联样式"><a href="#绑定内联样式" class="headerlink" title="绑定内联样式"></a>绑定内联样式</h4><p>1、v-bind:style 的对象语法十分直观——看着非常像 CSS，但其实是一个 JavaScript 对象。CSS 属性名可以用驼峰式 (camelCase) 或短横线分隔 (kebab-case，记得用单引号括起来) 来命名：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;div v-bind:style=&quot;&#123; color: activeColor, fontSize: fontSize + &apos;px&apos; &#125;&quot;&gt;xyh&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>我们可以在 v-bind:style 直接设置样式：<br><img src="http://pic.zhaotu.me/2019/09/11/772a0cff465825976.png" alt="“Vue第10天”"><br>2、或者直接绑定到一个样式对象通常更好，这会让模板更清晰：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-bind:style=&quot;styleObject&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure><br><img src="http://pic.zhaotu.me/2019/09/11/8d97244ef2381c98f.png" alt="“Vue第10天”"></p>
+<p>3、v-bind:style 的数组语法可以将多个样式对象应用到同一个元素上：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-bind:style=&quot;[baseStyles, overridingStyles]&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<h4 id="自动添加前缀"><a href="#自动添加前缀" class="headerlink" title="自动添加前缀"></a>自动添加前缀</h4><p>当 v-bind:style 使用需要添加浏览器引擎前缀的 CSS 属性时，如 transform，Vue.js 会自动侦测并添加相应的前缀。</p>
 
       
     </div>
@@ -710,8 +655,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/uncategorized/IIS部署php项目/" rel="next" title="">
-                <i class="fa fa-chevron-left"></i> 
+              <a href="/Vue/Vue第9天/" rel="next" title="Vue第9天">
+                <i class="fa fa-chevron-left"></i> Vue第9天
               </a>
             
           </div>
@@ -719,10 +664,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/Vue/Vue第2天/" rel="prev" title="Vue第2天">
-                Vue第2天 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -957,7 +898,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建vue项目"><span class="nav-number">2.</span> <span class="nav-text">创建vue项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-js-目录结构"><span class="nav-number">3.</span> <span class="nav-text">Vue.js 目录结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目的首页入口"><span class="nav-number">4.</span> <span class="nav-text">项目的首页入口</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-js-样式绑定"><span class="nav-number">1.</span> <span class="nav-text">Vue.js 样式绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#绑定-HTML-Class"><span class="nav-number">1.1.</span> <span class="nav-text">绑定 HTML Class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组语法"><span class="nav-number">1.2.</span> <span class="nav-text">数组语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#绑定内联样式"><span class="nav-number">1.3.</span> <span class="nav-text">绑定内联样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自动添加前缀"><span class="nav-number">1.4.</span> <span class="nav-text">自动添加前缀</span></a></li></ol></li></ol></div>
             
 
           </div>
