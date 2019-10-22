@@ -140,23 +140,27 @@
 
 
 
-  <meta name="description" content="条件语句v-ifv-if 指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回 true值的时候被渲染。这里的v-if 指令将根据表达式 wh 的值(true 或 false )来决定是否插入 p 元素。把一个 “template”元素当做不可见的包裹元素，并在上面使用 v-if。最终的渲染结果将不包含 “template” 元素 。 v-else可以用 v-else 指令给 v-if 添">
+  <meta name="description" content="Vue.js 样式绑定操作元素的 class 列表和内联样式是数据绑定的一个常见需求。因为它们都是属性，所以我们可以用 v-bind 处理它们： 只需要通过表达式计算出字符串结果即可。在将 v-bind 用于 class 和 style 时，Vue.js 做了专门的增强。 表达式结果的类型除了字符串之外，还可以是对象或数组。 绑定 HTML Class我们可以为 v-bind:class 设置一个">
 <meta name="keywords" content="Vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue第5天">
-<meta property="og:url" content="http://xiayunhu.github.io/Vue/Vue第5天/index.html">
+<meta property="og:title" content="Vue样式绑定（十）">
+<meta property="og:url" content="http://xiayunhu.github.io/Vue/Vue样式绑定（十）/index.html">
 <meta property="og:site_name" content="xyh&#39;s Blog">
-<meta property="og:description" content="条件语句v-ifv-if 指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回 true值的时候被渲染。这里的v-if 指令将根据表达式 wh 的值(true 或 false )来决定是否插入 p 元素。把一个 “template”元素当做不可见的包裹元素，并在上面使用 v-if。最终的渲染结果将不包含 “template” 元素 。 v-else可以用 v-else 指令给 v-if 添">
+<meta property="og:description" content="Vue.js 样式绑定操作元素的 class 列表和内联样式是数据绑定的一个常见需求。因为它们都是属性，所以我们可以用 v-bind 处理它们： 只需要通过表达式计算出字符串结果即可。在将 v-bind 用于 class 和 style 时，Vue.js 做了专门的增强。 表达式结果的类型除了字符串之外，还可以是对象或数组。 绑定 HTML Class我们可以为 v-bind:class 设置一个">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://pic.zhaotu.me/2019/08/14/1a31ea82a4400d64e.png">
-<meta property="og:image" content="http://pic.zhaotu.me/2019/08/14/28153664c98b476df.png">
-<meta property="og:image" content="http://pic.zhaotu.me/2019/08/14/33870f325d745fa1d.png">
-<meta property="og:image" content="http://pic.zhaotu.me/2019/08/14/4df615d00fec6fa1c.png">
-<meta property="og:updated_time" content="2019-08-14T06:30:09.542Z">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/09/11/1bbc507db31bda863.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/09/11/200fa6ffef5dcbd24.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/09/11/335639896276aed15.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/09/11/4b677a12199bb882c.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/09/11/550b6934d194aa7bc.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/09/11/65459c1aa6fbddefa.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/09/11/772a0cff465825976.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/09/11/8d97244ef2381c98f.png">
+<meta property="og:updated_time" content="2019-10-21T02:33:12.285Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue第5天">
-<meta name="twitter:description" content="条件语句v-ifv-if 指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回 true值的时候被渲染。这里的v-if 指令将根据表达式 wh 的值(true 或 false )来决定是否插入 p 元素。把一个 “template”元素当做不可见的包裹元素，并在上面使用 v-if。最终的渲染结果将不包含 “template” 元素 。 v-else可以用 v-else 指令给 v-if 添">
-<meta name="twitter:image" content="http://pic.zhaotu.me/2019/08/14/1a31ea82a4400d64e.png">
+<meta name="twitter:title" content="Vue样式绑定（十）">
+<meta name="twitter:description" content="Vue.js 样式绑定操作元素的 class 列表和内联样式是数据绑定的一个常见需求。因为它们都是属性，所以我们可以用 v-bind 处理它们： 只需要通过表达式计算出字符串结果即可。在将 v-bind 用于 class 和 style 时，Vue.js 做了专门的增强。 表达式结果的类型除了字符串之外，还可以是对象或数组。 绑定 HTML Class我们可以为 v-bind:class 设置一个">
+<meta name="twitter:image" content="http://pic.zhaotu.me/2019/09/11/1bbc507db31bda863.png">
 
 
 
@@ -165,7 +169,7 @@
 
 
 
-  <link rel="canonical" href="http://xiayunhu.github.io/Vue/Vue第5天/"/>
+  <link rel="canonical" href="http://xiayunhu.github.io/Vue/Vue样式绑定（十）/"/>
 
 
 
@@ -175,7 +179,7 @@
   };
 </script>
 
-  <title>Vue第5天 | xyh's Blog</title>
+  <title>Vue样式绑定（十） | xyh's Blog</title>
   
 
 
@@ -406,7 +410,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xiayunhu.github.io/Vue/Vue第5天/">
+    <link itemprop="mainEntityOfPage" href="http://xiayunhu.github.io/Vue/Vue样式绑定（十）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XYH">
@@ -424,7 +428,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Vue第5天
+          <h1 class="post-title" itemprop="name headline">Vue样式绑定（十）
               
             
           </h1>
@@ -453,7 +457,7 @@
                 
               
 
-              <time title="创建时间：2019-08-13 00:00:00" itemprop="dateCreated datePublished" datetime="2019-08-13T00:00:00+08:00">2019-08-13</time>
+              <time title="创建时间：2019-09-11 00:00:00" itemprop="dateCreated datePublished" datetime="2019-09-11T00:00:00+08:00">2019-09-11</time>
             
 
 		
@@ -473,7 +477,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-14 14:30:09" itemprop="dateModified" datetime="2019-08-14T14:30:09+08:00">2019-08-14</time>
+                <time title="修改时间：2019-10-21 10:33:12" itemprop="dateModified" datetime="2019-10-21T10:33:12+08:00">2019-10-21</time>
               
             
           </span>
@@ -506,8 +510,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/Vue/Vue第5天/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Vue/Vue第5天/" itemprop="commentCount"></span>
+                <a href="/Vue/Vue样式绑定（十）/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Vue/Vue样式绑定（十）/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -544,7 +548,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">字数统计:</span>
-           <span class="post-count">574字</span>
+           <span class="post-count">597字</span>
          </span>
 
          <span class="post-time">
@@ -573,13 +577,13 @@
       
 
       
-        <h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><h4 id="v-if"><a href="#v-if" class="headerlink" title="v-if"></a>v-if</h4><p>v-if 指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回 true值的时候被渲染。<br>这里的v-if 指令将根据表达式 wh 的值(true 或 false )来决定是否插入 p 元素。<br>把一个 “template”元素当做不可见的包裹元素，并在上面使用 v-if。最终的渲染结果将不包含 “template” 元素 。<br><img src="http://pic.zhaotu.me/2019/08/14/1a31ea82a4400d64e.png" alt="“Vue第5天”"></p>
-<h4 id="v-else"><a href="#v-else" class="headerlink" title="v-else"></a>v-else</h4><p>可以用 v-else 指令给 v-if 添加一个 “else” 块<br>举个例子：随机生成一个数字，判断是否大于0.5，然后输出对应信息。<br><img src="http://pic.zhaotu.me/2019/08/14/28153664c98b476df.png" alt="“Vue第5天”"></p>
-<h4 id="v-else-if-2-1-0-新增"><a href="#v-else-if-2-1-0-新增" class="headerlink" title="v-else-if (2.1.0 新增)"></a>v-else-if (2.1.0 新增)</h4><p>v-else-if，顾名思义，充当 v-if 的”else-if 块”，可以连续使用<br><img src="http://pic.zhaotu.me/2019/08/14/33870f325d745fa1d.png" alt="“Vue第5天”"><br>类似于 v-else，v-else-if 也必须紧跟在带 v-if 或者 v-else-if 的元素之后。</p>
-<h4 id="v-show"><a href="#v-show" class="headerlink" title="v-show"></a>v-show</h4><p>根据条件展示元素的选项是 v-show 指令<br><img src="http://pic.zhaotu.me/2019/08/14/4df615d00fec6fa1c.png" alt="“Vue第5天”"><br>不同的是带有 v-show 的元素始终会被渲染并保留在 DOM 中。v-show 只是简单地切换元素的 CSS 属性 display。<br><b>注意：v-show 不支持 <template> 元素，也不支持 v-else。</template></b></p>
-<h4 id="v-if-对比-v-show"><a href="#v-if-对比-v-show" class="headerlink" title="v-if 对比 v-show"></a>v-if 对比 v-show</h4><p>1、v-if 是“真正”的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建。<br>2、v-if 也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。<br>3、相比之下，v-show 就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换。<br>4、一般来说，v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用 v-show 较好；如果在运行时条件很少改变，则使用 v-if 较好。</p>
-<h4 id="v-if-与-v-for-一起使用"><a href="#v-if-与-v-for-一起使用" class="headerlink" title="v-if 与 v-for 一起使用"></a>v-if 与 v-for 一起使用</h4><p>首先是不推荐这样使用的，当 v-if 与 v-for 一起使用时，v-for 具有比 v-if 更高的优先级。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>条件语句在我们平时做项目的时候用到的非常多的，所以还是要好好研究透，多多练习。</p>
+        <h3 id="Vue-js-样式绑定"><a href="#Vue-js-样式绑定" class="headerlink" title="Vue.js 样式绑定"></a>Vue.js 样式绑定</h3><p>操作元素的 class 列表和内联样式是数据绑定的一个常见需求。因为它们都是属性，所以我们可以用 v-bind 处理它们： 只需要通过表达式计算出字符串结果即可。在将 v-bind 用于 class 和 style 时，Vue.js 做了专门的增强。 表达式结果的类型除了字符串之外，还可以是对象或数组。</p>
+<h4 id="绑定-HTML-Class"><a href="#绑定-HTML-Class" class="headerlink" title="绑定 HTML Class"></a>绑定 HTML Class</h4><p>我们可以为 v-bind:class 设置一个对象，从而动态的切换 class:<br>例1、将 isActive 设置为 true 显示了一个绿色的 div 块，如果设置为 false 则不显示：<br><img src="http://pic.zhaotu.me/2019/09/11/1bbc507db31bda863.png" alt="“Vue第10天”"><br>以上的例子div的class为active。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;active&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure><br>你可以在对象中传入更多属性来动态切换多个 class。此外，v-bind:class 指令也可以与普通的 class 属性共存。<br><img src="http://pic.zhaotu.me/2019/09/11/200fa6ffef5dcbd24.png" alt="“Vue第10天”"><br>当 isActive 或者 hasError 变化时，class 列表将相应地更新。例如，如果 hasError 的值为 true，class 列表将变为 “static active text-danger”。</p>
+<p>我们也可以在这里绑定一个返回对象的计算属性。这是一个常用且强大的模式：<br><img src="http://pic.zhaotu.me/2019/09/11/335639896276aed15.png" alt="“Vue第10天”"><br><img src="http://pic.zhaotu.me/2019/09/11/4b677a12199bb882c.png" alt="“Vue第10天”"></p>
+<h4 id="数组语法"><a href="#数组语法" class="headerlink" title="数组语法"></a>数组语法</h4><p>我们可以把一个数组传给 v-bind:class，以应用一个 class 列表：<br><img src="http://pic.zhaotu.me/2019/09/11/550b6934d194aa7bc.png" alt="“Vue第10天”"><br>渲染为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;active text-danger&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure><br>如果你也想根据条件切换列表中的 class，可以用三元表达式：<br><img src="http://pic.zhaotu.me/2019/09/11/65459c1aa6fbddefa.png" alt="“Vue第10天”"></p>
+<h4 id="绑定内联样式"><a href="#绑定内联样式" class="headerlink" title="绑定内联样式"></a>绑定内联样式</h4><p>1、v-bind:style 的对象语法十分直观——看着非常像 CSS，但其实是一个 JavaScript 对象。CSS 属性名可以用驼峰式 (camelCase) 或短横线分隔 (kebab-case，记得用单引号括起来) 来命名：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;div v-bind:style=&quot;&#123; color: activeColor, fontSize: fontSize + &apos;px&apos; &#125;&quot;&gt;xyh&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>我们可以在 v-bind:style 直接设置样式：<br><img src="http://pic.zhaotu.me/2019/09/11/772a0cff465825976.png" alt="“Vue第10天”"><br>2、或者直接绑定到一个样式对象通常更好，这会让模板更清晰：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-bind:style=&quot;styleObject&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure><br><img src="http://pic.zhaotu.me/2019/09/11/8d97244ef2381c98f.png" alt="“Vue第10天”"></p>
+<p>3、v-bind:style 的数组语法可以将多个样式对象应用到同一个元素上：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-bind:style=&quot;[baseStyles, overridingStyles]&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<h4 id="自动添加前缀"><a href="#自动添加前缀" class="headerlink" title="自动添加前缀"></a>自动添加前缀</h4><p>当 v-bind:style 使用需要添加浏览器引擎前缀的 CSS 属性时，如 transform，Vue.js 会自动侦测并添加相应的前缀。</p>
 
       
     </div>
@@ -664,8 +668,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Vue/Vue第4天/" rel="next" title="Vue第4天">
-                <i class="fa fa-chevron-left"></i> Vue第4天
+              <a href="/Vue/Vue监听属性（九）/" rel="next" title="Vue监听属性（九）">
+                <i class="fa fa-chevron-left"></i> Vue监听属性（九）
               </a>
             
           </div>
@@ -674,8 +678,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Vue/Vue第6天/" rel="prev" title="Vue第6天">
-                Vue第6天 <i class="fa fa-chevron-right"></i>
+              <a href="/Vue/Vue事件处理器（十一）/" rel="prev" title="Vue事件处理器（十一）">
+                Vue事件处理器（十一） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -911,7 +915,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#条件语句"><span class="nav-number">1.</span> <span class="nav-text">条件语句</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#v-if"><span class="nav-number">1.1.</span> <span class="nav-text">v-if</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-else"><span class="nav-number">1.2.</span> <span class="nav-text">v-else</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-else-if-2-1-0-新增"><span class="nav-number">1.3.</span> <span class="nav-text">v-else-if (2.1.0 新增)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-show"><span class="nav-number">1.4.</span> <span class="nav-text">v-show</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-if-对比-v-show"><span class="nav-number">1.5.</span> <span class="nav-text">v-if 对比 v-show</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-if-与-v-for-一起使用"><span class="nav-number">1.6.</span> <span class="nav-text">v-if 与 v-for 一起使用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-js-样式绑定"><span class="nav-number">1.</span> <span class="nav-text">Vue.js 样式绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#绑定-HTML-Class"><span class="nav-number">1.1.</span> <span class="nav-text">绑定 HTML Class</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数组语法"><span class="nav-number">1.2.</span> <span class="nav-text">数组语法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#绑定内联样式"><span class="nav-number">1.3.</span> <span class="nav-text">绑定内联样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自动添加前缀"><span class="nav-number">1.4.</span> <span class="nav-text">自动添加前缀</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -947,7 +951,7 @@
     <!-- 博客字数统计 -->
     <span class="site-pv">
       <i class="fa fa-pencil"></i>
-      博客全站共： <span class="post-count">19.7k</span> 字
+      博客全站共： <span class="post-count">20k</span> 字
     </span>
 </div>
 

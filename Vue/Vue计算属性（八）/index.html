@@ -140,23 +140,22 @@
 
 
 
-  <meta name="description" content="条件渲染v-if指令v-if 指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回 truthy 值的时候被渲染。也可以用 v-else 添加一个“else 块”： v-else你可以使用 v-else 指令来表示 v-if 的“else 块”：v-else 元素必须紧跟在带 v-if 或者 v-else-if 的元素的后面，否则它将不会被识别。 v-else-if（2.1.0 新增）v-">
+  <meta name="description" content="Vue.js 计算属性computed计算属性关键词: computed，对于任何复杂逻辑，你都应当使用计算属性。接下来我们看看计算属性的实例 computed settercomputed 属性默认只有 getter ，不过在需要时你也可以提供一个 setter 从实例运行结果看在运行 vm.site = ‘http://www.xyhwh.cn&amp;#39;; 时，setter 会被调用， vm.">
 <meta name="keywords" content="Vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue第7天">
-<meta property="og:url" content="http://xiayunhu.github.io/Vue/Vue第7天/index.html">
+<meta property="og:title" content="Vue计算属性（八）">
+<meta property="og:url" content="http://xiayunhu.github.io/Vue/Vue计算属性（八）/index.html">
 <meta property="og:site_name" content="xyh&#39;s Blog">
-<meta property="og:description" content="条件渲染v-if指令v-if 指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回 truthy 值的时候被渲染。也可以用 v-else 添加一个“else 块”： v-else你可以使用 v-else 指令来表示 v-if 的“else 块”：v-else 元素必须紧跟在带 v-if 或者 v-else-if 的元素的后面，否则它将不会被识别。 v-else-if（2.1.0 新增）v-">
+<meta property="og:description" content="Vue.js 计算属性computed计算属性关键词: computed，对于任何复杂逻辑，你都应当使用计算属性。接下来我们看看计算属性的实例 computed settercomputed 属性默认只有 getter ，不过在需要时你也可以提供一个 setter 从实例运行结果看在运行 vm.site = ‘http://www.xyhwh.cn&amp;#39;; 时，setter 会被调用， vm.">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://pic.zhaotu.me/2019/09/02/1299a8f57e6a45a0c.png">
-<meta property="og:image" content="http://pic.zhaotu.me/2019/09/02/21f6bc60df4c615a8.png">
-<meta property="og:image" content="http://pic.zhaotu.me/2019/09/02/3a2ecdb1f398ad7d5.png">
-<meta property="og:image" content="http://pic.zhaotu.me/2019/09/02/499e0ef072f98a1d0.png">
-<meta property="og:updated_time" content="2019-09-02T05:35:11.408Z">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/09/02/12bf07fb980042858.md.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/09/02/2891d12eaaf961504.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/09/02/3fb16852e375bd728.png">
+<meta property="og:updated_time" content="2019-10-21T02:32:17.429Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue第7天">
-<meta name="twitter:description" content="条件渲染v-if指令v-if 指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回 truthy 值的时候被渲染。也可以用 v-else 添加一个“else 块”： v-else你可以使用 v-else 指令来表示 v-if 的“else 块”：v-else 元素必须紧跟在带 v-if 或者 v-else-if 的元素的后面，否则它将不会被识别。 v-else-if（2.1.0 新增）v-">
-<meta name="twitter:image" content="http://pic.zhaotu.me/2019/09/02/1299a8f57e6a45a0c.png">
+<meta name="twitter:title" content="Vue计算属性（八）">
+<meta name="twitter:description" content="Vue.js 计算属性computed计算属性关键词: computed，对于任何复杂逻辑，你都应当使用计算属性。接下来我们看看计算属性的实例 computed settercomputed 属性默认只有 getter ，不过在需要时你也可以提供一个 setter 从实例运行结果看在运行 vm.site = ‘http://www.xyhwh.cn&amp;#39;; 时，setter 会被调用， vm.">
+<meta name="twitter:image" content="http://pic.zhaotu.me/2019/09/02/12bf07fb980042858.md.png">
 
 
 
@@ -165,7 +164,7 @@
 
 
 
-  <link rel="canonical" href="http://xiayunhu.github.io/Vue/Vue第7天/"/>
+  <link rel="canonical" href="http://xiayunhu.github.io/Vue/Vue计算属性（八）/"/>
 
 
 
@@ -175,7 +174,7 @@
   };
 </script>
 
-  <title>Vue第7天 | xyh's Blog</title>
+  <title>Vue计算属性（八） | xyh's Blog</title>
   
 
 
@@ -406,7 +405,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xiayunhu.github.io/Vue/Vue第7天/">
+    <link itemprop="mainEntityOfPage" href="http://xiayunhu.github.io/Vue/Vue计算属性（八）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XYH">
@@ -424,7 +423,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Vue第7天
+          <h1 class="post-title" itemprop="name headline">Vue计算属性（八）
               
             
           </h1>
@@ -453,7 +452,7 @@
                 
               
 
-              <time title="创建时间：2019-08-15 00:00:00" itemprop="dateCreated datePublished" datetime="2019-08-15T00:00:00+08:00">2019-08-15</time>
+              <time title="创建时间：2019-09-02 00:00:00" itemprop="dateCreated datePublished" datetime="2019-09-02T00:00:00+08:00">2019-09-02</time>
             
 
 		
@@ -473,7 +472,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-02 13:35:11" itemprop="dateModified" datetime="2019-09-02T13:35:11+08:00">2019-09-02</time>
+                <time title="修改时间：2019-10-21 10:32:17" itemprop="dateModified" datetime="2019-10-21T10:32:17+08:00">2019-10-21</time>
               
             
           </span>
@@ -506,8 +505,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/Vue/Vue第7天/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Vue/Vue第7天/" itemprop="commentCount"></span>
+                <a href="/Vue/Vue计算属性（八）/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Vue/Vue计算属性（八）/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -544,7 +543,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">字数统计:</span>
-           <span class="post-count">282字</span>
+           <span class="post-count">107字</span>
          </span>
 
          <span class="post-time">
@@ -573,11 +572,9 @@
       
 
       
-        <h3 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h3><h4 id="v-if指令"><a href="#v-if指令" class="headerlink" title="v-if指令"></a>v-if指令</h4><p>v-if 指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回 truthy 值的时候被渲染。<br><img src="http://pic.zhaotu.me/2019/09/02/1299a8f57e6a45a0c.png" alt="“Vue第7天”"><br>也可以用 v-else 添加一个“else 块”：</p>
-<h4 id="v-else"><a href="#v-else" class="headerlink" title="v-else"></a>v-else</h4><p>你可以使用 v-else 指令来表示 v-if 的“else 块”：<br><img src="http://pic.zhaotu.me/2019/09/02/21f6bc60df4c615a8.png" alt="“Vue第7天”"><br>v-else 元素必须紧跟在带 v-if 或者 v-else-if 的元素的后面，否则它将不会被识别。</p>
-<h4 id="v-else-if（2-1-0-新增）"><a href="#v-else-if（2-1-0-新增）" class="headerlink" title="v-else-if（2.1.0 新增）"></a>v-else-if（2.1.0 新增）</h4><p>v-else-if，顾名思义，充当 v-if 的“else-if 块”，可以连续使用<br><img src="http://pic.zhaotu.me/2019/09/02/3a2ecdb1f398ad7d5.png" alt="“Vue第7天”"><br>类似于 v-else，v-else-if 也必须紧跟在带 v-if 或者 v-else-if 的元素之后。</p>
-<h4 id="v-show"><a href="#v-show" class="headerlink" title="v-show"></a>v-show</h4><p>另一个用于根据条件展示元素的选项是 v-show 指令。用法大致一样<br><img src="http://pic.zhaotu.me/2019/09/02/499e0ef072f98a1d0.png" alt="“Vue第7天”"><br>不同的是带有 v-show 的元素始终会被渲染并保留在 DOM 中。v-show 只是简单地切换元素的 CSS 属性 display。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>条件渲染我就介绍这两种，一个是v-if，另一个是v-show。如果想要多了解的话，可以在vue.js官网上查看相关技术文档。</p>
+        <h3 id="Vue-js-计算属性"><a href="#Vue-js-计算属性" class="headerlink" title="Vue.js 计算属性"></a>Vue.js 计算属性</h3><h4 id="computed"><a href="#computed" class="headerlink" title="computed"></a>computed</h4><p>计算属性关键词: computed，对于任何复杂逻辑，你都应当使用计算属性。<br><img src="http://pic.zhaotu.me/2019/09/02/12bf07fb980042858.md.png" alt="“Vue第8天”"><br>接下来我们看看计算属性的实例<br><img src="http://pic.zhaotu.me/2019/09/02/2891d12eaaf961504.png" alt="“Vue第8天”"></p>
+<h4 id="computed-setter"><a href="#computed-setter" class="headerlink" title="computed setter"></a>computed setter</h4><p>computed 属性默认只有 getter ，不过在需要时你也可以提供一个 setter<br><img src="http://pic.zhaotu.me/2019/09/02/3fb16852e375bd728.png" alt="“Vue第8天”"></p>
+<p>从实例运行结果看在运行 vm.site = ‘<a href="http://www.xyhwh.cn&#39;" target="_blank" rel="noopener">http://www.xyhwh.cn&#39;</a>; 时，setter 会被调用， vm.name 和 vm.url 也会被对应更新。</p>
 
       
     </div>
@@ -662,8 +659,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Vue/Vue第6天/" rel="next" title="Vue第6天">
-                <i class="fa fa-chevron-left"></i> Vue第6天
+              <a href="/Vue/Vue条件渲染（七）/" rel="next" title="Vue条件渲染（七）">
+                <i class="fa fa-chevron-left"></i> Vue条件渲染（七）
               </a>
             
           </div>
@@ -672,8 +669,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Vue/Vue第8天/" rel="prev" title="Vue第8天">
-                Vue第8天 <i class="fa fa-chevron-right"></i>
+              <a href="/Vue/Vue监听属性（九）/" rel="prev" title="Vue监听属性（九）">
+                Vue监听属性（九） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -909,7 +906,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#条件渲染"><span class="nav-number">1.</span> <span class="nav-text">条件渲染</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#v-if指令"><span class="nav-number">1.1.</span> <span class="nav-text">v-if指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-else"><span class="nav-number">1.2.</span> <span class="nav-text">v-else</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-else-if（2-1-0-新增）"><span class="nav-number">1.3.</span> <span class="nav-text">v-else-if（2.1.0 新增）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-show"><span class="nav-number">1.4.</span> <span class="nav-text">v-show</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-js-计算属性"><span class="nav-number">1.</span> <span class="nav-text">Vue.js 计算属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#computed"><span class="nav-number">1.1.</span> <span class="nav-text">computed</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#computed-setter"><span class="nav-number">1.2.</span> <span class="nav-text">computed setter</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -945,7 +942,7 @@
     <!-- 博客字数统计 -->
     <span class="site-pv">
       <i class="fa fa-pencil"></i>
-      博客全站共： <span class="post-count">19.7k</span> 字
+      博客全站共： <span class="post-count">20k</span> 字
     </span>
 </div>
 

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xiayunhu.github.io/"/>
-  <updated>2019-09-11T14:42:36.097Z</updated>
+  <updated>2019-10-22T08:23:12.638Z</updated>
   <id>http://xiayunhu.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Vue第10天</title>
-    <link href="http://xiayunhu.github.io/Vue/Vue%E7%AC%AC10%E5%A4%A9/"/>
-    <id>http://xiayunhu.github.io/Vue/Vue第10天/</id>
+    <title>Vue事件处理器（十一）</title>
+    <link href="http://xiayunhu.github.io/Vue/Vue%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E5%99%A8%EF%BC%88%E5%8D%81%E4%B8%80%EF%BC%89/"/>
+    <id>http://xiayunhu.github.io/Vue/Vue事件处理器（十一）/</id>
+    <published>2019-10-20T16:00:00.000Z</published>
+    <updated>2019-10-22T08:23:12.638Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Vue-js-事件处理器"><a href="#Vue-js-事件处理器" class="headerlink" title="Vue.js 事件处理器"></a>Vue.js 事件处理器</h3><h4 id="v-on指令"><a href="#v-on指令" class="headerlink" title="v-on指令"></a>v-on指令</h4><p>监听事件可以用v-on 指令监听 DOM 事件<br>例如以下代码：<br><img src="http://pic.zhaotu.me/2019/10/21/14572c752517b3aba.jpg" alt="“Vue事件处理器（十一）”"><br>在许多的情况下，事件处理逻辑会更为复杂，所以直接把 JavaScript 代码写在 v-on 指令中是不可行的。因此 v-on还可以   接收一个需要调用的方法名称。<br>例如以下代码：<br><img src="http://pic.zhaotu.me/2019/10/21/2c773e802b6937cf0.png" alt="“Vue事件处理器（十一）”"></p><h5 id="内联处理器中的方法"><a href="#内联处理器中的方法" class="headerlink" title="内联处理器中的方法"></a>内联处理器中的方法</h5><p>除了直接绑定到一个方法，也可以在内联 JavaScript 语句中调用方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;example-3&quot;&gt;</span><br><span class="line">  &lt;button v-on:click=&quot;say(&apos;hi&apos;)&quot;&gt;Say hi&lt;/button&gt;</span><br><span class="line">  &lt;button v-on:click=&quot;say(&apos;what&apos;)&quot;&gt;Say what&lt;/button&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">new Vue(&#123;</span><br><span class="line">  el: &apos;#example-3&apos;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    say: function (message) &#123;</span><br><span class="line">      alert(message)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p><h5 id="事件修饰符"><a href="#事件修饰符" class="headerlink" title="事件修饰符"></a>事件修饰符</h5><p>在事件处理程序中调用 event.preventDefault() 或 event.stopPropagation() 是非常常见的需求。尽管我们可以在方法 中轻松实现这点，但更好的方式是：方法只有纯粹的数据逻辑，而不是去处理 DOM 事件细节。<br>为了解决这个问题，Vue.js 为 v-on 提供了事件修饰符。之前提过，修饰符是由点开头的指令后缀来表示的。</p><ul><li>.stop </li><li>.prevent </li><li>.capture</li><li>.self</li><li>.once</li><li>.passive</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 阻止单击事件继续传播 --&gt;</span><br><span class="line">&lt;a v-on:click.stop=&quot;doThis&quot;&gt;&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 提交事件不再重载页面 --&gt;</span><br><span class="line">&lt;form v-on:submit.prevent=&quot;onSubmit&quot;&gt;&lt;/form&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 修饰符可以串联 --&gt;</span><br><span class="line">&lt;a v-on:click.stop.prevent=&quot;doThat&quot;&gt;&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 只有修饰符 --&gt;</span><br><span class="line">&lt;form v-on:submit.prevent&gt;&lt;/form&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 添加事件监听器时使用事件捕获模式 --&gt;</span><br><span class="line">&lt;!-- 即元素自身触发的事件先在此处理，然后才交由内部元素进行处理 --&gt;</span><br><span class="line">&lt;div v-on:click.capture=&quot;doThis&quot;&gt;...&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 只当在 event.target 是当前元素自身时触发处理函数 --&gt;</span><br><span class="line">&lt;!-- 即事件不是从内部元素触发的 --&gt;</span><br><span class="line">&lt;div v-on:click.self=&quot;doThat&quot;&gt;...&lt;/div&gt;</span><br></pre></td></tr></table></figure><p><b>注意：不要把 .passive 和 .prevent 一起使用，因为 .prevent 将会被忽略，同时浏览器可能会向你展示一个警告。请记住，.passive 会告诉浏览器你不想阻止事件的默认行为。</b></p><h5 id="按键修饰符"><a href="#按键修饰符" class="headerlink" title="按键修饰符"></a>按键修饰符</h5><p>在监听键盘事件时，我们经常需要检查常见的键值。Vue 允许为 v-on 在监听键盘事件时添加按键修饰符：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 只有在 `keyCode` 是 13 时调用 `vm.submit()` --&gt;</span><br><span class="line">&lt;input v-on:keyup.13=&quot;submit&quot;&gt;</span><br></pre></td></tr></table></figure><br>记住所有的 keyCode 比较困难，所以 Vue 为最常用的按键提供了别名：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 同上 --&gt;</span><br><span class="line">&lt;input v-on:keyup.enter=&quot;submit&quot;&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 缩写语法 --&gt;</span><br><span class="line">&lt;input @keyup.enter=&quot;submit&quot;&gt;</span><br></pre></td></tr></table></figure></p><p>全部的按键别名：</p><ul><li>.enter</li><li>.tab</li><li>.delete (捕获 “删除” 和 “退格” 键)</li><li>.esc</li><li>.space</li><li>.up</li><li>.down</li><li>.left</li><li>.right</li><li>.ctrl</li><li>.alt</li><li>.shift</li><li>.meta</li></ul><p>可以通过全局 config.keyCodes 对象自定义按键修饰符别名：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&lt;!-- Alt + C --&gt;</span><br><span class="line">&lt;input @keyup.alt.67=&quot;clear&quot;&gt;</span><br><span class="line">&lt;!-- Ctrl + Click --&gt;</span><br><span class="line">&lt;div @click.ctrl=&quot;doSomething&quot;&gt;Do something&lt;/div&gt;</span><br></pre></td></tr></table></figure></p><h5 id="自动匹配按键修饰符（2-5-0-新增）"><a href="#自动匹配按键修饰符（2-5-0-新增）" class="headerlink" title="自动匹配按键修饰符（2.5.0 新增）"></a>自动匹配按键修饰符（2.5.0 新增）</h5><p>你也可直接将 KeyboardEvent.key 暴露的任意有效按键名转换为 kebab-case 来作为修饰符：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input @keyup.page-down=&quot;onPageDown&quot;&gt;</span><br></pre></td></tr></table></figure>在上面的例子中，处理函数仅在 $event.key === ‘PageDown’ 时被调用。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;Vue-js-事件处理器&quot;&gt;&lt;a href=&quot;#Vue-js-事件处理器&quot; class=&quot;headerlink&quot; title=&quot;Vue.js 事件处理器&quot;&gt;&lt;/a&gt;Vue.js 事件处理器&lt;/h3&gt;&lt;h4 id=&quot;v-on指令&quot;&gt;&lt;a href=&quot;#v-on指令&quot;
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="http://xiayunhu.github.io/categories/Vue/"/>
+    
+    
+      <category term="Vue" scheme="http://xiayunhu.github.io/tags/Vue/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue样式绑定（十）</title>
+    <link href="http://xiayunhu.github.io/Vue/Vue%E6%A0%B7%E5%BC%8F%E7%BB%91%E5%AE%9A%EF%BC%88%E5%8D%81%EF%BC%89/"/>
+    <id>http://xiayunhu.github.io/Vue/Vue样式绑定（十）/</id>
     <published>2019-09-10T16:00:00.000Z</published>
-    <updated>2019-09-11T14:42:36.097Z</updated>
+    <updated>2019-10-21T02:33:12.285Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Vue-js-样式绑定"><a href="#Vue-js-样式绑定" class="headerlink" title="Vue.js 样式绑定"></a>Vue.js 样式绑定</h3><p>操作元素的 class 列表和内联样式是数据绑定的一个常见需求。因为它们都是属性，所以我们可以用 v-bind 处理它们： 只需要通过表达式计算出字符串结果即可。在将 v-bind 用于 class 和 style 时，Vue.js 做了专门的增强。 表达式结果的类型除了字符串之外，还可以是对象或数组。</p><h4 id="绑定-HTML-Class"><a href="#绑定-HTML-Class" class="headerlink" title="绑定 HTML Class"></a>绑定 HTML Class</h4><p>我们可以为 v-bind:class 设置一个对象，从而动态的切换 class:<br>例1、将 isActive 设置为 true 显示了一个绿色的 div 块，如果设置为 false 则不显示：<br><img src="http://pic.zhaotu.me/2019/09/11/1bbc507db31bda863.png" alt="“Vue第10天”"><br>以上的例子div的class为active。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;active&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure><br>你可以在对象中传入更多属性来动态切换多个 class。此外，v-bind:class 指令也可以与普通的 class 属性共存。<br><img src="http://pic.zhaotu.me/2019/09/11/200fa6ffef5dcbd24.png" alt="“Vue第10天”"><br>当 isActive 或者 hasError 变化时，class 列表将相应地更新。例如，如果 hasError 的值为 true，class 列表将变为 “static active text-danger”。</p><p>我们也可以在这里绑定一个返回对象的计算属性。这是一个常用且强大的模式：<br><img src="http://pic.zhaotu.me/2019/09/11/335639896276aed15.png" alt="“Vue第10天”"><br><img src="http://pic.zhaotu.me/2019/09/11/4b677a12199bb882c.png" alt="“Vue第10天”"></p><h4 id="数组语法"><a href="#数组语法" class="headerlink" title="数组语法"></a>数组语法</h4><p>我们可以把一个数组传给 v-bind:class，以应用一个 class 列表：<br><img src="http://pic.zhaotu.me/2019/09/11/550b6934d194aa7bc.png" alt="“Vue第10天”"><br>渲染为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;active text-danger&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure><br>如果你也想根据条件切换列表中的 class，可以用三元表达式：<br><img src="http://pic.zhaotu.me/2019/09/11/65459c1aa6fbddefa.png" alt="“Vue第10天”"></p><h4 id="绑定内联样式"><a href="#绑定内联样式" class="headerlink" title="绑定内联样式"></a>绑定内联样式</h4><p>1、v-bind:style 的对象语法十分直观——看着非常像 CSS，但其实是一个 JavaScript 对象。CSS 属性名可以用驼峰式 (camelCase) 或短横线分隔 (kebab-case，记得用单引号括起来) 来命名：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;app&quot;&gt;</span><br><span class="line">    &lt;div v-bind:style=&quot;&#123; color: activeColor, fontSize: fontSize + &apos;px&apos; &#125;&quot;&gt;xyh&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>我们可以在 v-bind:style 直接设置样式：<br><img src="http://pic.zhaotu.me/2019/09/11/772a0cff465825976.png" alt="“Vue第10天”"><br>2、或者直接绑定到一个样式对象通常更好，这会让模板更清晰：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-bind:style=&quot;styleObject&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure><br><img src="http://pic.zhaotu.me/2019/09/11/8d97244ef2381c98f.png" alt="“Vue第10天”"></p><p>3、v-bind:style 的数组语法可以将多个样式对象应用到同一个元素上：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-bind:style=&quot;[baseStyles, overridingStyles]&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure></p><h4 id="自动添加前缀"><a href="#自动添加前缀" class="headerlink" title="自动添加前缀"></a>自动添加前缀</h4><p>当 v-bind:style 使用需要添加浏览器引擎前缀的 CSS 属性时，如 transform，Vue.js 会自动侦测并添加相应的前缀。</p>]]></content>
     
@@ -42,11 +67,11 @@
   </entry>
   
   <entry>
-    <title>Vue第9天</title>
-    <link href="http://xiayunhu.github.io/Vue/Vue%E7%AC%AC9%E5%A4%A9/"/>
-    <id>http://xiayunhu.github.io/Vue/Vue第9天/</id>
+    <title>Vue监听属性（九）</title>
+    <link href="http://xiayunhu.github.io/Vue/Vue%E7%9B%91%E5%90%AC%E5%B1%9E%E6%80%A7%EF%BC%88%E4%B9%9D%EF%BC%89/"/>
+    <id>http://xiayunhu.github.io/Vue/Vue监听属性（九）/</id>
     <published>2019-09-09T16:00:00.000Z</published>
-    <updated>2019-09-11T08:13:18.056Z</updated>
+    <updated>2019-10-21T02:32:47.471Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Vue监听属性"><a href="#Vue监听属性" class="headerlink" title="Vue监听属性"></a>Vue监听属性</h3><h4 id="watch"><a href="#watch" class="headerlink" title="watch"></a>watch</h4><p>Vue.js 监听属性 watch，我们可以通过 watch 来响应数据的变化<br><b>实例1、通过使用 watch 实现计数器：</b><br><img src="http://pic.zhaotu.me/2019/09/11/16adc68956a9f6fe3.png" alt="“Vue第9天”"><br>展示页面效果如下：<br><img src="http://pic.zhaotu.me/2019/09/11/28737e091b07e12c2.png" alt="“Vue第9天”"></p><p><b>实例2、了解了一些基本的用法，我们来写一个简单的购物车。</b><br>总共分为三个部分来写，一个是前端的页面展示、CSS样式美化以及Vue的数据绑定。<br>（1）前端Html页面<br>由于代码中带有双括号，网站会出现错误，所以我这里全部用代码截图展示。如果想要源码的话，可以加我好友，或者关注我微信公众号，查找源码。<br><img src="http://pic.zhaotu.me/2019/09/11/35f04de63b5bea726.png" alt="“Vue第9天”"></p><p>（2）CSS样式处理<br><img src="http://pic.zhaotu.me/2019/09/11/6ce1b9145c4261d82.png" alt="“Vue第9天”"></p><p>（3）Vue数据处理<br><img src="http://pic.zhaotu.me/2019/09/11/45229d492abc9f6ab.png" alt="“Vue第9天”"><br><img src="http://pic.zhaotu.me/2019/09/11/5d965ae05afd7d2a5.png" alt="“Vue第9天”"></p><p>展示的页面效果如下：<br><img src="http://pic.zhaotu.me/2019/09/11/719fbfd19aeda8bf6.png" alt="“Vue第9天”"></p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>当需要在数据变化时执行异步或开销较大的操作时，这个方式是最有用的。</p>]]></content>
     
@@ -67,11 +92,11 @@
   </entry>
   
   <entry>
-    <title>Vue第8天</title>
-    <link href="http://xiayunhu.github.io/Vue/Vue%E7%AC%AC8%E5%A4%A9/"/>
-    <id>http://xiayunhu.github.io/Vue/Vue第8天/</id>
+    <title>Vue计算属性（八）</title>
+    <link href="http://xiayunhu.github.io/Vue/Vue%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%EF%BC%88%E5%85%AB%EF%BC%89/"/>
+    <id>http://xiayunhu.github.io/Vue/Vue计算属性（八）/</id>
     <published>2019-09-01T16:00:00.000Z</published>
-    <updated>2019-09-02T13:21:55.420Z</updated>
+    <updated>2019-10-21T02:32:17.429Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Vue-js-计算属性"><a href="#Vue-js-计算属性" class="headerlink" title="Vue.js 计算属性"></a>Vue.js 计算属性</h3><h4 id="computed"><a href="#computed" class="headerlink" title="computed"></a>computed</h4><p>计算属性关键词: computed，对于任何复杂逻辑，你都应当使用计算属性。<br><img src="http://pic.zhaotu.me/2019/09/02/12bf07fb980042858.md.png" alt="“Vue第8天”"><br>接下来我们看看计算属性的实例<br><img src="http://pic.zhaotu.me/2019/09/02/2891d12eaaf961504.png" alt="“Vue第8天”"></p><h4 id="computed-setter"><a href="#computed-setter" class="headerlink" title="computed setter"></a>computed setter</h4><p>computed 属性默认只有 getter ，不过在需要时你也可以提供一个 setter<br><img src="http://pic.zhaotu.me/2019/09/02/3fb16852e375bd728.png" alt="“Vue第8天”"></p><p>从实例运行结果看在运行 vm.site = ‘<a href="http://www.xyhwh.cn&#39;" target="_blank" rel="noopener">http://www.xyhwh.cn&#39;</a>; 时，setter 会被调用， vm.name 和 vm.url 也会被对应更新。</p>]]></content>
     
@@ -92,11 +117,11 @@
   </entry>
   
   <entry>
-    <title>Vue第7天</title>
-    <link href="http://xiayunhu.github.io/Vue/Vue%E7%AC%AC7%E5%A4%A9/"/>
-    <id>http://xiayunhu.github.io/Vue/Vue第7天/</id>
+    <title>Vue条件渲染（七）</title>
+    <link href="http://xiayunhu.github.io/Vue/Vue%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93%EF%BC%88%E4%B8%83%EF%BC%89/"/>
+    <id>http://xiayunhu.github.io/Vue/Vue条件渲染（七）/</id>
     <published>2019-08-14T16:00:00.000Z</published>
-    <updated>2019-09-02T05:35:11.408Z</updated>
+    <updated>2019-10-21T02:31:46.019Z</updated>
     
     <content type="html"><![CDATA[<h3 id="条件渲染"><a href="#条件渲染" class="headerlink" title="条件渲染"></a>条件渲染</h3><h4 id="v-if指令"><a href="#v-if指令" class="headerlink" title="v-if指令"></a>v-if指令</h4><p>v-if 指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回 truthy 值的时候被渲染。<br><img src="http://pic.zhaotu.me/2019/09/02/1299a8f57e6a45a0c.png" alt="“Vue第7天”"><br>也可以用 v-else 添加一个“else 块”：</p><h4 id="v-else"><a href="#v-else" class="headerlink" title="v-else"></a>v-else</h4><p>你可以使用 v-else 指令来表示 v-if 的“else 块”：<br><img src="http://pic.zhaotu.me/2019/09/02/21f6bc60df4c615a8.png" alt="“Vue第7天”"><br>v-else 元素必须紧跟在带 v-if 或者 v-else-if 的元素的后面，否则它将不会被识别。</p><h4 id="v-else-if（2-1-0-新增）"><a href="#v-else-if（2-1-0-新增）" class="headerlink" title="v-else-if（2.1.0 新增）"></a>v-else-if（2.1.0 新增）</h4><p>v-else-if，顾名思义，充当 v-if 的“else-if 块”，可以连续使用<br><img src="http://pic.zhaotu.me/2019/09/02/3a2ecdb1f398ad7d5.png" alt="“Vue第7天”"><br>类似于 v-else，v-else-if 也必须紧跟在带 v-if 或者 v-else-if 的元素之后。</p><h4 id="v-show"><a href="#v-show" class="headerlink" title="v-show"></a>v-show</h4><p>另一个用于根据条件展示元素的选项是 v-show 指令。用法大致一样<br><img src="http://pic.zhaotu.me/2019/09/02/499e0ef072f98a1d0.png" alt="“Vue第7天”"><br>不同的是带有 v-show 的元素始终会被渲染并保留在 DOM 中。v-show 只是简单地切换元素的 CSS 属性 display。</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>条件渲染我就介绍这两种，一个是v-if，另一个是v-show。如果想要多了解的话，可以在vue.js官网上查看相关技术文档。</p>]]></content>
     
@@ -117,11 +142,11 @@
   </entry>
   
   <entry>
-    <title>Vue第6天</title>
-    <link href="http://xiayunhu.github.io/Vue/Vue%E7%AC%AC6%E5%A4%A9/"/>
-    <id>http://xiayunhu.github.io/Vue/Vue第6天/</id>
+    <title>Vue循环语句（六）</title>
+    <link href="http://xiayunhu.github.io/Vue/Vue%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%EF%BC%88%E5%85%AD%EF%BC%89/"/>
+    <id>http://xiayunhu.github.io/Vue/Vue循环语句（六）/</id>
     <published>2019-08-13T16:00:00.000Z</published>
-    <updated>2019-08-15T02:55:52.327Z</updated>
+    <updated>2019-10-21T02:31:00.882Z</updated>
     
     <content type="html"><![CDATA[<h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><h4 id="v-for指令"><a href="#v-for指令" class="headerlink" title="v-for指令"></a>v-for指令</h4><p>我们可以用 v-for 指令基于一个数组来渲染一个列表。<br>v-for 指令需要使用 item in items 形式的特殊语法，其中<b>items 是源数据数组</b>，而 <b>item 则是被迭代的数组元素的别名</b>。<br>例如：我们把绑定的数据到数组，放到表格中把数据循环展现出来。<br><img src="http://pic.zhaotu.me/2019/08/15/1967d2200ac7feb03.png" alt="“Vue第6天”"></p><h4 id="v-for-迭代对象"><a href="#v-for-迭代对象" class="headerlink" title="v-for 迭代对象"></a>v-for 迭代对象</h4><p>v-for 可以通过一个对象的属性来迭代数据<br><img src="http://pic.zhaotu.me/2019/08/15/2b44da1026a0a15a1.png" alt="“Vue第6天”"><br>在 v-for 块中，我们可以访问所有父作用域的属性。v-for 还支持一个可选的第二个参数，即当前项的索引。<br><img src="http://pic.zhaotu.me/2019/08/15/3749885361ab63938.png" alt="“Vue第6天”"><br>你也可以用 of 替代 in 作为分隔符，因为它更接近 JavaScript 迭代器的语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-for=&quot;item of items&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure></p><h5 id="第二参数"><a href="#第二参数" class="headerlink" title="第二参数"></a>第二参数</h5><p>可以提供第二个的参数为 property 名称 (也就是键名)。<br><img src="http://pic.zhaotu.me/2019/08/15/41856f873d429f01f.png" alt="“Vue第6天”"></p><h5 id="第三参数"><a href="#第三参数" class="headerlink" title="第三参数"></a>第三参数</h5><p>还可以用第三个参数作为索引。<br><img src="http://pic.zhaotu.me/2019/08/15/5dd6869ace672bb9b.png" alt="“Vue第6天”"></p><h4 id="在-v-for-里使用值范围"><a href="#在-v-for-里使用值范围" class="headerlink" title="在 v-for 里使用值范围"></a>在 v-for 里使用值范围</h4><p>v-for 也可以接受整数。在这种情况下，它会把模板重复对应次数。<br><img src="http://pic.zhaotu.me/2019/08/15/6ded0d5514a5f085b.png" alt="“Vue第6天”"></p><h4 id="在组件上使用-v-for"><a href="#在组件上使用-v-for" class="headerlink" title="在组件上使用 v-for"></a>在组件上使用 v-for</h4><p>在自定义组件上，你可以像在任何普通元素上一样使用 v-for 。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;my-component v-for=&quot;item in items&quot; :key=&quot;item.id&quot;&gt;&lt;/my-component&gt;</span><br></pre></td></tr></table></figure><br><b>2.2.0+ 的版本里，当在组件上使用 v-for 时，key 现在是必须的。</b></p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>今天就学到这了，循环是每个语言最重要的部分之一了，还是要好好的花时间研究的。</p>]]></content>
     
@@ -142,11 +167,11 @@
   </entry>
   
   <entry>
-    <title>Vue第5天</title>
-    <link href="http://xiayunhu.github.io/Vue/Vue%E7%AC%AC5%E5%A4%A9/"/>
-    <id>http://xiayunhu.github.io/Vue/Vue第5天/</id>
+    <title>Vue条件语句（五）</title>
+    <link href="http://xiayunhu.github.io/Vue/Vue%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5%EF%BC%88%E4%BA%94%EF%BC%89/"/>
+    <id>http://xiayunhu.github.io/Vue/Vue条件语句（五）/</id>
     <published>2019-08-12T16:00:00.000Z</published>
-    <updated>2019-08-14T06:30:09.542Z</updated>
+    <updated>2019-10-21T02:29:01.607Z</updated>
     
     <content type="html"><![CDATA[<h3 id="条件语句"><a href="#条件语句" class="headerlink" title="条件语句"></a>条件语句</h3><h4 id="v-if"><a href="#v-if" class="headerlink" title="v-if"></a>v-if</h4><p>v-if 指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回 true值的时候被渲染。<br>这里的v-if 指令将根据表达式 wh 的值(true 或 false )来决定是否插入 p 元素。<br>把一个 “template”元素当做不可见的包裹元素，并在上面使用 v-if。最终的渲染结果将不包含 “template” 元素 。<br><img src="http://pic.zhaotu.me/2019/08/14/1a31ea82a4400d64e.png" alt="“Vue第5天”"></p><h4 id="v-else"><a href="#v-else" class="headerlink" title="v-else"></a>v-else</h4><p>可以用 v-else 指令给 v-if 添加一个 “else” 块<br>举个例子：随机生成一个数字，判断是否大于0.5，然后输出对应信息。<br><img src="http://pic.zhaotu.me/2019/08/14/28153664c98b476df.png" alt="“Vue第5天”"></p><h4 id="v-else-if-2-1-0-新增"><a href="#v-else-if-2-1-0-新增" class="headerlink" title="v-else-if (2.1.0 新增)"></a>v-else-if (2.1.0 新增)</h4><p>v-else-if，顾名思义，充当 v-if 的”else-if 块”，可以连续使用<br><img src="http://pic.zhaotu.me/2019/08/14/33870f325d745fa1d.png" alt="“Vue第5天”"><br>类似于 v-else，v-else-if 也必须紧跟在带 v-if 或者 v-else-if 的元素之后。</p><h4 id="v-show"><a href="#v-show" class="headerlink" title="v-show"></a>v-show</h4><p>根据条件展示元素的选项是 v-show 指令<br><img src="http://pic.zhaotu.me/2019/08/14/4df615d00fec6fa1c.png" alt="“Vue第5天”"><br>不同的是带有 v-show 的元素始终会被渲染并保留在 DOM 中。v-show 只是简单地切换元素的 CSS 属性 display。<br><b>注意：v-show 不支持 <template> 元素，也不支持 v-else。</template></b></p><h4 id="v-if-对比-v-show"><a href="#v-if-对比-v-show" class="headerlink" title="v-if 对比 v-show"></a>v-if 对比 v-show</h4><p>1、v-if 是“真正”的条件渲染，因为它会确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建。<br>2、v-if 也是惰性的：如果在初始渲染时条件为假，则什么也不做——直到条件第一次变为真时，才会开始渲染条件块。<br>3、相比之下，v-show 就简单得多——不管初始条件是什么，元素总是会被渲染，并且只是简单地基于 CSS 进行切换。<br>4、一般来说，v-if 有更高的切换开销，而 v-show 有更高的初始渲染开销。因此，如果需要非常频繁地切换，则使用 v-show 较好；如果在运行时条件很少改变，则使用 v-if 较好。</p><h4 id="v-if-与-v-for-一起使用"><a href="#v-if-与-v-for-一起使用" class="headerlink" title="v-if 与 v-for 一起使用"></a>v-if 与 v-for 一起使用</h4><p>首先是不推荐这样使用的，当 v-if 与 v-for 一起使用时，v-for 具有比 v-if 更高的优先级。</p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>条件语句在我们平时做项目的时候用到的非常多的，所以还是要好好研究透，多多练习。</p>]]></content>
     
@@ -167,11 +192,11 @@
   </entry>
   
   <entry>
-    <title>Vue第4天</title>
-    <link href="http://xiayunhu.github.io/Vue/Vue%E7%AC%AC4%E5%A4%A9/"/>
-    <id>http://xiayunhu.github.io/Vue/Vue第4天/</id>
+    <title>Vue模板语法（四）</title>
+    <link href="http://xiayunhu.github.io/Vue/Vue%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95%EF%BC%88%E5%9B%9B%EF%BC%89/"/>
+    <id>http://xiayunhu.github.io/Vue/Vue模板语法（四）/</id>
     <published>2019-08-11T16:00:00.000Z</published>
-    <updated>2019-08-13T07:51:54.768Z</updated>
+    <updated>2019-10-21T02:28:09.445Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Vue的模板语法"><a href="#Vue的模板语法" class="headerlink" title="Vue的模板语法"></a>Vue的模板语法</h3><p>接着昨天的继续学习模板语法。</p><h4 id="动态参数（2-6-0-新增）"><a href="#动态参数（2-6-0-新增）" class="headerlink" title="动态参数（2.6.0 新增）"></a>动态参数（2.6.0 新增）</h4><p>从 2.6.0 开始，可以用方括号括起来的 JavaScript 表达式作为一个指令的参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;&lt;a v-bind:[attributeName]=&quot;url&quot;&gt; ... &lt;/a&gt; &quot;</span><br></pre></td></tr></table></figure><br>这里的 attributeName 会被作为一个 JavaScript 表达式进行动态求值，求得的值将会作为最终的参数来使用。<br>例如，如果你的 Vue 实例有一个 data 属性 attributeName，其值为 “href”，那么这个绑定将等价于 v-bind:href。<br>同样地，你可以使用动态参数为一个动态的事件名绑定处理函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;&lt;a v-on:[eventName]=&quot;doSomething&quot;&gt; ... &lt;/a&gt; &quot;</span><br></pre></td></tr></table></figure><br>同样地，当 eventName 的值为 “focus” 时，v-on:[eventName] 将等价于 v-on:focus。<br><img src="http://pic.zhaotu.me/2019/08/13/1df72ac35b6757aa4.png" alt="“Vue第4天”"></p><h4 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h4><p>修饰符 (modifier) 是以半角句号 . 指明的特殊后缀，用于指出一个指令应该以特殊方式绑定。<br>例如，.prevent 修饰符告诉 v-on 指令对于触发的事件调用 event.preventDefault()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;&lt;form v-on:submit.prevent=&quot;onSubmit&quot;&gt;...&lt;/form&gt;&quot;</span><br></pre></td></tr></table></figure></p><h4 id="用户输入"><a href="#用户输入" class="headerlink" title="用户输入"></a>用户输入</h4><p>在 input 输入框中我们可以使用 v-model 指令来实现双向数据绑定<br><img src="http://pic.zhaotu.me/2019/08/13/25eda2c25eb110e87.png" alt="“Vue第4天”"><br>v-model 指令用来在 input、select、textarea、checkbox、radio 等表单控件元素上创建双向数据绑定，根据表单上的值，自动更新绑定的元素的值。<br>按钮的事件我们可以使用 v-on 监听事件，并对用户的输入进行响应。<br>例如：用户点击按钮后对字符串进行反转操作<br><img src="http://pic.zhaotu.me/2019/08/13/35b4fce4cbf1461fc.png" alt="“Vue第4天”"></p><h4 id="过滤器（了解）"><a href="#过滤器（了解）" class="headerlink" title="过滤器（了解）"></a>过滤器（了解）</h4><p>Vue.js 允许你自定义过滤器，被用作一些常见的文本格式化<br><img src="http://pic.zhaotu.me/2019/08/13/4b285b0691ed674e9.png" alt="“Vue第4天”"><br>例如：对输入的字符串第一个字母转为大写<br><img src="http://pic.zhaotu.me/2019/08/13/5e41cc6cf3d2d981a.png" alt="“Vue第4天”"></p><h4 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h4><p>v- 前缀作为一种视觉提示，用来识别模板中 Vue 特定的特性。Vue 为 v-bind 和 v-on 这两个最常用的指令，提供了特定简写。</p><h5 id="v-bind-缩写"><a href="#v-bind-缩写" class="headerlink" title="v-bind 缩写"></a>v-bind 缩写</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 完整语法 --&gt;</span><br><span class="line">&lt;a v-bind:href=&quot;url&quot;&gt;&lt;/a&gt;</span><br><span class="line">&lt;!-- 缩写 --&gt;</span><br><span class="line">&lt;a :href=&quot;url&quot;&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure><h5 id="v-on-缩写"><a href="#v-on-缩写" class="headerlink" title="v-on 缩写"></a>v-on 缩写</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 完整语法 --&gt;</span><br><span class="line">&lt;a v-on:click=&quot;doSomething&quot;&gt;&lt;/a&gt;</span><br><span class="line">&lt;!-- 缩写 --&gt;</span><br><span class="line">&lt;a @click=&quot;doSomething&quot;&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>今天一个学了5个模板语法，同样也是我们学习vue的重点，主要有动态参数（2.6.0 新增）、修饰符、用户输入、过滤器、缩写（v-bind 缩写、v-on 缩写）。</p>]]></content>
     
@@ -193,11 +218,11 @@
   </entry>
   
   <entry>
-    <title>Vue第3天</title>
-    <link href="http://xiayunhu.github.io/Vue/Vue%E7%AC%AC3%E5%A4%A9/"/>
-    <id>http://xiayunhu.github.io/Vue/Vue第3天/</id>
+    <title>Vue模板语法（三）</title>
+    <link href="http://xiayunhu.github.io/Vue/Vue%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95%EF%BC%88%E4%B8%89%EF%BC%89/"/>
+    <id>http://xiayunhu.github.io/Vue/Vue模板语法（三）/</id>
     <published>2019-08-10T16:00:00.000Z</published>
-    <updated>2019-08-12T07:56:35.521Z</updated>
+    <updated>2019-10-21T02:26:42.981Z</updated>
     
     <content type="html"><![CDATA[<h3 id="Vue的模板语法"><a href="#Vue的模板语法" class="headerlink" title="Vue的模板语法"></a>Vue的模板语法</h3><p>今天来我们来学习一下Vue的模板语法，Vue.js使用了基于HTML的模板语法，它的核心是一个允许你采用简洁的模板语法来声明式的将数据渲染进 DOM 的系统。<br>在底层的实现上，Vue 将模板编译成虚拟 DOM 渲染函数。结合响应系统，Vue 能够智能地计算出最少需要重新渲染多少组件，<br>并把 DOM 操作次数减到最少。</p><h4 id="文本插值-双大括号"><a href="#文本插值-双大括号" class="headerlink" title="文本插值 (双大括号)"></a>文本插值 (双大括号)</h4><p>数据绑定最常见的形式就是使用“双大括号”的文本插值<br><img src="http://pic.zhaotu.me/2019/08/12/QQ20190812095737cd3d89ba69b4b8d5.png" alt="“Vue第3天”"></p><h4 id="HTML（”v-html”指令）"><a href="#HTML（”v-html”指令）" class="headerlink" title="HTML（”v-html”指令）"></a>HTML（”v-html”指令）</h4><p>双大括号会将数据解释为普通文本，而非 HTML 代码。为了输出真正的 HTML，你需要使用 “v-html” 指令<br><img src="http://pic.zhaotu.me/2019/08/12/25a9af56a827c065b.png" alt="“Vue第3天”"></p><h4 id="特性（”v-bind”指令）"><a href="#特性（”v-bind”指令）" class="headerlink" title="特性（”v-bind”指令）"></a>特性（”v-bind”指令）</h4><p>HTML 属性中的值应使用 “v-bind” 指令，用一个例子来说明下这个指令。<br>判断 class1 的值，如果为 true 使用 class1 类的样式，否则不使用该类。<br><img src="http://pic.zhaotu.me/2019/08/12/3a05adc3e9739a969.png" alt="“Vue第3天”"></p><h4 id="使用-JavaScript-表达式"><a href="#使用-JavaScript-表达式" class="headerlink" title="使用 JavaScript 表达式"></a>使用 JavaScript 表达式</h4><p>实际上，对于所有的数据绑定，Vue.js 都提供了完全的 JavaScript 表达式支持。<br><img src="http://pic.zhaotu.me/2019/08/12/4948672d6ab731261.png" alt="“Vue第3天”"></p><h4 id="指令（”v-if”指令）"><a href="#指令（”v-if”指令）" class="headerlink" title="指令（”v-if”指令）"></a>指令（”v-if”指令）</h4><p>指令 (Directives) 是带有 v- 前缀的特殊特性。<br>指令的职责是，当表达式的值改变时，将其产生的连带影响，响应式地作用于 DOM。<br>指令特性的值预期是单个 JavaScript 表达式 (“v-for” 是例外情况，以后我们再讨论)。<br><img src="http://pic.zhaotu.me/2019/08/12/5748551d39c0495eb.png" alt="“Vue第3天”"></p><h4 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h4><p>一些指令能够接收一个”参数”，在指令名称之后以冒号表示。例如，”v-bind” 指令可以用于响应式地更新 HTML 特性：<br><img src="http://pic.zhaotu.me/2019/08/12/69211f120112bf485.png" alt="“Vue第3天”"><br>另一个是 “v-on” 指令，它用于监听 DOM 事件，在这里参数是监听的事件名。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;&lt;a v-on:click=&quot;doSomething&quot;&gt;&quot; //最外边的双引号要去掉，我这里是网站编译的需要。</span><br></pre></td></tr></table></figure></p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>今天一个学了6个模板语法，这是我们学习vue的重点，主要有双大括号插值、”v-html”指令、”v-bind”指令、JavaScript 表达式、”v-if”指令、还有指令接收”参数”。</p>]]></content>
     
@@ -218,11 +243,11 @@
   </entry>
   
   <entry>
-    <title>Vue第2天</title>
-    <link href="http://xiayunhu.github.io/Vue/Vue%E7%AC%AC2%E5%A4%A9/"/>
-    <id>http://xiayunhu.github.io/Vue/Vue第2天/</id>
+    <title>Vue介绍（二）</title>
+    <link href="http://xiayunhu.github.io/Vue/Vue%E4%BB%8B%E7%BB%8D%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>http://xiayunhu.github.io/Vue/Vue介绍（二）/</id>
     <published>2019-08-09T16:00:00.000Z</published>
-    <updated>2019-08-12T00:25:32.222Z</updated>
+    <updated>2019-10-21T02:25:09.756Z</updated>
     
     <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>由于我们使用vue-cli脚手架搭建的项目学习起来难度比较大，我们放到进阶阶段再学习，我们先用vue包引入来学习vue。</p><h3 id="vue-js包"><a href="#vue-js包" class="headerlink" title="vue.js包"></a>vue.js包</h3><p>1、Staticfile CDN（国内） : <a href="https://cdn.staticfile.org/vue/2.2.2/vue.min.js" target="_blank" rel="noopener">https://cdn.staticfile.org/vue/2.2.2/vue.min.js</a><br>2、unpkg：<a href="https://unpkg.com/vue/dist/vue.js" target="_blank" rel="noopener">https://unpkg.com/vue/dist/vue.js</a><br>3、cdnjs : <a href="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js" target="_blank" rel="noopener">https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js</a></p><h3 id="开始学习vue"><a href="#开始学习vue" class="headerlink" title="开始学习vue"></a>开始学习vue</h3><p>1、每个 Vue 应用都需要通过实例化 Vue 来实现。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var xyh = new Vue(&#123;</span><br><span class="line">  // 选项</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><br>2、通过以下的实例我们来分析</p><table><thead><tr><th style="text-align:center">参数</th><th style="text-align:center">说明</th></tr></thead><tbody><tr><td style="text-align:center">el</td><td style="text-align:center">它是 DOM 元素中的 id，数据改动全部在以上指定的 div 内，div 外部不受影响</td></tr><tr><td style="text-align:center">data</td><td style="text-align:center">用于定义属性，下面例子有两个属性分别为：name、url</td></tr><tr><td style="text-align:center">methods</td><td style="text-align:center">用于定义的函数，可以通过 return 来返回函数值</td></tr><tr><td style="text-align:center">双括号</td><td style="text-align:center">用于输出对象属性和函数返回值。</td></tr></tbody></table><p><img src="http://pic.zhaotu.me/2019/08/10/QQ201908101016080bc1d87a46f1782d.png" alt="“Vue第2天”"><br>3、当一个 Vue 实例被创建时，它向 Vue 的响应式系统中加入了其 data 对象中能找到的所有的属性。当这些属性的值发生改变<br>时，html视图将也会产生相应的变化。<br><img src="http://pic.zhaotu.me/2019/08/10/22749f277dfd1ef2f.png" alt="“Vue第2天”"><br><b>也就是说，无论我们给data对象改变值，还是直接改变属性值，都会改变原始数据。<br>一般来说，除了数据属性，Vue 实例还提供了一些有用的实例属性与方法。它们都有前缀 $，以便与用户定义的属性区分开来。<br></b></p><h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>今天先就了解那么多，主要是学习了引用vue.js包、初始化vue、vue中的一些参数和用法。</p>]]></content>
     
@@ -244,11 +269,11 @@
   </entry>
   
   <entry>
-    <title>Vue第1天</title>
-    <link href="http://xiayunhu.github.io/Vue/Vue%E7%AC%AC1%E5%A4%A9/"/>
-    <id>http://xiayunhu.github.io/Vue/Vue第1天/</id>
+    <title>创建Vue项目（一）</title>
+    <link href="http://xiayunhu.github.io/Vue/%E5%88%9B%E5%BB%BAVue%E9%A1%B9%E7%9B%AE%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>http://xiayunhu.github.io/Vue/创建Vue项目（一）/</id>
     <published>2019-08-08T16:00:00.000Z</published>
-    <updated>2019-08-10T01:37:01.919Z</updated>
+    <updated>2019-10-21T02:17:54.343Z</updated>
     
     <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>最近想着应该好好的学习下vue.js来补充下自己的知识，所以接下来我将会把每天学的东西记录下来，供我们大家一起学习。</p><h3 id="创建vue项目"><a href="#创建vue项目" class="headerlink" title="创建vue项目"></a>创建vue项目</h3><p>1、先全局安装vue-cli<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install --global vue-cli</span><br></pre></td></tr></table></figure>2、创建一个新的项目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue init webpack xyhVue（你的项目名称）</span><br></pre></td></tr></table></figure>3、紧接着需要一些配置，默认回车就好。<br>4、创建好之后，进入到你的项目文件下，运行项目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cnpm run dev</span><br><span class="line"></span><br><span class="line"> DONE  Compiled successfully in 43557ms                                     4:24:11 PM</span><br><span class="line"> I  Your application is running here: http://localhost:8080</span><br></pre></td></tr></table></figure><br>启动成功之后，在浏览器中输入<a href="http://localhost:8080" target="_blank" rel="noopener">http://localhost:8080</a> ，输出结果如下图所示：<br><img src="http://pic.zhaotu.me/2019/08/08/vue879d435f53758ab6b.md.png" alt="“Vue第一天”"></p><h3 id="Vue-js-目录结构"><a href="#Vue-js-目录结构" class="headerlink" title="Vue.js 目录结构"></a>Vue.js 目录结构</h3><p>打开创建好的项目文件，具体结构如下图所示：<br><img src="http://pic.zhaotu.me/2019/08/09/201908091647110a2403b9c22c70fb.png" alt="“vue项目创建和运行”"><br>我们将每个文件的名称及作用进行解析。</p><table><thead><tr><th style="text-align:center">文件名称</th><th style="text-align:center">说明/作用</th></tr></thead><tbody><tr><td style="text-align:center">node_modules</td><td style="text-align:center">npm 加载的项目依赖模块</td></tr><tr><td style="text-align:center">build</td><td style="text-align:center">项目搭建(webpack)相关代码</td></tr><tr><td style="text-align:center">config</td><td style="text-align:center">配置目录，包括端口号等。初学可以使用默认的</td></tr><tr><td style="text-align:center">src</td><td style="text-align:center">这里是我们要开发的目录，基本上要做的事情都在这个目录里。里面包含了几个目录及文件：<br>assets: 放置一些图片，如logo等。<br>components: 目录里面放了一个组件文件，可以不用。<br>App.vue: 项目入口文件，我们也可以直接将组件写这里，而不使用 components 目录。<br>main.js: 项目的核心文件。</td></tr><tr><td style="text-align:center">static</td><td style="text-align:center">静态资源目录，如图片、字体等。</td></tr><tr><td style="text-align:center">test</td><td style="text-align:center">初始测试目录，可删除</td></tr><tr><td style="text-align:center">index.html</td><td style="text-align:center">首页入口文件，你可以添加一些 meta 信息或统计代码等。</td></tr><tr><td style="text-align:center">package.json</td><td style="text-align:center">项目配置文件。</td></tr><tr><td style="text-align:center">package-lock.json</td><td style="text-align:center">对结合了逻辑树和物理树的一个快照（snapshot），里面有明确的各依赖版本号，实际安装的结构，也有逻辑树的结构</td></tr><tr><td style="text-align:center">README.md</td><td style="text-align:center">项目的说明文档，markdown 格式</td></tr></tbody></table><h3 id="项目的首页入口"><a href="#项目的首页入口" class="headerlink" title="项目的首页入口"></a>项目的首页入口</h3><p>我们可以尝试修改下初始化的项目，找到src文件下的components下的HelloWorld.vue.<br>则src/components/HelloWorld.vue<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &apos;HelloWorld&apos;,</span><br><span class="line">  data () &#123;</span><br><span class="line">    return &#123;</span><br><span class="line">      msg: &apos;第一个Vue项目创建好啦！！！&apos;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>我们修改后，保存，页面会自动刷新。<br><img src="http://pic.zhaotu.me/2019/08/09/20190809173515ca48eaa74be6ca1a.png" alt="“Vue第一天”"></p>]]></content>
     
@@ -355,31 +380,6 @@
     
     
       <category term="MySQL" scheme="http://xiayunhu.github.io/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vue.js笔记</title>
-    <link href="http://xiayunhu.github.io/Vue/Vue.js%E7%AC%94%E8%AE%B0/"/>
-    <id>http://xiayunhu.github.io/Vue/Vue.js笔记/</id>
-    <published>2019-06-03T16:00:00.000Z</published>
-    <updated>2019-06-18T08:31:07.993Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="初识Vue-js"><a href="#初识Vue-js" class="headerlink" title="初识Vue.js"></a>初识Vue.js</h3><p>Vue是一套构建用户界面的渐进式框架。Vue 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。<br>Vue.js 的 API 是参考了AngularJS、KnockoutJS、Ractive.js、Rivets.js。<br>Vue.js 的 API 的对于其他框架的参考也只是参考，其中也包含了许多 Vue.js 的独特功能。</p><h3 id="Vue-js文件的引入"><a href="#Vue-js文件的引入" class="headerlink" title="Vue.js文件的引入"></a>Vue.js文件的引入</h3><p>1、先来最简单的引入方法，直接在html文件里直接引入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;https://cdn.staticfile.org/vue/2.2.2/vue.min.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure></p><p>这样就成功的引进了Vue.js,不需要在引入其他文件，就这一个。</p><p>2、使用CDN方法：</p><ul><li>Staticfile CDN（国内）：<a href="https://cdn.staticfile.org/vue/2.2.2/vue.min.js" target="_blank" rel="noopener">https://cdn.staticfile.org/vue/2.2.2/vue.min.js</a></li><li>unpkg：<a href="https://unpkg.com/vue/dist/vue.js" target="_blank" rel="noopener">https://unpkg.com/vue/dist/vue.js</a>, 会保持和 npm 发布的最新的版本一致。</li><li>cdnjs：<a href="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js" target="_blank" rel="noopener">https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.min.js</a></li></ul><h3 id="第一个程序"><a href="#第一个程序" class="headerlink" title="第一个程序"></a>第一个程序</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line"> &lt;!--创建一个div--&gt;   </span><br><span class="line"> &lt;div id=&quot;app&quot;&gt;</span><br><span class="line">  &lt;p&gt;&lt;/p&gt;</span><br><span class="line"> &lt;/div&gt;</span><br><span class="line">    &lt;!--vue语句--&gt;   </span><br><span class="line">&lt;script&gt;</span><br><span class="line">new Vue(&#123;</span><br><span class="line">  el: &apos;#app&apos;,</span><br><span class="line">  data: &#123;</span><br><span class="line">message: &apos;Hello Vue.js!&apos;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure><p>每个 Vue 应用都需要通过实例化 Vue 来实现。</p><h3 id="实例分析"><a href="#实例分析" class="headerlink" title="实例分析"></a>实例分析</h3><p>我们在上述的程序中可以看到Vue构造器中有一个el参数，它是DOM元素中的id。简单的说就是你创建的div元素的id。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">  </span><br><span class="line">    &lt;!--也可以用class--&gt;</span><br><span class="line">  &lt;div id=&quot;app&quot;&gt;&lt;/div&gt; </span><br><span class="line">&lt;script&gt;</span><br><span class="line">    new Vue(&#123;</span><br><span class="line">el: &apos;#app&apos;, &lt;!--上边用class这个地方就要改为 &apos;.app&apos; --&gt;</span><br><span class="line">data: &#123;</span><br><span class="line">           site: &quot;我的博客&quot;,</span><br><span class="line">           url: &quot;www.xyhwh.cn&quot;,</span><br><span class="line">           alexa: &quot;100&quot;</span><br><span class="line">       &#125;,</span><br><span class="line"> methods: &#123;</span><br><span class="line">           details: function() &#123;</span><br><span class="line">               return  this.site;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line"> &#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure><p>我们可以改动在这个div下的内容，而div以外的不受影响。</p><ul><li>el是选定div的范围。</li><li>data 用于定义属性，实例中有三个属性分别为：site、url、alexa。</li><li>methods 用于定义的函数，可以通过 return 来返回函数值。</li><li>双重大括号用于输出对象属性和函数返回值。</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;初识Vue-js&quot;&gt;&lt;a href=&quot;#初识Vue-js&quot; class=&quot;headerlink&quot; title=&quot;初识Vue.js&quot;&gt;&lt;/a&gt;初识Vue.js&lt;/h3&gt;&lt;p&gt;Vue是一套构建用户界面的渐进式框架。Vue 的目标是通过尽可能简单的 API 实现响应的数
-      
-    
-    </summary>
-    
-      <category term="Vue" scheme="http://xiayunhu.github.io/categories/Vue/"/>
-    
-    
-      <category term="Vue" scheme="http://xiayunhu.github.io/tags/Vue/"/>
     
   </entry>
   

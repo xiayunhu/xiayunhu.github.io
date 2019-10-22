@@ -140,24 +140,25 @@
 
 
 
-  <meta name="description" content="Vue的模板语法接着昨天的继续学习模板语法。 动态参数（2.6.0 新增）从 2.6.0 开始，可以用方括号括起来的 JavaScript 表达式作为一个指令的参数1&amp;quot;&amp;lt;a v-bind:[attributeName]=&amp;quot;url&amp;quot;&amp;gt; ... &amp;lt;/a&amp;gt; &amp;quot;这里的 attributeName 会被作为一个 JavaScript 表达式进行">
+  <meta name="description" content="循环语句v-for指令我们可以用 v-for 指令基于一个数组来渲染一个列表。v-for 指令需要使用 item in items 形式的特殊语法，其中items 是源数据数组，而 item 则是被迭代的数组元素的别名。例如：我们把绑定的数据到数组，放到表格中把数据循环展现出来。 v-for 迭代对象v-for 可以通过一个对象的属性来迭代数据在 v-for 块中，我们可以访问所有父作用域的属性。">
 <meta name="keywords" content="Vue">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue第4天">
-<meta property="og:url" content="http://xiayunhu.github.io/Vue/Vue第4天/index.html">
+<meta property="og:title" content="Vue循环语句（六）">
+<meta property="og:url" content="http://xiayunhu.github.io/Vue/Vue循环语句（六）/index.html">
 <meta property="og:site_name" content="xyh&#39;s Blog">
-<meta property="og:description" content="Vue的模板语法接着昨天的继续学习模板语法。 动态参数（2.6.0 新增）从 2.6.0 开始，可以用方括号括起来的 JavaScript 表达式作为一个指令的参数1&amp;quot;&amp;lt;a v-bind:[attributeName]=&amp;quot;url&amp;quot;&amp;gt; ... &amp;lt;/a&amp;gt; &amp;quot;这里的 attributeName 会被作为一个 JavaScript 表达式进行">
+<meta property="og:description" content="循环语句v-for指令我们可以用 v-for 指令基于一个数组来渲染一个列表。v-for 指令需要使用 item in items 形式的特殊语法，其中items 是源数据数组，而 item 则是被迭代的数组元素的别名。例如：我们把绑定的数据到数组，放到表格中把数据循环展现出来。 v-for 迭代对象v-for 可以通过一个对象的属性来迭代数据在 v-for 块中，我们可以访问所有父作用域的属性。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://pic.zhaotu.me/2019/08/13/1df72ac35b6757aa4.png">
-<meta property="og:image" content="http://pic.zhaotu.me/2019/08/13/25eda2c25eb110e87.png">
-<meta property="og:image" content="http://pic.zhaotu.me/2019/08/13/35b4fce4cbf1461fc.png">
-<meta property="og:image" content="http://pic.zhaotu.me/2019/08/13/4b285b0691ed674e9.png">
-<meta property="og:image" content="http://pic.zhaotu.me/2019/08/13/5e41cc6cf3d2d981a.png">
-<meta property="og:updated_time" content="2019-08-13T07:51:54.768Z">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/08/15/1967d2200ac7feb03.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/08/15/2b44da1026a0a15a1.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/08/15/3749885361ab63938.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/08/15/41856f873d429f01f.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/08/15/5dd6869ace672bb9b.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/08/15/6ded0d5514a5f085b.png">
+<meta property="og:updated_time" content="2019-10-21T02:31:00.882Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue第4天">
-<meta name="twitter:description" content="Vue的模板语法接着昨天的继续学习模板语法。 动态参数（2.6.0 新增）从 2.6.0 开始，可以用方括号括起来的 JavaScript 表达式作为一个指令的参数1&amp;quot;&amp;lt;a v-bind:[attributeName]=&amp;quot;url&amp;quot;&amp;gt; ... &amp;lt;/a&amp;gt; &amp;quot;这里的 attributeName 会被作为一个 JavaScript 表达式进行">
-<meta name="twitter:image" content="http://pic.zhaotu.me/2019/08/13/1df72ac35b6757aa4.png">
+<meta name="twitter:title" content="Vue循环语句（六）">
+<meta name="twitter:description" content="循环语句v-for指令我们可以用 v-for 指令基于一个数组来渲染一个列表。v-for 指令需要使用 item in items 形式的特殊语法，其中items 是源数据数组，而 item 则是被迭代的数组元素的别名。例如：我们把绑定的数据到数组，放到表格中把数据循环展现出来。 v-for 迭代对象v-for 可以通过一个对象的属性来迭代数据在 v-for 块中，我们可以访问所有父作用域的属性。">
+<meta name="twitter:image" content="http://pic.zhaotu.me/2019/08/15/1967d2200ac7feb03.png">
 
 
 
@@ -166,7 +167,7 @@
 
 
 
-  <link rel="canonical" href="http://xiayunhu.github.io/Vue/Vue第4天/"/>
+  <link rel="canonical" href="http://xiayunhu.github.io/Vue/Vue循环语句（六）/"/>
 
 
 
@@ -176,7 +177,7 @@
   };
 </script>
 
-  <title>Vue第4天 | xyh's Blog</title>
+  <title>Vue循环语句（六） | xyh's Blog</title>
   
 
 
@@ -407,7 +408,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://xiayunhu.github.io/Vue/Vue第4天/">
+    <link itemprop="mainEntityOfPage" href="http://xiayunhu.github.io/Vue/Vue循环语句（六）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XYH">
@@ -425,7 +426,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Vue第4天
+          <h1 class="post-title" itemprop="name headline">Vue循环语句（六）
               
             
           </h1>
@@ -454,7 +455,7 @@
                 
               
 
-              <time title="创建时间：2019-08-12 00:00:00" itemprop="dateCreated datePublished" datetime="2019-08-12T00:00:00+08:00">2019-08-12</time>
+              <time title="创建时间：2019-08-14 00:00:00" itemprop="dateCreated datePublished" datetime="2019-08-14T00:00:00+08:00">2019-08-14</time>
             
 
 		
@@ -474,7 +475,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-13 15:51:54" itemprop="dateModified" datetime="2019-08-13T15:51:54+08:00">2019-08-13</time>
+                <time title="修改时间：2019-10-21 10:31:00" itemprop="dateModified" datetime="2019-10-21T10:31:00+08:00">2019-10-21</time>
               
             
           </span>
@@ -507,8 +508,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/Vue/Vue第4天/#comments" itemprop="discussionUrl">
-                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Vue/Vue第4天/" itemprop="commentCount"></span>
+                <a href="/Vue/Vue循环语句（六）/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Vue/Vue循环语句（六）/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -545,7 +546,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">字数统计:</span>
-           <span class="post-count">629字</span>
+           <span class="post-count">396字</span>
          </span>
 
          <span class="post-time">
@@ -554,7 +555,7 @@
              <i class="fa fa-calendar-o"></i>
            </span>
            <span class="post-meta-item-text">阅读时长:</span>
-           <span class="post-count">2分钟</span>
+           <span class="post-count">1分钟</span>
          </span>
 	
     
@@ -574,15 +575,13 @@
       
 
       
-        <h3 id="Vue的模板语法"><a href="#Vue的模板语法" class="headerlink" title="Vue的模板语法"></a>Vue的模板语法</h3><p>接着昨天的继续学习模板语法。</p>
-<h4 id="动态参数（2-6-0-新增）"><a href="#动态参数（2-6-0-新增）" class="headerlink" title="动态参数（2.6.0 新增）"></a>动态参数（2.6.0 新增）</h4><p>从 2.6.0 开始，可以用方括号括起来的 JavaScript 表达式作为一个指令的参数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;&lt;a v-bind:[attributeName]=&quot;url&quot;&gt; ... &lt;/a&gt; &quot;</span><br></pre></td></tr></table></figure><br>这里的 attributeName 会被作为一个 JavaScript 表达式进行动态求值，求得的值将会作为最终的参数来使用。<br>例如，如果你的 Vue 实例有一个 data 属性 attributeName，其值为 “href”，那么这个绑定将等价于 v-bind:href。<br>同样地，你可以使用动态参数为一个动态的事件名绑定处理函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;&lt;a v-on:[eventName]=&quot;doSomething&quot;&gt; ... &lt;/a&gt; &quot;</span><br></pre></td></tr></table></figure><br>同样地，当 eventName 的值为 “focus” 时，v-on:[eventName] 将等价于 v-on:focus。<br><img src="http://pic.zhaotu.me/2019/08/13/1df72ac35b6757aa4.png" alt="“Vue第4天”"></p>
-<h4 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h4><p>修饰符 (modifier) 是以半角句号 . 指明的特殊后缀，用于指出一个指令应该以特殊方式绑定。<br>例如，.prevent 修饰符告诉 v-on 指令对于触发的事件调用 event.preventDefault()<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;&lt;form v-on:submit.prevent=&quot;onSubmit&quot;&gt;...&lt;/form&gt;&quot;</span><br></pre></td></tr></table></figure></p>
-<h4 id="用户输入"><a href="#用户输入" class="headerlink" title="用户输入"></a>用户输入</h4><p>在 input 输入框中我们可以使用 v-model 指令来实现双向数据绑定<br><img src="http://pic.zhaotu.me/2019/08/13/25eda2c25eb110e87.png" alt="“Vue第4天”"><br>v-model 指令用来在 input、select、textarea、checkbox、radio 等表单控件元素上创建双向数据绑定，根据表单上的值，自动更新绑定的元素的值。<br>按钮的事件我们可以使用 v-on 监听事件，并对用户的输入进行响应。<br>例如：用户点击按钮后对字符串进行反转操作<br><img src="http://pic.zhaotu.me/2019/08/13/35b4fce4cbf1461fc.png" alt="“Vue第4天”"></p>
-<h4 id="过滤器（了解）"><a href="#过滤器（了解）" class="headerlink" title="过滤器（了解）"></a>过滤器（了解）</h4><p>Vue.js 允许你自定义过滤器，被用作一些常见的文本格式化<br><img src="http://pic.zhaotu.me/2019/08/13/4b285b0691ed674e9.png" alt="“Vue第4天”"><br>例如：对输入的字符串第一个字母转为大写<br><img src="http://pic.zhaotu.me/2019/08/13/5e41cc6cf3d2d981a.png" alt="“Vue第4天”"></p>
-<h4 id="缩写"><a href="#缩写" class="headerlink" title="缩写"></a>缩写</h4><p>v- 前缀作为一种视觉提示，用来识别模板中 Vue 特定的特性。Vue 为 v-bind 和 v-on 这两个最常用的指令，提供了特定简写。</p>
-<h5 id="v-bind-缩写"><a href="#v-bind-缩写" class="headerlink" title="v-bind 缩写"></a>v-bind 缩写</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 完整语法 --&gt;</span><br><span class="line">&lt;a v-bind:href=&quot;url&quot;&gt;&lt;/a&gt;</span><br><span class="line">&lt;!-- 缩写 --&gt;</span><br><span class="line">&lt;a :href=&quot;url&quot;&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<h5 id="v-on-缩写"><a href="#v-on-缩写" class="headerlink" title="v-on 缩写"></a>v-on 缩写</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 完整语法 --&gt;</span><br><span class="line">&lt;a v-on:click=&quot;doSomething&quot;&gt;&lt;/a&gt;</span><br><span class="line">&lt;!-- 缩写 --&gt;</span><br><span class="line">&lt;a @click=&quot;doSomething&quot;&gt;&lt;/a&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>今天一个学了5个模板语法，同样也是我们学习vue的重点，主要有动态参数（2.6.0 新增）、修饰符、用户输入、过滤器、缩写（v-bind 缩写、v-on 缩写）。</p>
+        <h3 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h3><h4 id="v-for指令"><a href="#v-for指令" class="headerlink" title="v-for指令"></a>v-for指令</h4><p>我们可以用 v-for 指令基于一个数组来渲染一个列表。<br>v-for 指令需要使用 item in items 形式的特殊语法，其中<b>items 是源数据数组</b>，而 <b>item 则是被迭代的数组元素的别名</b>。<br>例如：我们把绑定的数据到数组，放到表格中把数据循环展现出来。<br><img src="http://pic.zhaotu.me/2019/08/15/1967d2200ac7feb03.png" alt="“Vue第6天”"></p>
+<h4 id="v-for-迭代对象"><a href="#v-for-迭代对象" class="headerlink" title="v-for 迭代对象"></a>v-for 迭代对象</h4><p>v-for 可以通过一个对象的属性来迭代数据<br><img src="http://pic.zhaotu.me/2019/08/15/2b44da1026a0a15a1.png" alt="“Vue第6天”"><br>在 v-for 块中，我们可以访问所有父作用域的属性。v-for 还支持一个可选的第二个参数，即当前项的索引。<br><img src="http://pic.zhaotu.me/2019/08/15/3749885361ab63938.png" alt="“Vue第6天”"><br>你也可以用 of 替代 in 作为分隔符，因为它更接近 JavaScript 迭代器的语法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;div v-for=&quot;item of items&quot;&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure></p>
+<h5 id="第二参数"><a href="#第二参数" class="headerlink" title="第二参数"></a>第二参数</h5><p>可以提供第二个的参数为 property 名称 (也就是键名)。<br><img src="http://pic.zhaotu.me/2019/08/15/41856f873d429f01f.png" alt="“Vue第6天”"></p>
+<h5 id="第三参数"><a href="#第三参数" class="headerlink" title="第三参数"></a>第三参数</h5><p>还可以用第三个参数作为索引。<br><img src="http://pic.zhaotu.me/2019/08/15/5dd6869ace672bb9b.png" alt="“Vue第6天”"></p>
+<h4 id="在-v-for-里使用值范围"><a href="#在-v-for-里使用值范围" class="headerlink" title="在 v-for 里使用值范围"></a>在 v-for 里使用值范围</h4><p>v-for 也可以接受整数。在这种情况下，它会把模板重复对应次数。<br><img src="http://pic.zhaotu.me/2019/08/15/6ded0d5514a5f085b.png" alt="“Vue第6天”"></p>
+<h4 id="在组件上使用-v-for"><a href="#在组件上使用-v-for" class="headerlink" title="在组件上使用 v-for"></a>在组件上使用 v-for</h4><p>在自定义组件上，你可以像在任何普通元素上一样使用 v-for 。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;my-component v-for=&quot;item in items&quot; :key=&quot;item.id&quot;&gt;&lt;/my-component&gt;</span><br></pre></td></tr></table></figure><br><b>2.2.0+ 的版本里，当在组件上使用 v-for 时，key 现在是必须的。</b></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>今天就学到这了，循环是每个语言最重要的部分之一了，还是要好好的花时间研究的。</p>
 
       
     </div>
@@ -667,8 +666,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Vue/Vue第3天/" rel="next" title="Vue第3天">
-                <i class="fa fa-chevron-left"></i> Vue第3天
+              <a href="/Vue/Vue条件语句（五）/" rel="next" title="Vue条件语句（五）">
+                <i class="fa fa-chevron-left"></i> Vue条件语句（五）
               </a>
             
           </div>
@@ -677,8 +676,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/Vue/Vue第5天/" rel="prev" title="Vue第5天">
-                Vue第5天 <i class="fa fa-chevron-right"></i>
+              <a href="/Vue/Vue条件渲染（七）/" rel="prev" title="Vue条件渲染（七）">
+                Vue条件渲染（七） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -914,7 +913,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue的模板语法"><span class="nav-number">1.</span> <span class="nav-text">Vue的模板语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#动态参数（2-6-0-新增）"><span class="nav-number">1.1.</span> <span class="nav-text">动态参数（2.6.0 新增）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修饰符"><span class="nav-number">1.2.</span> <span class="nav-text">修饰符</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#用户输入"><span class="nav-number">1.3.</span> <span class="nav-text">用户输入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#过滤器（了解）"><span class="nav-number">1.4.</span> <span class="nav-text">过滤器（了解）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#缩写"><span class="nav-number">1.5.</span> <span class="nav-text">缩写</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#v-bind-缩写"><span class="nav-number">1.5.1.</span> <span class="nav-text">v-bind 缩写</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#v-on-缩写"><span class="nav-number">1.5.2.</span> <span class="nav-text">v-on 缩写</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#循环语句"><span class="nav-number">1.</span> <span class="nav-text">循环语句</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#v-for指令"><span class="nav-number">1.1.</span> <span class="nav-text">v-for指令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#v-for-迭代对象"><span class="nav-number">1.2.</span> <span class="nav-text">v-for 迭代对象</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#第二参数"><span class="nav-number">1.2.1.</span> <span class="nav-text">第二参数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#第三参数"><span class="nav-number">1.2.2.</span> <span class="nav-text">第三参数</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在-v-for-里使用值范围"><span class="nav-number">1.3.</span> <span class="nav-text">在 v-for 里使用值范围</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在组件上使用-v-for"><span class="nav-number">1.4.</span> <span class="nav-text">在组件上使用 v-for</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">2.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
@@ -950,7 +949,7 @@
     <!-- 博客字数统计 -->
     <span class="site-pv">
       <i class="fa fa-pencil"></i>
-      博客全站共： <span class="post-count">19.7k</span> 字
+      博客全站共： <span class="post-count">20k</span> 字
     </span>
 </div>
 
