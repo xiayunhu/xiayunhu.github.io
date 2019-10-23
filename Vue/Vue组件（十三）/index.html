@@ -140,16 +140,25 @@
 
 
 
-  <meta name="description" content="前端 java PHP 分享 博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="xyh&#39;s Blog">
-<meta property="og:url" content="http://xiayunhu.github.io/tags/Layui/index.html">
+  <meta name="description" content="Vue.js组件组件（Component）是 Vue.js 最强大的功能之一。组件可以扩展 HTML 元素，封装可重用的代码。注册一个全局组件语法格式如下：1Vue.component(tagName, options)tagName 为组件名，options 为配置选项。注册后，我们可以使用以下方式来调用组件：1&amp;lt;tagName&amp;gt;&amp;lt;/tagName&amp;gt; 全局组件注册一个简单">
+<meta name="keywords" content="Vue">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue组件（十三）">
+<meta property="og:url" content="http://xiayunhu.github.io/Vue/Vue组件（十三）/index.html">
 <meta property="og:site_name" content="xyh&#39;s Blog">
-<meta property="og:description" content="前端 java PHP 分享 博客">
+<meta property="og:description" content="Vue.js组件组件（Component）是 Vue.js 最强大的功能之一。组件可以扩展 HTML 元素，封装可重用的代码。注册一个全局组件语法格式如下：1Vue.component(tagName, options)tagName 为组件名，options 为配置选项。注册后，我们可以使用以下方式来调用组件：1&amp;lt;tagName&amp;gt;&amp;lt;/tagName&amp;gt; 全局组件注册一个简单">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/10/23/15be0db7ed5e7b56e.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/10/23/28fede28b7170c2fd.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/10/23/39e86fbaee2f0bc46.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/10/23/4261c2fedf305066d.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/10/23/512580cc66533e56f.png">
+<meta property="og:image" content="http://pic.zhaotu.me/2019/10/23/64a0c6614da9887f6.png">
+<meta property="og:updated_time" content="2019-10-23T08:36:51.631Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xyh&#39;s Blog">
-<meta name="twitter:description" content="前端 java PHP 分享 博客">
+<meta name="twitter:title" content="Vue组件（十三）">
+<meta name="twitter:description" content="Vue.js组件组件（Component）是 Vue.js 最强大的功能之一。组件可以扩展 HTML 元素，封装可重用的代码。注册一个全局组件语法格式如下：1Vue.component(tagName, options)tagName 为组件名，options 为配置选项。注册后，我们可以使用以下方式来调用组件：1&amp;lt;tagName&amp;gt;&amp;lt;/tagName&amp;gt; 全局组件注册一个简单">
+<meta name="twitter:image" content="http://pic.zhaotu.me/2019/10/23/15be0db7ed5e7b56e.png">
 
 
 
@@ -158,7 +167,7 @@
 
 
 
-  <link rel="canonical" href="http://xiayunhu.github.io/tags/Layui/"/>
+  <link rel="canonical" href="http://xiayunhu.github.io/Vue/Vue组件（十三）/"/>
 
 
 
@@ -168,7 +177,7 @@
   };
 </script>
 
-  <title>标签: Layui | xyh's Blog</title>
+  <title>Vue组件（十三） | xyh's Blog</title>
   
 
 
@@ -233,7 +242,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 <a href="https://github.com/xiayunhu/" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#64CEAA; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
@@ -307,7 +316,7 @@
         
         
           
-          <li class="menu-item menu-item-标签 menu-item-active">
+          <li class="menu-item menu-item-标签">
     <a href="/tags/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />标签</a>
   </li>
@@ -379,87 +388,320 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Layui<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
+
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://xiayunhu.github.io/Vue/Vue组件（十三）/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XYH">
+      <meta itemprop="description" content="前端 java PHP 分享 博客">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+	
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="xyh's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/Layui/layui/" itemprop="url">
-              
-                <span itemprop="name">Layui的左侧三级导航栏</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Vue组件（十三）
+              
+            
+          </h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-03-27T00:00:00+08:00"
-              content="2019-03-27" >
-          03-27
-        </time>
-      </div>
+		
+		
+       <div class="post-meta">
+		
+		
+          <span class="post-time">
 
-    </header>
-  </article>
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
 
+              
+                
+              
+
+              <time title="创建时间：2019-10-23 00:00:00 / 修改时间：16:36:51" itemprop="dateCreated datePublished" datetime="2019-10-23T00:00:00+08:00">2019-10-23</time>
+            
+
+		
+			
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Vue/" itemprop="url" rel="index"><span itemprop="name">Vue</span></a></span>
+
+                
+                
+              
+            </span>
+          
+		  	  
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/Vue/Vue组件（十三）/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count valine-comment-count" data-xid="/Vue/Vue组件（十三）/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon"
+            >
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
+
+          
+
+          
+		
+	
+    
+    
+		  	 
+			<br/>
+			
+         
+	
+         <span class="post-time">
+		 
+           <span class="post-meta-item-icon">
+             <i class="fa fa-calendar-o"></i>
+           </span>
+           <span class="post-meta-item-text">字数统计:</span>
+           <span class="post-count">760字</span>
+         </span>
+
+         <span class="post-time">
+            &nbsp; | &nbsp;
+           <span class="post-meta-item-icon">
+             <i class="fa fa-calendar-o"></i>
+           </span>
+           <span class="post-meta-item-text">阅读时长:</span>
+           <span class="post-count">2分钟</span>
+         </span>
+	
+    
+    
+		  
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="Vue-js组件"><a href="#Vue-js组件" class="headerlink" title="Vue.js组件"></a>Vue.js组件</h3><p>组件（Component）是 Vue.js 最强大的功能之一。<br>组件可以扩展 HTML 元素，封装可重用的代码。<br>注册一个全局组件语法格式如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(tagName, options)</span><br></pre></td></tr></table></figure><br>tagName 为组件名，options 为配置选项。注册后，我们可以使用以下方式来调用组件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;tagName&gt;&lt;/tagName&gt;</span><br></pre></td></tr></table></figure></p>
+<h4 id="全局组件"><a href="#全局组件" class="headerlink" title="全局组件"></a>全局组件</h4><p>注册一个简单的全局组件 xyh，并使用它：<br><img src="http://pic.zhaotu.me/2019/10/23/15be0db7ed5e7b56e.png" alt="“Vue组件”"></p>
+<h4 id="局部组件"><a href="#局部组件" class="headerlink" title="局部组件"></a>局部组件</h4><p>我们也可以在实例选项中注册局部组件，这样组件只能在这个实例中使用：<br>注册一个简单的局部组件 xyh，并使用它：<br><img src="http://pic.zhaotu.me/2019/10/23/28fede28b7170c2fd.png" alt="“Vue组件”"></p>
+<h4 id="Prop"><a href="#Prop" class="headerlink" title="Prop"></a>Prop</h4><p>prop 是父组件用来传递数据的一个自定义属性。<br>父组件的数据需要通过 props 把数据传给子组件，子组件需要显式地用 props 选项声明 “prop”：<br>如以下例子：<br><img src="http://pic.zhaotu.me/2019/10/23/39e86fbaee2f0bc46.png" alt="“Vue组件”"></p>
+<h4 id="动态-Prop"><a href="#动态-Prop" class="headerlink" title="动态 Prop"></a>动态 Prop</h4><p>类似于用 v-bind 绑定 HTML 特性到一个表达式，也可以用 v-bind 动态绑定 props 的值到父组件的数据中。每当父组件的数据变化时，该变化也会传导给子组件<br><img src="http://pic.zhaotu.me/2019/10/23/4261c2fedf305066d.png" alt="“Vue组件”"><br>注意: prop 是单向绑定的：当父组件的属性变化时，将传导给子组件，但是不会反过来。</p>
+<h4 id="Prop-验证"><a href="#Prop-验证" class="headerlink" title="Prop 验证"></a>Prop 验证</h4><p>组件可以为 props 指定验证要求。<br>为了定制 prop 的验证方式，你可以为 props 中的值提供一个带有验证需求的对象，而不是一个字符串数组。例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">Vue.component(&apos;my-component&apos;, &#123;</span><br><span class="line">  props: &#123;</span><br><span class="line">    // 基础的类型检查 (`null` 和 `undefined` 会通过任何类型验证)</span><br><span class="line">    propA: Number,</span><br><span class="line">    // 多个可能的类型</span><br><span class="line">    propB: [String, Number],</span><br><span class="line">    // 必填的字符串</span><br><span class="line">    propC: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">      required: true</span><br><span class="line">    &#125;,</span><br><span class="line">    // 带有默认值的数字</span><br><span class="line">    propD: &#123;</span><br><span class="line">      type: Number,</span><br><span class="line">      default: 100</span><br><span class="line">    &#125;,</span><br><span class="line">    // 带有默认值的对象</span><br><span class="line">    propE: &#123;</span><br><span class="line">      type: Object,</span><br><span class="line">      // 对象或数组默认值必须从一个工厂函数获取</span><br><span class="line">      default: function () &#123;</span><br><span class="line">        return &#123; message: &apos;hello&apos; &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    // 自定义验证函数</span><br><span class="line">    propF: &#123;</span><br><span class="line">      validator: function (value) &#123;</span><br><span class="line">        // 这个值必须匹配下列字符串中的一个</span><br><span class="line">        return [&apos;success&apos;, &apos;warning&apos;, &apos;danger&apos;].indexOf(value) !== -1</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><br>当 prop 验证失败的时候，(开发环境构建版本的) Vue 将会产生一个控制台的警告。<br>type 可以是下面原生构造器：</p>
+<ul>
+<li>String</li>
+<li>Number</li>
+<li>Boolean</li>
+<li>Array</li>
+<li>Object</li>
+<li>Date</li>
+<li>Function</li>
+<li>Symbol<br>type 也可以是一个自定义构造器，使用 instanceof 检测。</li>
+</ul>
+<h4 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h4><p>父组件是使用 props 传递数据给子组件，但如果子组件要把数据传递回去，就需要使用自定义事件！</p>
+<p>我们可以使用 v-on 绑定自定义事件, 每个 Vue 实例都实现了事件接口(Events interface)，即：<br>使用 $on(eventName) 监听事件<br>使用 $emit(eventName) 触发事件<br>另外，父组件可以在使用子组件的地方直接用 v-on 来监听子组件触发的事件。</p>
+<p>以下实例中子组件已经和它外部完全解耦了。它所做的只是触发一个父组件关心的内部事件。<br><img src="http://pic.zhaotu.me/2019/10/23/512580cc66533e56f.png" alt="“Vue组件”"><br><img src="http://pic.zhaotu.me/2019/10/23/64a0c6614da9887f6.png" alt="“Vue组件”"></p>
+<h3 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h3>
       
     </div>
 
+    
+
+    
+    
+    
+	
+	<div>
+		  
+		  <div>
+     
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本 文 结 束 <i class="fa fa-paw"></i> 感 谢 您 的 阅 读-------------</div>
+    
+</div>
+
+		  
+   </div>
+
+	<div>
+		  
+			
+
+
+
+
+		  
+	</div>
+	
+    
+	
+	
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作更好的文章!</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechat.png" alt="XYH 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.png" alt="XYH 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Vue/" rel="tag"><i class="fa fa-tag"></i> Vue</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Vue/Vue表单（十二）/" rel="next" title="Vue表单（十二）">
+                <i class="fa fa-chevron-left"></i> Vue表单（十二）
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+	
+  
+
+
 
         </div>
         
@@ -480,8 +722,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -647,6 +898,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Vue-js组件"><span class="nav-number">1.</span> <span class="nav-text">Vue.js组件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#全局组件"><span class="nav-number">1.1.</span> <span class="nav-text">全局组件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#局部组件"><span class="nav-number">1.2.</span> <span class="nav-text">局部组件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Prop"><span class="nav-number">1.3.</span> <span class="nav-text">Prop</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#动态-Prop"><span class="nav-number">1.4.</span> <span class="nav-text">动态 Prop</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Prop-验证"><span class="nav-number">1.5.</span> <span class="nav-text">Prop 验证</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自定义事件"><span class="nav-number">1.6.</span> <span class="nav-text">自定义事件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结束"><span class="nav-number">2.</span> <span class="nav-text">结束</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -840,6 +1107,10 @@ setInterval("createtime()",250);
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
 
   
 
