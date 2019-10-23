@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://xiayunhu.github.io/"/>
-  <updated>2019-10-22T08:23:12.638Z</updated>
+  <updated>2019-10-23T06:28:39.126Z</updated>
   <id>http://xiayunhu.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vue表单（十二）</title>
+    <link href="http://xiayunhu.github.io/Vue/Vue%E8%A1%A8%E5%8D%95%EF%BC%88%E5%8D%81%E4%BA%8C%EF%BC%89/"/>
+    <id>http://xiayunhu.github.io/Vue/Vue表单（十二）/</id>
+    <published>2019-10-21T16:00:00.000Z</published>
+    <updated>2019-10-23T06:28:39.126Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="表单基础语法"><a href="#表单基础语法" class="headerlink" title="表单基础语法"></a>表单基础语法</h3><p>你可以用 v-model 指令在表单 input、textarea 及 select元素上创建双向数据绑定。 它会根据控件类型自动选取正确的方法来更新元素。尽管有些神奇，但 v-model 本质上不过是语法糖。它负责监听用户的输入事件以更新数据，并对一些极端场景进行一些特殊处理。<br>以下实例中演示了 input 和 textarea 元素中使用 v-model 实现双向数据绑定：<br><img src="http://pic.zhaotu.me/2019/10/22/15286b0dd6da3d4e1.png" alt="“Vue表单”"></p><h4 id="复选框（v-model-”checked”）"><a href="#复选框（v-model-”checked”）" class="headerlink" title="复选框（v-model=”checked”）"></a>复选框（v-model=”checked”）</h4><p>复选框如果是一个为逻辑值，如果是多个则绑定到同一个数组：<br>下列例子是复选框的双向数据绑定：<br><img src="http://pic.zhaotu.me/2019/10/23/2d05ec0563bdc3668.png" alt="“Vue表单”"></p><h4 id="单选按钮（v-model-”checked”）"><a href="#单选按钮（v-model-”checked”）" class="headerlink" title="单选按钮（v-model=”checked”）"></a>单选按钮（v-model=”checked”）</h4><p>单选按钮的双向数据绑定：<br><img src="http://pic.zhaotu.me/2019/10/23/33c8d0db1e378bab1.png" alt="“Vue表单”"></p><h4 id="选择框"><a href="#选择框" class="headerlink" title="选择框"></a>选择框</h4><p>1、单选框（v-model=”selected”）：<br><img src="http://pic.zhaotu.me/2019/10/23/45360500f4bb36653.png" alt="“Vue表单”"><br><b>注意：如果 v-model 表达式的初始值未能匹配任何选项，select元素将被渲染为“未选中”状态。在 iOS 中，这会使用户无法选择第一个选项。因为这样的情况下，iOS 不会触发 change 事件。因此，更推荐像上面这样提供一个值为空的禁用选项。</b><br>2、多选框（绑定到一个数组）：<br><img src="http://pic.zhaotu.me/2019/10/23/5a09f3de0d957aa46.png" alt="“Vue表单”"></p><h4 id="修饰符"><a href="#修饰符" class="headerlink" title="修饰符"></a>修饰符</h4><p>1、.lazy<br>在默认情况下， v-model 在 input 事件中同步输入框的值与数据，但你可以添加一个修饰符 lazy ，从而转变为在 change 事件中同步：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 在 &quot;change&quot; 而不是 &quot;input&quot; 事件中更新 --&gt;</span><br><span class="line">&lt;input v-model.lazy=&quot;msg&quot; &gt;</span><br></pre></td></tr></table></figure><br>2、.number<br>如果想自动将用户的输入值转为数值类型，可以给 v-model 添加 number 修饰符：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 在 &quot;change&quot; 而不是 &quot;input&quot; 事件中更新 --&gt;</span><br><span class="line">&lt;input v-model.lazy=&quot;msg&quot; &gt;</span><br></pre></td></tr></table></figure><br>这通常很有用，因为即使在 type=”number” 时，HTML 输入元素的值也总会返回字符串。如果这个值无法被 parseFloat() 解析，则会返回原始的值。<br>3、.trim<br>如果要自动过滤用户输入的首尾空白字符，可以给 v-model 添加 trim 修饰符：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;input v-model.trim=&quot;msg&quot;&gt;</span><br></pre></td></tr></table></figure></p><h3 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;表单基础语法&quot;&gt;&lt;a href=&quot;#表单基础语法&quot; class=&quot;headerlink&quot; title=&quot;表单基础语法&quot;&gt;&lt;/a&gt;表单基础语法&lt;/h3&gt;&lt;p&gt;你可以用 v-model 指令在表单 input、textarea 及 select元素上创建双向数据绑定。
+      
+    
+    </summary>
+    
+      <category term="Vue" scheme="http://xiayunhu.github.io/categories/Vue/"/>
+    
+    
+      <category term="Vue" scheme="http://xiayunhu.github.io/tags/Vue/"/>
+    
+  </entry>
   
   <entry>
     <title>Vue事件处理器（十一）</title>
@@ -482,31 +507,6 @@
     
     
       <category term="JavaScript" scheme="http://xiayunhu.github.io/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>PHP支付宝在线即时到账</title>
-    <link href="http://xiayunhu.github.io/PHP/PHP%E6%94%AF%E4%BB%98%E5%AE%9D%E5%9C%A8%E7%BA%BF%E5%8D%B3%E6%97%B6%E5%88%B0%E8%B4%A6/"/>
-    <id>http://xiayunhu.github.io/PHP/PHP支付宝在线即时到账/</id>
-    <published>2019-04-17T16:00:00.000Z</published>
-    <updated>2019-05-06T07:31:08.450Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>现在越来越多的电子网上支付，其中支付宝还是大众的选择。支付宝官方给出的即时到账功能还是很不错的，可以让用户在线向开发者的支付<br>宝账号支付现金，交易的金额可以即时到账，可以让开发者快速的回笼资金。交易操作简单、步骤少，方便。较为安全的是交易的资金可以三<br>个月内可退款，更多了解可看支付宝<a href="https://docs.open.alipay.com/62/" target="_blank" rel="noopener">官方文档</a>。</p><h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>首先我们是用PHP作为后台的开发，运行PHP的环境的搭建，支付宝账号（注意是商家的要用营业执照备案的）我这里就是把流程讲一下，最后你把ID换一下就好。<br><a href="https://docs.open.alipay.com/62/103738/" target="_blank" rel="noopener">应用范例</a>：可以参照官方给的流程图大体了解一下。<br>我们要使用即时到账接口的权限，需要先签约即时到账产品。签约方式：在线申请。申请地址：<a href="https://docs.open.alipay.com/62/" target="_blank" rel="noopener">即时到账申请地址</a>，提交申请后，会有一个审核阶段，审核通过才能使用该接口。</p><h3 id="下载demo接口"><a href="#下载demo接口" class="headerlink" title="下载demo接口"></a>下载demo接口</h3><p>下载<a href="https://docs.open.alipay.com/62/104749/" target="_blank" rel="noopener">即时到账交易接口</a>， 选择(create_direct_pay_by_user) ,我用电脑打开官方的网址发现没有选择下载的链接，我这里把百度云盘下载好的<br>接口分享一下<a href="https://pan.baidu.com/s/1oiqieRk8R_YT66iwBDiZbg" target="_blank" rel="noopener">接口demo</a>提取码：g74r。把下载好的文件解压，选择MD5签名版本的文件，你会发现一共有六个文件夹，我们只选择create_direct_pay_by_user-PHP-UTF-8的文件。</p><h3 id="文件结构"><a href="#文件结构" class="headerlink" title="文件结构"></a>文件结构</h3><p>代码文件结构如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">create_direct_pay_by_user-php-UTF-8</span><br><span class="line">  │</span><br><span class="line">  ├lib┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈类文件夹</span><br><span class="line">  │  │</span><br><span class="line">  │  ├alipay_core.function.php ┈┈┈┈┈┈支付宝接口公用函数文件</span><br><span class="line">  │  │</span><br><span class="line">  │  ├alipay_notify.class.php┈┈┈┈┈┈┈支付宝通知处理类文件</span><br><span class="line">  │  │</span><br><span class="line">  │  ├alipay_submit.class.php┈┈┈┈┈┈┈支付宝各接口请求提交类文件</span><br><span class="line">  │  │</span><br><span class="line">  │  └alipay_md5.function.php┈┈┈┈┈┈┈支付宝接口MD5函数文件</span><br><span class="line">  │</span><br><span class="line">  ├log.txt┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈日志文件</span><br><span class="line">  │</span><br><span class="line">  ├alipay.config.php┈┈┈┈┈┈┈┈┈┈┈┈基础配置类文件</span><br><span class="line">  │</span><br><span class="line">  ├alipayapi.php┈┈┈┈┈┈┈┈┈┈┈┈┈┈支付宝接口入口文件</span><br><span class="line">  │</span><br><span class="line">  ├notify_url.php ┈┈┈┈┈┈┈┈┈┈┈┈┈服务器异步通知页面文件</span><br><span class="line">  │</span><br><span class="line">  ├return_url.php ┈┈┈┈┈┈┈┈┈┈┈┈┈页面跳转同步通知文件</span><br><span class="line">  │</span><br><span class="line">  ├cacert.pem ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈用于CURL中校验SSL的CA证书文件</span><br><span class="line">  │</span><br><span class="line">  └readme.txt ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈使用说明文本</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>注意：里面的文件不要删。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;现在越来越多的电子网上支付，其中支付宝还是大众的选择。支付宝官方给出的即时到账功能还是很不错的，可以让用户在线向开发者的支付&lt;br&gt;宝账号支
-      
-    
-    </summary>
-    
-      <category term="PHP" scheme="http://xiayunhu.github.io/categories/PHP/"/>
-    
-    
-      <category term="PHP" scheme="http://xiayunhu.github.io/tags/PHP/"/>
     
   </entry>
   
